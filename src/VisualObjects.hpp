@@ -1,5 +1,7 @@
+#pragma once
+
 #include <iostream>
-#include <list>
+#include <vector>
 
 #include "VisualTypes.hpp"
 #include "VisualCanvas.hpp"
@@ -17,8 +19,8 @@ public:
 
     Pen m_pen;
     
-private:   
-    std::list<Point> m_points;    
+protected:   
+    std::vector<Point> m_points;    
     int m_is_selected;
 };
 
@@ -36,34 +38,59 @@ public:
 
 void LineVisualObject::Draw(VisualCanvas canvas)
 {
-    for (int )
+    canvas.m_pen = m_pen;    
+    //
+    for (int i = 1; i < m_points.size(); ++i)
+        canvas.DrawLine(m_points[i - 1], m_points[i]);
 }
 
 struct RectVisualObject: public FilledVisualObject
 {
-
+public:
+    void Draw(VisualCanvas canvas) override;
 };
 
-struct TSimpleLine: public LineVisualObject
+void RectVisualObject::Draw(VisualCanvas canvas)
 {
+    canvas.m_pen = m_pen;    
+    canvas.m_brush = m_brush;    
+}
 
+struct SimpleLine: public LineVisualObject
+{
+    //  { only two points }
 };
 
 
 struct PolyLine: public LineVisualObject
 {
-
+    // { delete last point on right click }
 };
 
-struct TRectangle: public RectVisualObject
+struct Rectangle: public RectVisualObject
 {
-
+public:
+    void Draw(VisualCanvas canvas) override;
 };
 
+void Rectangle::Draw(VisualCanvas canvas) 
+{
+    RectVisualObject::Draw(canvas);
+    //
+    canvas.DrawRectangle(m_points[0], m_points[1]);
+}
 
 struct Ellipse: public RectVisualObject
 {
-
+public:
+    void Draw(VisualCanvas canvas) override;
 };
+
+void Ellipse::Draw(VisualCanvas canvas) 
+{
+    RectVisualObject::Draw(canvas);
+    //
+    canvas.DrawEllipse(m_points[0], m_points[1]);
+}
     
   
