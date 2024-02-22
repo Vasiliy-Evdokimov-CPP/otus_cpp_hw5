@@ -52,7 +52,6 @@ std::string ColorToString(Color color)
     }
 }
 
-
 struct Point
 {
     int x;

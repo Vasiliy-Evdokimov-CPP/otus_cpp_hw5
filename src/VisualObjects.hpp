@@ -1,12 +1,17 @@
 #pragma once
 
-#include <iostream>
 #include <vector>
 
 #include "VisualTypes.hpp"
 #include "VisualCanvas.hpp"
 
-struct VisualObject 
+enum class VisualObjectType { selector, simpleline, polyline, rectangle, ellipse };
+
+class BaseVisualObject {};
+
+class Selector: public BaseVisualObject {};
+
+class VisualObject: public BaseVisualObject
 {
 public:
     VisualObject()
@@ -14,8 +19,11 @@ public:
         m_is_selected = 0; 
         m_points.clear();       
     }
-    virtual void Draw(VisualCanvas canvas) = 0;
-    virtual void AddPoint(Point point) = 0;
+    virtual void Draw(IVisualCanvas& canvas) = 0;
+    virtual void AddPoint(Point point)  
+    {
+        m_points.push_back(point);
+    }
 
     Pen m_pen;
     
@@ -24,19 +32,19 @@ protected:
     int m_is_selected;
 };
 
-struct FilledVisualObject: public VisualObject
+class FilledVisualObject: public VisualObject
 {   
 public:
     Brush m_brush;
 };
 
-struct LineVisualObject: public VisualObject
+class LineVisualObject: public VisualObject
 {
 public:
-    void Draw(VisualCanvas canvas) override;
+    void Draw(IVisualCanvas& canvas) override;
 };
 
-void LineVisualObject::Draw(VisualCanvas canvas)
+void LineVisualObject::Draw(IVisualCanvas& canvas)
 {
     canvas.m_pen = m_pen;    
     //
@@ -44,49 +52,49 @@ void LineVisualObject::Draw(VisualCanvas canvas)
         canvas.DrawLine(m_points[i - 1], m_points[i]);
 }
 
-struct RectVisualObject: public FilledVisualObject
+class RectVisualObject: public FilledVisualObject
 {
 public:
-    void Draw(VisualCanvas canvas) override;
+    void Draw(IVisualCanvas& canvas) override;
 };
 
-void RectVisualObject::Draw(VisualCanvas canvas)
+void RectVisualObject::Draw(IVisualCanvas& canvas)
 {
     canvas.m_pen = m_pen;    
     canvas.m_brush = m_brush;    
 }
 
-struct SimpleLine: public LineVisualObject
+class SimpleLine: public LineVisualObject
 {
     //  { only two points }
 };
 
 
-struct PolyLine: public LineVisualObject
+class PolyLine: public LineVisualObject
 {
     // { delete last point on right click }
 };
 
-struct Rectangle: public RectVisualObject
+class Rectangle: public RectVisualObject
 {
 public:
-    void Draw(VisualCanvas canvas) override;
+    void Draw(IVisualCanvas& canvas) override;
 };
 
-void Rectangle::Draw(VisualCanvas canvas) 
+void Rectangle::Draw(IVisualCanvas& canvas) 
 {
     RectVisualObject::Draw(canvas);
     //
     canvas.DrawRectangle(m_points[0], m_points[1]);
 }
 
-struct Ellipse: public RectVisualObject
+class Ellipse: public RectVisualObject
 {
 public:
-    void Draw(VisualCanvas canvas) override;
+    void Draw(IVisualCanvas& canvas) override;
 };
 
-void Ellipse::Draw(VisualCanvas canvas) 
+void Ellipse::Draw(IVisualCanvas& canvas) 
 {
     RectVisualObject::Draw(canvas);
     //

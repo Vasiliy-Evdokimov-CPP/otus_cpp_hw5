@@ -1,14 +1,11 @@
-#include <iostream>
 
-#include "VisualObjects.hpp"
+#include "VisualEditor.hpp"
+#include "VisualCanvas.hpp"
 
 int main()
 {
-    std::cout << "Hello!" << std::endl;
-    /*
-    container = main_menu + objects_palette + canvas
-    crrate controller(container);
-    */
-
+    VisualController visual_controller;
+    DesktopEditor desktop_editor(&visual_controller);
+    //
     return 0;
 }

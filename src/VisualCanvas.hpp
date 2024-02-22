@@ -1,46 +1,51 @@
 #pragma once
 
-#include <iostream>
-
+#include "Logger.hpp"
 #include "VisualTypes.hpp"
 
-struct VisualCanvas 
+class IVisualCanvas 
 {
 public:
-    void DrawLine(Point point_1, Point point_2);
-    void DrawRectangle(Point left_top, Point right_bottom);
-    void DrawEllipse(Point left_top, Point right_bottom);
+    virtual void DrawLine(Point point_1, Point point_2) = 0;
+    virtual void DrawRectangle(Point left_top, Point right_bottom) = 0;
+    virtual void DrawEllipse(Point left_top, Point right_bottom) = 0;
 
     Pen m_pen;
     Brush m_brush;
 };
 
-void VisualCanvas::DrawLine(Point point_1, Point point_2)
+//
+
+class DesktopCanvas: public IVisualCanvas
 {
-    std::cout <<         
-        "VisualCanvas: Draw LINE from " <<
-        point_1.ToString() << " to " << point_2.ToString() <<
-        " with pen " << m_pen.ToString()
-    << std::endl;
+    void DrawLine(Point point_1, Point point_2) override;
+    void DrawRectangle(Point left_top, Point right_bottom) override;
+    void DrawEllipse(Point left_top, Point right_bottom) override;
+};
+
+void DesktopCanvas::DrawLine(Point point_1, Point point_2)
+{
+    WriteLog("DesktopCanvas: Draw LINE from " +
+        point_1.ToString() + " to " + point_2.ToString() +
+        " with pen " + m_pen.ToString()
+    );
 } 
 
-void VisualCanvas::DrawRectangle(Point left_top, Point right_bottom)
+void DesktopCanvas::DrawRectangle(Point left_top, Point right_bottom)
 {
-    std::cout << 
-        "VisualCanvas: Draw RECTANGLE from " << 
-        left_top.ToString() << " to " << right_bottom.ToString() << 
-        " with pen " << m_pen.ToString() << 
-        " and brush " << m_brush.ToString()
-    << std::endl;
+    WriteLog("DesktopCanvas: Draw RECTANGLE from " + 
+        left_top.ToString() + " to " + right_bottom.ToString() + 
+        " with pen " + m_pen.ToString() + 
+        " and brush " + m_brush.ToString()
+    );        
 } 
 
-void VisualCanvas::DrawEllipse(Point left_top, Point right_bottom)
+void DesktopCanvas::DrawEllipse(Point left_top, Point right_bottom)
 {
-    std::cout << 
-        "VisualCanvas: Draw ELLIPSE from " << 
-        left_top.ToString() << " to " << right_bottom.ToString() << 
-        " with pen " << m_pen.ToString() <<
-        " and brush " << m_brush.ToString()
-    << std::endl;
+    WriteLog("DesktopCanvas: Draw ELLIPSE from " + 
+        left_top.ToString() + " to " + right_bottom.ToString() + 
+        " with pen " + m_pen.ToString() +
+        " and brush " + m_brush.ToString()
+    );        
 } 
 
