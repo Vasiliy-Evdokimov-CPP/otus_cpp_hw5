@@ -85,7 +85,7 @@ public:
         //
         for (int i = 0; i < m_controller->GetObjectsCount(); i++)
         {
-            VisualObject* obj = m_controller->GetObject(i);
+            std::shared_ptr<VisualObject> obj = m_controller->GetObject(i);
             obj->Draw(m_canvas);
         }            
     }
@@ -104,6 +104,8 @@ public:
 
     void KeyPress(KeyboardKey key)
     {
+        WriteLog("KeyboardKeyDown " + KeyboardKeyToString(key));
+        //
         if (key == KeyboardKey::vk_delete)
         {
             //

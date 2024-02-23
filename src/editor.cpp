@@ -43,8 +43,3 @@ int main()
     //
     return 0;
 }
-
-/* 
-std::unique_ptr<Class> x
-x = std::make_unique<Class>()
-*/

@@ -1,5 +1,6 @@
 #pragma once
 
+#include <memory>
 #include <vector>
 
 #include "Logger.hpp"
@@ -48,7 +49,7 @@ public:
         m_current_brush.color = color;
     }
 
-    VisualObject* HitTest(Point point) 
+    std::shared_ptr<VisualObject> HitTest(Point point) 
     {
         for (int i = 0; i < m_objects.size(); ++i) 
             if (m_objects[i]->HitTest(point))
@@ -82,10 +83,6 @@ public:
     void CancelPoint()
     {
         m_selected_object = nullptr;
-        //
-        if (m_current_object == nullptr) return;
-        //
-        delete m_current_object;
         m_current_object = nullptr;
     }
     
@@ -94,7 +91,7 @@ public:
         return m_objects.size();
     }
 
-    VisualObject* GetObject(uint index)
+    std::shared_ptr<VisualObject> GetObject(uint index)
     {
         if ((index >= 0) && (index < m_objects.size()))
             return m_objects[index];
@@ -104,7 +101,7 @@ public:
     void ClearObjects() 
     {
         for (int i = 0; i < m_objects.size(); ++i)
-            delete m_objects[i];
+            m_objects[i] = nullptr;
         m_objects.clear();    
     }
 
@@ -129,18 +126,18 @@ public:
     };
 
 private:
-    VisualObject* CreateCurrentObject(VisualObjectType object_type) 
+    std::shared_ptr<VisualObject> CreateCurrentObject(VisualObjectType object_type) 
     {
         switch (object_type)
         {
             case VisualObjectType::line :
-                return new SimpleLine(m_current_pen);
+                return std::make_shared<SimpleLine>(m_current_pen);
                 break;
             case VisualObjectType::rectangle :
-                return new Rectangle(m_current_pen, m_current_brush);
+                return std::make_shared<Rectangle>(m_current_pen, m_current_brush);
                 break;
             case VisualObjectType::ellipse :
-                return new Ellipse(m_current_pen, m_current_brush);
+                return std::make_shared<Ellipse>(m_current_pen, m_current_brush);
                 break;
             default:
                 return nullptr;
@@ -148,13 +145,13 @@ private:
         }
     }
 
-    std::vector<VisualObject*> m_objects;
+    std::vector<std::shared_ptr<VisualObject>> m_objects;
 
     VisualObjectType m_current_object_type = VisualObjectType::selector;
     Pen m_current_pen;
     Brush m_current_brush;
 
-    VisualObject* m_current_object = nullptr;
-    VisualObject* m_selected_object = nullptr;
+    std::shared_ptr<VisualObject> m_current_object;
+    std::shared_ptr<VisualObject> m_selected_object;
 
 };
