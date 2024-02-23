@@ -2,9 +2,11 @@
 
 #include <string>
 
+typedef unsigned int uint;
+
 enum class PenStyle { solid, dotted, dashed };
 
-enum class BrushStyle { solid, clear };
+enum class BrushStyle { solid, clear, horizontal, vertical };
 
 enum class Color { black, white, red, green, blue };
 
@@ -12,11 +14,11 @@ std::string PenStyleToString(PenStyle pen_style)
 {
     switch (pen_style) {
         case PenStyle::solid:
-            return "solid";
+            return "SOLID";
         case PenStyle::dotted:
-            return "dotted";
+            return "DOTTED";
         case PenStyle::dashed:
-            return "dashed";                        
+            return "DASHED";                        
         default:
             return "(unknown)";    
     }
@@ -26,9 +28,13 @@ std::string BrushStyleToString(BrushStyle brush_style)
 {
     switch (brush_style) {
         case BrushStyle::solid:
-            return "solid";
+            return "SOLID";
         case BrushStyle::clear:
-            return "clear";                    
+            return "CLEAR";
+        case BrushStyle::horizontal:
+            return "HORIZONTAL"; 
+        case BrushStyle::vertical:
+            return "VERTICAL";                           
         default:
             return "(unknown)";    
     }
@@ -38,15 +44,15 @@ std::string ColorToString(Color color)
 {
     switch (color) {
         case Color::black:
-            return "black";
+            return "BLACK";
         case Color::white:
-            return "white";   
+            return "WHITE";   
         case Color::red:
-            return "red";
+            return "RED";
         case Color::green: 
-            return "green";
+            return "GREEN";
         case Color::blue: 
-            return "blue";                                             
+            return "BLUE";                                             
         default:
             return "(unknown)";    
     }
@@ -88,7 +94,7 @@ struct Pen
 struct Brush 
 {
     Brush():
-        style(BrushStyle::clear),
+        style(BrushStyle::solid),
         color(Color::white) {}
 
     BrushStyle style;

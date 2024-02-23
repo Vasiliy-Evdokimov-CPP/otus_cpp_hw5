@@ -1,25 +1,10 @@
 #pragma once
 
+#include <string>
+
 #include "Logger.hpp"
 #include "VisualTypes.hpp"
 #include "VisualObjects.hpp"
-
-typedef unsigned int uint;
-
-// template <VisualObjectType V>
-// struct SelectedObject
-// {
-//     using type =
-//         (V == VisualObjectType::simpleline)
-//             ? SimpleLine
-//             : ((V == VisualObjectType::polyline)
-//                 ? PolyLine
-//                 : ((V == VisualObjectType::rectangle)
-//                     ? Rectangle
-//                     : ((V == VisualObjectType::ellipse)
-//                         ? Ellipse
-//                         : Selector)));
-// };
 
 class IObjectsPalette 
 {
@@ -27,9 +12,10 @@ private:
     VisualObjectType m_selected; 
 public:
     virtual void Draw() = 0;
-    void Select(VisualObjectType object)
+    void Select(VisualObjectType object_type)
     {
-        m_selected = object;
+        WriteLog(ObjectTypeToString(object_type) + " object selected");
+        m_selected = object_type;
     }
 };
 
@@ -41,6 +27,7 @@ public:
     virtual void Draw() = 0;
     void Select(PenStyle pen_style)
     {
+        WriteLog(PenStyleToString(pen_style) + " pen selected");
         m_selected = pen_style;
     }
 };
@@ -53,6 +40,7 @@ public:
     virtual void Draw() = 0;
     void Select(BrushStyle brush_style)
     {
+        WriteLog(BrushStyleToString(brush_style) + " brush selected");
         m_selected = brush_style;
     }
 };
@@ -66,7 +54,7 @@ public:
     void Select(Color color)
     {
         m_selected = color;
-        WriteLog(ColorToString(color) + " selected");
+        WriteLog(ColorToString(color) + " color selected");
     }
 };
 
@@ -78,6 +66,7 @@ public:
     virtual void Draw() = 0;
     void Select(uint thickness)
     {
+        WriteLog(std::to_string(thickness) + "px thickness selected");
         m_selected = thickness;
     }
 };
