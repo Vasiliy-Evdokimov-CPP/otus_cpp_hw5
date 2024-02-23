@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <cmath>
 
 typedef unsigned int uint;
 
@@ -108,3 +109,34 @@ struct Brush
         ")";
     }
 };
+
+double distance(Point p, Point p1, Point p2) 
+{
+    double A = p.x - p1.x;
+    double B = p.y - p1.y;
+    double C = p2.x - p1.x;
+    double D = p2.y - p1.y;
+    
+    double dot = A * C + B * D;
+    double len_sq = C * C + D * D;
+    double param = dot / len_sq;
+    
+    double xx, yy;
+    if (param < 0) {
+        xx = p1.x;
+        yy = p1.y;
+    }
+    else if (param > 1) {
+        xx = p2.x;
+        yy = p2.y;
+    }
+    else {
+        xx = p1.x + param * C;
+        yy = p1.y + param * D;
+    }
+    
+    double dx = p.x - xx;
+    double dy = p.y - yy;
+    
+    return std::sqrt(dx * dx + dy * dy);
+}

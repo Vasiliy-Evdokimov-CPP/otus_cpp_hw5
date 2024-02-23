@@ -48,26 +48,41 @@ public:
         m_current_brush.color = color;
     }
 
-    void AddPoint(Point point)
-    {        
-        if (m_current_object == nullptr)
-        {
-            m_current_object = CreateCurrentObject(m_current_object_type);
-        }
-        //
-        if (m_current_object == nullptr) return;
-        //
-        m_current_object->AddPoint(point);
-        //
-        if (m_current_object->IsFinished())
-        {
-            objects.push_back(m_current_object);
-            m_current_object = nullptr;
-        }        
+    VisualObject* HitTest(Point point) 
+    {
+        for (int i = 0; i < m_objects.size(); ++i) 
+            if (m_objects[i]->HitTest(point))
+                return m_objects[i];
+        return nullptr;
     }
 
-    void DeleteLastPoint()
+    void HandlePoint(Point point)
+    {        
+        if (m_current_object_type == VisualObjectType::selector) 
+        {
+            m_selected_object = HitTest(point);
+        } else {
+            m_selected_object = nullptr;
+            //
+            if (m_current_object == nullptr)
+                m_current_object = CreateCurrentObject(m_current_object_type);
+            //
+            if (m_current_object == nullptr) return;
+            //
+            m_current_object->AddPoint(point);
+            //
+            if (m_current_object->IsFinished())
+            {
+                m_objects.push_back(m_current_object);
+                m_current_object = nullptr;
+            }
+        }                
+    }
+
+    void CancelPoint()
     {
+        m_selected_object = nullptr;
+        //
         if (m_current_object == nullptr) return;
         //
         delete m_current_object;
@@ -76,21 +91,26 @@ public:
     
     int GetObjectsCount()
     {
-        return objects.size();
+        return m_objects.size();
     }
 
     VisualObject* GetObject(uint index)
     {
-        if ((index >= 0) && (index < objects.size()))
-            return objects[index];
+        if ((index >= 0) && (index < m_objects.size()))
+            return m_objects[index];
         return nullptr;
     }
 
     void ClearObjects() 
     {
-        for (int i = 0; i < objects.size(); ++i)
-            delete objects[i];
-        objects.clear();    
+        for (int i = 0; i < m_objects.size(); ++i)
+            delete m_objects[i];
+        m_objects.clear();    
+    }
+
+        void DeleteObject(VisualObject* object)
+    {
+        //
     }
 
     void NewFile()
@@ -128,11 +148,13 @@ private:
         }
     }
 
-    std::vector<VisualObject*> objects;
+    std::vector<VisualObject*> m_objects;
 
     VisualObjectType m_current_object_type = VisualObjectType::selector;
     Pen m_current_pen;
     Brush m_current_brush;
 
     VisualObject* m_current_object = nullptr;
+    VisualObject* m_selected_object = nullptr;
+
 };

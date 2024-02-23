@@ -71,35 +71,40 @@ public:
     }
 };
 
-class DesktopObjectsPalette: public IObjectsPalette {
+class DesktopObjectsPalette: public IObjectsPalette
+{
     void Draw() override 
     {
         WriteLog("Draw Desktop_ObjectsPalette");
     }
 };
 
-class DesktopPenStylePalette: public IPenStylePalette {
+class DesktopPenStylePalette: public IPenStylePalette
+{
     void Draw() override 
     {
         WriteLog("Draw Desktop_PenStylePalette");        
     }
 };
 
-class DesktopBrushStylePalette: public IBrushStylePalette {
+class DesktopBrushStylePalette: public IBrushStylePalette
+{
     void Draw() override 
     {
         WriteLog("Draw Desktop_BrushStylePalette");
     }
 };
 
-class DesktopColorPalette: public IColorPalette {
+class DesktopColorPalette: public IColorPalette
+{
     void Draw() override 
     {
         WriteLog("Draw Desktop_ColorPalette");        
     }
 };
 
-class DesktopThicknessSelector: public IThicknessSelector {
+class DesktopThicknessSelector: public IThicknessSelector
+{
     void Draw() override 
     {
         WriteLog("Draw Desktop_ThicknessSelector");

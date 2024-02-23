@@ -5,12 +5,16 @@
 #include "VisualTypes.hpp"
 #include "VisualCanvas.hpp"
 
+const int HIT_TOLERANCE = 3;
+
 enum class VisualObjectType { selector, line, rectangle, ellipse };
 
 std::string ObjectTypeToString(VisualObjectType object_type)
 {
     switch (object_type) 
     {
+        case VisualObjectType::selector:
+            return "SELECTOR";
         case VisualObjectType::line:
             return "LINE";
         case VisualObjectType::rectangle:
@@ -32,8 +36,6 @@ public:
     VisualObject()
     {        
         WriteLog("VisualObject()");
-        //
-        m_is_selected = 0; 
     }
 
     ~VisualObject()
@@ -44,6 +46,9 @@ public:
     }
 
     virtual void Draw(IVisualCanvas* canvas) = 0;
+
+    virtual int HitTest(Point point) = 0;
+
     int GetPointsCount()
     {
         return m_points.size();
@@ -58,7 +63,7 @@ public:
     }
     int IsFinished() 
     {
-        return (GetMaxPointsCount() == 0) || (m_points.size() == GetMaxPointsCount());
+        return (m_points.size() == GetMaxPointsCount());
     }
 
     Pen m_pen;
@@ -66,7 +71,6 @@ public:
 protected:
     int m_max_points_count = 2;
     std::vector<Point> m_points;    
-    int m_is_selected;
 };
 
 class FilledVisualObject: public VisualObject
@@ -78,33 +82,43 @@ public:
 class LineVisualObject: public VisualObject
 {
 public:
-    void Draw(IVisualCanvas* canvas) override;
+    void Draw(IVisualCanvas* canvas) override
+    {
+        canvas->m_pen = m_pen;    
+        //
+        for (int i = 1; i < m_points.size(); ++i)
+            canvas->DrawLine(m_points[i - 1], m_points[i]);
+    }
+    int HitTest(Point point) override 
+    {
+        if (m_points.size() < 2) return 0;
+        //
+        return distance(point, m_points[0], m_points[1]) < HIT_TOLERANCE;
+    }
 };
-
-void LineVisualObject::Draw(IVisualCanvas* canvas)
-{
-    canvas->m_pen = m_pen;    
-    //
-    for (int i = 1; i < m_points.size(); ++i)
-        canvas->DrawLine(m_points[i - 1], m_points[i]);
-}
 
 class RectVisualObject: public FilledVisualObject
 {
 public:
+    int HitTest(Point point) 
+    {
+        if (m_points.size() < 2) return 0;
+        //
+        return 
+            ((point.x > m_points[0].x - HIT_TOLERANCE) && (point.x < m_points[1].x + HIT_TOLERANCE) &&
+             (point.y > m_points[0].y - HIT_TOLERANCE) && (point.y < m_points[1].y + HIT_TOLERANCE));        
+    }
     RectVisualObject(Pen pen, Brush brush)
     {
         m_pen = pen;
         m_brush = brush;
     } 
-    virtual void Draw(IVisualCanvas* canvas) override;
+    virtual void Draw(IVisualCanvas* canvas) override
+    {
+        canvas->m_pen = m_pen;    
+        canvas->m_brush = m_brush;    
+    }
 };
-
-void RectVisualObject::Draw(IVisualCanvas* canvas)
-{
-    canvas->m_pen = m_pen;    
-    canvas->m_brush = m_brush;    
-}
 
 class SimpleLine: public LineVisualObject
 {
@@ -128,15 +142,13 @@ public:
     {
         //
     };
-    void Draw(IVisualCanvas* canvas) override;
+    void Draw(IVisualCanvas* canvas) override
+    {
+        RectVisualObject::Draw(canvas);
+        //
+        canvas->DrawRectangle(m_points[0], m_points[1]);
+    }
 };
-
-void Rectangle::Draw(IVisualCanvas* canvas) 
-{
-    RectVisualObject::Draw(canvas);
-    //
-    canvas->DrawRectangle(m_points[0], m_points[1]);
-}
 
 class Ellipse: public RectVisualObject
 {
@@ -145,14 +157,10 @@ public:
     {
         //
     };
-    void Draw(IVisualCanvas* canvas) override;
-};
-
-void Ellipse::Draw(IVisualCanvas* canvas) 
-{
-    RectVisualObject::Draw(canvas);
-    //
-    canvas->DrawEllipse(m_points[0], m_points[1]);
-}
-    
-  
+    void Draw(IVisualCanvas* canvas) override
+    {
+        RectVisualObject::Draw(canvas);
+        //
+        canvas->DrawEllipse(m_points[0], m_points[1]);
+    }
+}; 

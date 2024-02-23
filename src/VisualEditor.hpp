@@ -9,6 +9,8 @@
 
 enum class MouseButton { left, middle, right };
 
+enum class KeyboardKey { vk_delete };
+
 std::string MouseButtonToString(MouseButton mouse_button) 
 {
     switch (mouse_button) 
@@ -17,6 +19,17 @@ std::string MouseButtonToString(MouseButton mouse_button)
             return "[LEFT_BTN]";
         case MouseButton::right:
             return "[RIGHT_BTN]";                        
+        default:
+            return "(unknown)";    
+    }
+}
+
+std::string KeyboardKeyToString(KeyboardKey keyboard_key) 
+{
+    switch (keyboard_key) 
+    {
+        case KeyboardKey::vk_delete:
+            return "[VK_DELETE]";                    
         default:
             return "(unknown)";    
     }
@@ -82,11 +95,19 @@ public:
         WriteLog("MouseDown " + MouseButtonToString(button) + " at " + point.ToString());
         //
         if (button == MouseButton::left)
-            m_controller->AddPoint(point);
+            m_controller->HandlePoint(point);
         if (button == MouseButton::right)
-            m_controller->DeleteLastPoint();   
+            m_controller->CancelPoint();   
         //
         Redraw();
+    }
+
+    void KeyPress(KeyboardKey key)
+    {
+        if (key == KeyboardKey::vk_delete)
+        {
+            //
+        }
     }
 
     void NewFile()
