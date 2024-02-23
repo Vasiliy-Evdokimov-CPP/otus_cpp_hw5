@@ -45,7 +45,7 @@ public:
         m_points.clear();
     }
 
-    virtual void Draw(IVisualCanvas* canvas) = 0;
+    virtual void Draw(std::shared_ptr<IVisualCanvas> canvas) = 0;
 
     virtual int HitTest(Point point) = 0;
 
@@ -82,7 +82,7 @@ public:
 class LineVisualObject: public VisualObject
 {
 public:
-    void Draw(IVisualCanvas* canvas) override
+    void Draw(std::shared_ptr<IVisualCanvas> canvas) override
     {
         canvas->m_pen = m_pen;    
         //
@@ -113,7 +113,7 @@ public:
         m_pen = pen;
         m_brush = brush;
     } 
-    virtual void Draw(IVisualCanvas* canvas) override
+    virtual void Draw(std::shared_ptr<IVisualCanvas> canvas) override
     {
         canvas->m_pen = m_pen;    
         canvas->m_brush = m_brush;    
@@ -142,7 +142,7 @@ public:
     {
         //
     };
-    void Draw(IVisualCanvas* canvas) override
+    void Draw(std::shared_ptr<IVisualCanvas> canvas) override
     {
         RectVisualObject::Draw(canvas);
         //
@@ -157,7 +157,7 @@ public:
     {
         //
     };
-    void Draw(IVisualCanvas* canvas) override
+    void Draw(std::shared_ptr<IVisualCanvas> canvas) override
     {
         RectVisualObject::Draw(canvas);
         //

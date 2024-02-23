@@ -4,10 +4,10 @@
 
 int main()
 {
-    VisualController visual_controller;
-    DesktopEditor desktop_editor(&visual_controller);
+    std::shared_ptr<VisualController> visual_controller = std::make_shared<VisualController>();
+    DesktopEditor desktop_editor(visual_controller);
     //
-    // создание нового файла
+    //  создание нового файла
     desktop_editor.NewFile();
     //  рисование линии
     desktop_editor.SelectPenColor(Color::green);

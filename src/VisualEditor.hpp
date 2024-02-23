@@ -38,7 +38,7 @@ std::string KeyboardKeyToString(KeyboardKey keyboard_key)
 class VisualEditor
 {
 public:
-    VisualEditor(VisualController* visual_controller) 
+    VisualEditor(std::shared_ptr<VisualController> visual_controller) 
     {
         m_controller = visual_controller;
     }
@@ -130,42 +130,42 @@ public:
     }
 
 protected:
-    IVisualCanvas* m_canvas;
-    IObjectsPalette* m_object_palette;
-    IPenStylePalette* m_pen_style_palette;
-    IColorPalette* m_pen_color_palette;
-    IBrushStylePalette* m_brush_style_palette;
-    IColorPalette* m_brush_color_palette;
-    IThicknessSelector* m_thickness_selector;
+    std::shared_ptr<IVisualCanvas> m_canvas;
+    std::shared_ptr<IObjectsPalette> m_object_palette;
+    std::shared_ptr<IPenStylePalette> m_pen_style_palette;
+    std::shared_ptr<IColorPalette> m_pen_color_palette;
+    std::shared_ptr<IBrushStylePalette> m_brush_style_palette;
+    std::shared_ptr<IColorPalette> m_brush_color_palette;
+    std::shared_ptr<IThicknessSelector> m_thickness_selector;
     //
-    VisualController* m_controller;
+    std::shared_ptr<VisualController> m_controller;
 };
 
 class DesktopEditor: public VisualEditor
 {    
 public:
-    DesktopEditor(VisualController* visual_controller) : VisualEditor(visual_controller)
+    DesktopEditor(std::shared_ptr<VisualController> visual_controller) : VisualEditor(visual_controller)
     {
-        m_canvas = new DesktopCanvas();
-        m_object_palette = new DesktopObjectsPalette();
-        m_pen_style_palette = new DesktopPenStylePalette();
-        m_pen_color_palette = new DesktopColorPalette();
-        m_brush_style_palette = new DesktopBrushStylePalette();
-        m_brush_color_palette = new DesktopColorPalette();
-        m_thickness_selector = new DesktopThicknessSelector();
+        m_canvas = std::make_shared<DesktopCanvas>();
+        m_object_palette = std::make_shared<DesktopObjectsPalette>();
+        m_pen_style_palette = std::make_shared<DesktopPenStylePalette>();
+        m_pen_color_palette = std::make_shared<DesktopColorPalette>();
+        m_brush_style_palette = std::make_shared<DesktopBrushStylePalette>();
+        m_brush_color_palette = std::make_shared<DesktopColorPalette>();
+        m_thickness_selector = std::make_shared<DesktopThicknessSelector>();
         //
-        std::cout << __PRETTY_FUNCTION__ << std::endl;
+        WriteLog(__PRETTY_FUNCTION__);        
     }
     
     ~DesktopEditor() 
     {
-        delete m_canvas;
-        delete m_object_palette;
-        delete m_pen_style_palette;
-        delete m_pen_color_palette;
-        delete m_brush_style_palette;
-        delete m_brush_color_palette;
-        delete m_thickness_selector;
+        m_canvas = nullptr;
+        m_object_palette = nullptr;
+        m_pen_style_palette = nullptr;
+        m_pen_color_palette = nullptr;
+        m_brush_style_palette = nullptr;
+        m_brush_color_palette = nullptr;
+        m_thickness_selector = nullptr;
     }
 
 };

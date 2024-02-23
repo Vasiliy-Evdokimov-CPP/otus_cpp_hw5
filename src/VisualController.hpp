@@ -105,7 +105,7 @@ public:
         m_objects.clear();    
     }
 
-        void DeleteObject(VisualObject* object)
+    void DeleteObject(std::shared_ptr<VisualObject> object)
     {
         //
     }
