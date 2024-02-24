@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
 
-set(PROJECT_NAME print_ip)
+set(PROJECT_NAME editor)
+set(SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
 
 set(PATCH_VERSION "1" CACHE INTERNAL "Patch version")
 set(PROJECT_VESRION 0.0.${PATCH_VERSION})
@@ -10,7 +11,14 @@ project(${PROJECT_NAME} VERSION ${PROJECT_VESRION})
 configure_file(version.h.in version.h)
 
 add_executable(${PROJECT_NAME} 
-    print_ip.cpp
+    ${SRC_DIR}/editor.cpp
+    ${SRC_DIR}/Logger.hpp
+    ${SRC_DIR}/VisualCanvas.hpp
+    ${SRC_DIR}/VisualController.hpp
+    ${SRC_DIR}/VisualEditor.hpp
+    ${SRC_DIR}/VisualObjects.hpp
+    ${SRC_DIR}/VisualPalettes.hpp
+    ${SRC_DIR}/VisualTypes.hpp
 )
 
 set_target_properties(
