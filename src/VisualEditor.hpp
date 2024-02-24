@@ -147,6 +147,8 @@ class DesktopEditor: public VisualEditor
 public:
     DesktopEditor(std::shared_ptr<VisualController> visual_controller) : VisualEditor(visual_controller)
     {
+        WriteLog("DesktopEditor()");
+        //
         m_canvas = std::make_shared<DesktopCanvas>();
         m_object_palette = std::make_shared<DesktopObjectsPalette>();
         m_pen_style_palette = std::make_shared<DesktopPenStylePalette>();
@@ -154,8 +156,6 @@ public:
         m_brush_style_palette = std::make_shared<DesktopBrushStylePalette>();
         m_brush_color_palette = std::make_shared<DesktopColorPalette>();
         m_thickness_selector = std::make_shared<DesktopThicknessSelector>();
-        //
-        WriteLog(__PRETTY_FUNCTION__);        
     }
     
     ~DesktopEditor() 
