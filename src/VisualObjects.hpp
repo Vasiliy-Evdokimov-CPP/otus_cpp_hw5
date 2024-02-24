@@ -1,29 +1,39 @@
 #pragma once
 
 #include <vector>
+#include <map>
 
 #include "VisualTypes.hpp"
 #include "VisualCanvas.hpp"
 
 const int HIT_TOLERANCE = 3;
 
-enum class VisualObjectType { selector, line, rectangle, ellipse };
+enum class VisualObjectType { unknown, selector, line, rectangle, ellipse };
+
+std::map<VisualObjectType, std::string> ObjectTypeToStringMap = 
+{
+    { VisualObjectType::unknown,    "(unknown)" }, 
+    { VisualObjectType::selector,   "SELECTOR" }, 
+    { VisualObjectType::line,       "LINE" }, 
+    { VisualObjectType::rectangle,  "RECTANGLE" }, 
+    { VisualObjectType::ellipse,    "ELLIPSE" }
+};
 
 std::string ObjectTypeToString(VisualObjectType object_type)
 {
-    switch (object_type) 
-    {
-        case VisualObjectType::selector:
-            return "SELECTOR";
-        case VisualObjectType::line:
-            return "LINE";
-        case VisualObjectType::rectangle:
-            return "RECTANGLE";
-        case VisualObjectType::ellipse:
-            return "ELLIPSE";   
-        default:
-            return "(unknown)";     
-    }
+    if (ObjectTypeToStringMap.count(object_type) == 0)
+        return ObjectTypeToStringMap[VisualObjectType::unknown];
+    //
+    return ObjectTypeToStringMap[object_type];     
+}
+
+VisualObjectType StringToObjectType(std::string object_type)
+{
+    for(auto iter{ObjectTypeToStringMap.begin()}; iter != ObjectTypeToStringMap.end(); iter++)
+        if (iter->second == object_type) 
+            return iter->first;
+    //        
+    return VisualObjectType::unknown;
 }
 
 class BaseVisualObject {};
@@ -37,18 +47,12 @@ public:
     {        
         WriteLog("VisualObject()");
     }
-
     ~VisualObject()
     {        
         WriteLog("~VisualObject()");
         //
         m_points.clear();
-    }
-
-    virtual void Draw(std::shared_ptr<IVisualCanvas> canvas) = 0;
-
-    virtual int HitTest(Point point) = 0;
-
+    }    
     int GetPointsCount()
     {
         return m_points.size();
@@ -66,11 +70,33 @@ public:
         return (m_points.size() == GetMaxPointsCount());
     }
 
+    virtual std::string Serialize()
+    {
+        std::string res = ObjectTypeToString(m_type);
+        //
+        res += " " + std::to_string(m_points.size());
+        //
+        for (int i = 0; i < m_points.size(); ++i)
+            res += " " + m_points[i].Serialize();
+        //
+        return res;    
+    }
+
+    virtual std::string GetTypeName()
+    {
+        return ObjectTypeToString(m_type);
+    }
+
+    virtual void Draw(std::shared_ptr<IVisualCanvas> canvas) = 0;
+    virtual int HitTest(Point point) = 0;
+    
     Pen m_pen;
     
 protected:
     int m_max_points_count = 2;
-    std::vector<Point> m_points;    
+    std::vector<Point> m_points;
+    VisualObjectType m_type = VisualObjectType::unknown;
+       
 };
 
 class FilledVisualObject: public VisualObject
@@ -128,6 +154,7 @@ public:
         WriteLog("SimpleLine()");
         //
         m_max_points_count = 2;
+        m_type = VisualObjectType::line;
     } 
     SimpleLine(Pen pen) : SimpleLine()
     {
@@ -138,9 +165,11 @@ public:
 class Rectangle: public RectVisualObject
 {
 public:
-    Rectangle(Pen pen, Brush brush) : RectVisualObject(pen, brush) 
+    Rectangle(Pen pen, Brush brush) : RectVisualObject(pen, brush)
     {
+        WriteLog("Rectangle()");
         //
+        m_type = VisualObjectType::rectangle;
     };
     void Draw(std::shared_ptr<IVisualCanvas> canvas) override
     {
@@ -155,7 +184,9 @@ class Ellipse: public RectVisualObject
 public:
     Ellipse(Pen pen, Brush brush) : RectVisualObject(pen, brush) 
     {
+        WriteLog("Ellipse()");
         //
+        m_type = VisualObjectType::ellipse;
     };
     void Draw(std::shared_ptr<IVisualCanvas> canvas) override
     {

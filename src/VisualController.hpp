@@ -4,6 +4,8 @@
 
 #include <vector>
 #include <algorithm>
+#include <sstream>
+#include <fstream>
 
 #include "Logger.hpp"
 #include "VisualTypes.hpp"
@@ -66,12 +68,12 @@ public:
             m_selected_object = HitTest(point);
             //
             if (m_selected_object != nullptr)
-                WriteLog("Object has been selected!");
+                WriteLog("(" + m_selected_object->Serialize() + ") has been selected!");
         } else {
             m_selected_object = nullptr;
             //
             if (m_current_object == nullptr)
-                m_current_object = CreateCurrentObject(m_current_object_type);
+                m_current_object = CreateObject(m_current_object_type);
             //
             if (m_current_object == nullptr) return;
             //
@@ -130,12 +132,50 @@ public:
 
     void LoadFile(std::string filename)
     {
+        ClearObjects();
         //
+        std::ifstream in(filename);
+        if (in.is_open())
+        {
+            std::string line, s_type; 
+            int points_count, x, y;           
+            //
+            while (std::getline(in, line))
+            {
+                std::stringstream ss(line);
+                ss >> s_type;                
+                //
+                auto vo_type = StringToObjectType(s_type);
+                if (vo_type != VisualObjectType::unknown)
+                {                    
+                    auto new_object = CreateObject(vo_type);                    
+                    ss >> points_count;
+                    for (int i = 0; i < points_count; ++i)
+                    {
+                        ss >> x >> y;
+                        new_object->AddPoint(Point{x, y});
+                    }
+                    m_objects.push_back(new_object);
+                } 
+            }
+        }
+        in.close();
+        //
+        WriteLog("File \"" + filename + "\" has been loaded!");
     };
 
     void SaveFile(std::string filename)
     {
+        std::ofstream out;
+        out.open(filename);
+        if (out.is_open())
+        {
+            for (int i = 0; i < m_objects.size(); ++i)
+                out << m_objects[i]->Serialize() << std::endl;
+        }                
+        out.close();
         //
+        WriteLog("File \"" + filename + "\" has been saved!");
     };
 
     void DeleteSelectedObject() 
@@ -146,7 +186,7 @@ public:
     }
 
 private:
-    std::shared_ptr<VisualObject> CreateCurrentObject(VisualObjectType object_type) 
+    std::shared_ptr<VisualObject> CreateObject(VisualObjectType object_type) 
     {
         switch (object_type)
         {

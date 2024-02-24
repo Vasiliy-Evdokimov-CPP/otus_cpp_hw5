@@ -125,7 +125,7 @@ public:
     }
 
     void LoadFile(std::string filename)
-    {
+    {        
         m_controller->LoadFile(filename);        
         Redraw();
     }

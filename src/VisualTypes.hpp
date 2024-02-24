@@ -2,61 +2,65 @@
 
 #include <string>
 #include <cmath>
+#include <map>
 
 typedef unsigned int uint;
 
-enum class PenStyle { solid, dotted, dashed };
+enum class PenStyle { unknown, solid, dotted, dashed };
 
-enum class BrushStyle { solid, clear, horizontal, vertical };
+enum class BrushStyle { unknown, solid, clear, horizontal, vertical };
 
-enum class Color { black, white, red, green, blue };
+enum class Color { unknown, black, white, red, green, blue };
+
+std::map<PenStyle, std::string> PenStyleToStringMap = 
+{
+    { PenStyle::unknown,    "(unknown)" }, 
+    { PenStyle::solid,      "SOLID" }, 
+    { PenStyle::dotted,     "DOTTED" }, 
+    { PenStyle::dashed,     "DASHED" }
+};
+
+std::map<BrushStyle, std::string> BrushStyleToStringMap = 
+{
+    { BrushStyle::unknown,      "(unknown)" }, 
+    { BrushStyle::solid,        "SOLID" }, 
+    { BrushStyle::clear,        "CLEAR" }, 
+    { BrushStyle::horizontal,   "HORIZONTAL" },
+    { BrushStyle::vertical,     "VERTICAL" }
+};
+
+std::map<Color, std::string> ColorToStringMap = 
+{
+    { Color::unknown,   "(unknown)" }, 
+    { Color::black,     "BLACK" }, 
+    { Color::white,     "WHITE" }, 
+    { Color::red,       "RED" },
+    { Color::green,     "GREEN" },
+    { Color::blue,      "BLUE" }
+};
 
 std::string PenStyleToString(PenStyle pen_style) 
 {
-    switch (pen_style) {
-        case PenStyle::solid:
-            return "SOLID";
-        case PenStyle::dotted:
-            return "DOTTED";
-        case PenStyle::dashed:
-            return "DASHED";                        
-        default:
-            return "(unknown)";    
-    }
+    if (PenStyleToStringMap.count(pen_style) == 0)
+        return PenStyleToStringMap[PenStyle::unknown];
+    //
+    return PenStyleToStringMap[pen_style];     
 }
 
 std::string BrushStyleToString(BrushStyle brush_style) 
 {
-    switch (brush_style) {
-        case BrushStyle::solid:
-            return "SOLID";
-        case BrushStyle::clear:
-            return "CLEAR";
-        case BrushStyle::horizontal:
-            return "HORIZONTAL"; 
-        case BrushStyle::vertical:
-            return "VERTICAL";                           
-        default:
-            return "(unknown)";    
-    }
+    if (BrushStyleToStringMap.count(brush_style) == 0)
+        return BrushStyleToStringMap[BrushStyle::unknown];
+    //
+    return BrushStyleToStringMap[brush_style];    
 }
 
 std::string ColorToString(Color color) 
 {
-    switch (color) {
-        case Color::black:
-            return "BLACK";
-        case Color::white:
-            return "WHITE";   
-        case Color::red:
-            return "RED";
-        case Color::green: 
-            return "GREEN";
-        case Color::blue: 
-            return "BLUE";                                             
-        default:
-            return "(unknown)";    
-    }
+    if (ColorToStringMap.count(color) == 0)
+        return ColorToStringMap[Color::unknown];
+    //
+    return ColorToStringMap[color]; 
 }
 
 struct Point
@@ -67,6 +71,11 @@ struct Point
     std::string ToString() 
     {
         return "(" + std::to_string(x) + "; " + std::to_string(y) + ")";
+    }
+
+    std::string Serialize() 
+    {
+        return std::to_string(x) + " " + std::to_string(y);
     }
 };
 

@@ -39,7 +39,7 @@ int main()
     //  saving file
     desktop_editor.SaveFile("new_picture.txt");
     //  loading file
-    //  desktop_editor.LoadFile("new_picture.txt");
+    desktop_editor.LoadFile("new_picture.txt");
     //
     return 0;
 }
