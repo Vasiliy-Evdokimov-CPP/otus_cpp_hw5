@@ -55,7 +55,7 @@ public:
 
     std::shared_ptr<VisualObject> HitTest(Point point) 
     {
-        for (int i = 0; i < m_objects.size(); ++i) 
+        for (size_t i = 0; i < m_objects.size(); ++i) 
             if (m_objects[i]->HitTest(point))
                 return m_objects[i];
         return nullptr;
@@ -100,14 +100,14 @@ public:
 
     std::shared_ptr<VisualObject> GetObject(uint index)
     {
-        if ((index >= 0) && (index < m_objects.size()))
+        if (index < m_objects.size())
             return m_objects[index];
         return nullptr;
     }
 
     void ClearObjects() 
     {
-        for (int i = 0; i < m_objects.size(); ++i)
+        for (size_t i = 0; i < m_objects.size(); ++i)
             m_objects[i] = nullptr;
         m_objects.clear();    
     }
@@ -170,7 +170,7 @@ public:
         out.open(filename);
         if (out.is_open())
         {
-            for (int i = 0; i < m_objects.size(); ++i)
+            for (size_t i = 0; i < m_objects.size(); ++i)
                 out << m_objects[i]->Serialize() << std::endl;
         }                
         out.close();

@@ -53,11 +53,11 @@ public:
         //
         m_points.clear();
     }    
-    int GetPointsCount()
+    size_t GetPointsCount()
     {
         return m_points.size();
     }    
-    int GetMaxPointsCount()
+    size_t GetMaxPointsCount()
     {
         return m_max_points_count;
     }  
@@ -76,7 +76,7 @@ public:
         //
         res += " " + std::to_string(m_points.size());
         //
-        for (int i = 0; i < m_points.size(); ++i)
+        for (size_t i = 0; i < m_points.size(); ++i)
             res += " " + m_points[i].Serialize();
         //
         return res;    
@@ -93,7 +93,7 @@ public:
     Pen m_pen;
     
 protected:
-    int m_max_points_count = 2;
+    size_t m_max_points_count = 2;
     std::vector<Point> m_points;
     VisualObjectType m_type = VisualObjectType::unknown;
        
@@ -112,7 +112,7 @@ public:
     {
         canvas->m_pen = m_pen;    
         //
-        for (int i = 1; i < m_points.size(); ++i)
+        for (size_t i = 1; i < m_points.size(); ++i)
             canvas->DrawLine(m_points[i - 1], m_points[i]);
     }
     int HitTest(Point point) override 
