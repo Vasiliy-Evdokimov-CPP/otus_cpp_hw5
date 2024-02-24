@@ -14,7 +14,7 @@ public:
     virtual void Draw() = 0;
     void Select(VisualObjectType object_type)
     {
-        WriteLog(ObjectTypeToString(object_type) + " object selected");
+        WriteLog(ObjectTypeToString(object_type) + " object has been selected");
         m_selected = object_type;
     }
 };
@@ -27,7 +27,7 @@ public:
     virtual void Draw() = 0;
     void Select(PenStyle pen_style)
     {
-        WriteLog(PenStyleToString(pen_style) + " pen selected");
+        WriteLog(PenStyleToString(pen_style) + " pen has been selected");
         m_selected = pen_style;
     }
 };
@@ -40,7 +40,7 @@ public:
     virtual void Draw() = 0;
     void Select(BrushStyle brush_style)
     {
-        WriteLog(BrushStyleToString(brush_style) + " brush selected");
+        WriteLog(BrushStyleToString(brush_style) + " brush has been selected");
         m_selected = brush_style;
     }
 };
@@ -54,7 +54,7 @@ public:
     void Select(Color color)
     {
         m_selected = color;
-        WriteLog(ColorToString(color) + " color selected");
+        WriteLog(ColorToString(color) + " color has been selected");
     }
 };
 
@@ -66,7 +66,7 @@ public:
     virtual void Draw() = 0;
     void Select(uint thickness)
     {
-        WriteLog(std::to_string(thickness) + "px thickness selected");
+        WriteLog(std::to_string(thickness) + "px thickness has been selected");
         m_selected = thickness;
     }
 };

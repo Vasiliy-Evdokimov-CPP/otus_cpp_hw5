@@ -12,7 +12,7 @@ public:
     
     void Clear()
     {
-        WriteLog("Canvas is cleared!");
+        WriteLog("Canvas has been cleared!");
     }
 
     Pen m_pen;

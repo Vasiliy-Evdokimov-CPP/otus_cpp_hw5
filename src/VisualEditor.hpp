@@ -108,7 +108,8 @@ public:
         //
         if (key == KeyboardKey::vk_delete)
         {
-            //
+            m_controller->DeleteSelectedObject();
+            Redraw();
         }
     }
 

@@ -1,7 +1,9 @@
 #pragma once
 
 #include <memory>
+
 #include <vector>
+#include <algorithm>
 
 #include "Logger.hpp"
 #include "VisualTypes.hpp"
@@ -62,6 +64,9 @@ public:
         if (m_current_object_type == VisualObjectType::selector) 
         {
             m_selected_object = HitTest(point);
+            //
+            if (m_selected_object != nullptr)
+                WriteLog("Object has been selected!");
         } else {
             m_selected_object = nullptr;
             //
@@ -105,9 +110,17 @@ public:
         m_objects.clear();    
     }
 
-    void DeleteObject(std::shared_ptr<VisualObject> object)
+    int DeleteObject(std::shared_ptr<VisualObject> object)
     {
+        if (object == nullptr) return 0;
         //
+        auto found = std::find_if(m_objects.begin(), m_objects.end(), 
+            [&](const std::shared_ptr<VisualObject>& ptr) { return ptr == object; });
+        //
+        if (found == m_objects.end()) return 0;
+        //
+        m_objects.erase(found); 
+        return 1;            
     }
 
     void NewFile()
@@ -124,6 +137,13 @@ public:
     {
         //
     };
+
+    void DeleteSelectedObject() 
+    { 
+        if (DeleteObject(m_selected_object)) {
+            m_selected_object = nullptr;
+        }
+    }
 
 private:
     std::shared_ptr<VisualObject> CreateCurrentObject(VisualObjectType object_type) 
