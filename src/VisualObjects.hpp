@@ -1,15 +1,32 @@
 #pragma once
 
+/**
+    \file
+    \details
+        В файле описывается классы визуальных объектов
+*/
+
 #include <vector>
 #include <map>
 
 #include "VisualTypes.hpp"
 #include "VisualCanvas.hpp"
 
+/**
+    \brief
+        Чувствительность при выделении объекта
+*/        
 const int HIT_TOLERANCE = 3;
 
+/**
+    \brief
+        Типы визуальных объектов
+*/ 
 enum class VisualObjectType { unknown, selector, line, rectangle, ellipse };
-
+/**
+    \brief
+        Словарь соответствия типа объекта его названию 
+*/ 
 std::map<VisualObjectType, std::string> ObjectTypeToStringMap = 
 {
     { VisualObjectType::unknown,    "(unknown)" }, 
@@ -18,7 +35,10 @@ std::map<VisualObjectType, std::string> ObjectTypeToStringMap =
     { VisualObjectType::rectangle,  "RECTANGLE" }, 
     { VisualObjectType::ellipse,    "ELLIPSE" }
 };
-
+/**
+    \brief
+        Преобразование типа объекта в строку
+*/ 
 std::string ObjectTypeToString(VisualObjectType object_type)
 {
     if (ObjectTypeToStringMap.count(object_type) == 0)
@@ -26,7 +46,10 @@ std::string ObjectTypeToString(VisualObjectType object_type)
     //
     return ObjectTypeToStringMap[object_type];     
 }
-
+/**
+    \brief
+        Преобразование типа строки в тип объекта
+*/ 
 VisualObjectType StringToObjectType(std::string object_type)
 {
     for(auto iter{ObjectTypeToStringMap.begin()}; iter != ObjectTypeToStringMap.end(); iter++)
@@ -36,10 +59,22 @@ VisualObjectType StringToObjectType(std::string object_type)
     return VisualObjectType::unknown;
 }
 
+/**
+    \brief
+        Базовый класс визуальных объектов
+*/
 class BaseVisualObject {};
 
+/**
+    \brief
+        Селектор - отдельного или группового выделения объектов
+*/
 class Selector: public BaseVisualObject {};
 
+/**
+    \brief
+        Визуальный объект - объекты непосредственно рисуемые в редакторе
+*/
 class VisualObject: public BaseVisualObject
 {
 public:
