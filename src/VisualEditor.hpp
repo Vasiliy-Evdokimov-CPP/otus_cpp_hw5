@@ -146,7 +146,7 @@ public:
     {
         m_canvas->Clear();
         //
-        for (int i = 0; i < m_controller->GetObjectsCount(); i++)
+        for (size_t i = 0; i < m_controller->GetObjectsCount(); i++)
         {
             std::shared_ptr<VisualObject> obj = m_controller->GetObject(i);
             obj->Draw(m_canvas);
