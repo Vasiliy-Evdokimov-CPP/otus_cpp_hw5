@@ -15,36 +15,40 @@
         Задание считается выполненным успешно, если все файлы прошли стадию компиляции, все классы охвачены диаграммами, код успешно прошел анализ.
 */
 
+#include "Logger.hpp"
 #include "VisualController.hpp"
 #include "VisualEditor.hpp"
 
 int main()
 {
-    std::shared_ptr<VisualController> visual_controller = std::make_shared<VisualController>();
-    DesktopEditor desktop_editor(visual_controller);
+    DesktopEditor desktop_editor(
+        std::make_shared<VisualController>(
+            std::make_shared<ConsoleLogger>()
+        )
+    );
     //
-    //  creating new file
+    //  создание нового документа
     desktop_editor.NewFile();
-    //  draw the line
+    //  рисуем линию
     desktop_editor.SelectPenColor(Color::green);
     desktop_editor.SelectObjectType(VisualObjectType::line);
     desktop_editor.MouseDown(Point{10, 10}, MouseButton::left);  
     desktop_editor.MouseDown(Point{20, 20}, MouseButton::left);
-    //  draw the rectangle, but cancel via right mouse button
+    //  начинаем рисовать прямоугольник, но отменяем, нажимая ПКМ
     desktop_editor.SelectObjectType(VisualObjectType::rectangle);
     desktop_editor.MouseDown(Point{30, 30}, MouseButton::left); 
     desktop_editor.MouseDown(Point{40, 40}, MouseButton::right);
-    //  draw the ellipse
+    //  рисуем эллипс
     desktop_editor.SelectBrushColor(Color::red);
     desktop_editor.SelectBrushStyle(BrushStyle::vertical);
     desktop_editor.SelectObjectType(VisualObjectType::ellipse);
     desktop_editor.MouseDown(Point{50, 50}, MouseButton::left); 
     desktop_editor.MouseDown(Point{60, 60}, MouseButton::left);
-    //  select and delete the ellipse
+    //  выбираем и удаляем эллипс
     desktop_editor.SelectObjectType(VisualObjectType::selector);
     desktop_editor.MouseDown(Point{55, 55}, MouseButton::left); 
     desktop_editor.KeyPress(KeyboardKey::vk_delete);
-    //  draw the another ellipse
+    //  рисуем ещё один эллипс
     desktop_editor.SelectPenStyle(PenStyle::dotted);
     desktop_editor.SelectBrushColor(Color::green);
     desktop_editor.SelectBrushStyle(BrushStyle::horizontal);    
@@ -52,9 +56,9 @@ int main()
     desktop_editor.MouseDown(Point{10, 10}, MouseButton::left); 
     desktop_editor.MouseDown(Point{20, 20}, MouseButton::left);
     //
-    //  saving file
+    //  сохраняем файл
     desktop_editor.SaveFile("new_picture.txt");
-    //  loading file
+    //  загружаем файл
     desktop_editor.LoadFile("new_picture.txt");
     //
     return 0;

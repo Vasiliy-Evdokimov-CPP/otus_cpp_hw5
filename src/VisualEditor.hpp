@@ -10,7 +10,6 @@
 
 #include "Logger.hpp"
 #include "VisualCanvas.hpp"
-#include "VisualPalettes.hpp"
 #include "VisualController.hpp"
 
 /**
@@ -18,6 +17,7 @@
         Кнопки мыши
 */
 enum class MouseButton { left, middle, right };
+
 /**
     \details
         Клавиши клавиатуры
@@ -77,6 +77,7 @@ public:
     {
         m_controller = visual_controller;
     }
+
     /**
         \brief
             Выбор типа создаваемого объекта
@@ -84,9 +85,9 @@ public:
     */
     void SelectObjectType(VisualObjectType object_type)
     {
-        m_object_palette->Select(object_type);
         m_controller->SelectObjectType(object_type);
     }
+
     /**
         \brief
             Выбор типа пера
@@ -94,9 +95,9 @@ public:
     */
     void SelectPenStyle(PenStyle pen_style)
     {
-        m_pen_style_palette->Select(pen_style);
         m_controller->SetPenStyle(pen_style);
     }
+
     /**
         \brief
             Выбор цвета пера
@@ -104,9 +105,9 @@ public:
     */
     void SelectPenColor(Color color)
     {
-        m_pen_color_palette->Select(color);
         m_controller->SetPenColor(color);
     }
+
     /**
         \brief
             Выбор типа кисти
@@ -114,9 +115,9 @@ public:
     */
     void SelectBrushStyle(BrushStyle brush_style)
     {
-        m_brush_style_palette->Select(brush_style);
         m_controller->SetBrushStyle(brush_style);
     }
+
     /**
         \brief
             Выбор цвета кисти
@@ -124,9 +125,9 @@ public:
     */
     void SelectBrushColor(Color color)
     {
-        m_brush_color_palette->Select(color);
         m_controller->SetBrushColor(color);
     }
+
     /**
         \brief
             Выбор толщины пера
@@ -134,9 +135,9 @@ public:
     */
     void SelectThickness(uint thickness)
     {
-        m_thickness_selector->Select(thickness);
         m_controller->SetPenThickness(thickness);
     }    
+
     /**
         \brief
             Перерисовка редактора
@@ -151,6 +152,7 @@ public:
             obj->Draw(m_canvas);
         }            
     }
+
     /**
         \brief
             Нажатие кнопки мыши 
@@ -168,6 +170,7 @@ public:
         //
         Redraw();
     }
+
     /**
         \brief
             Нажатие клавиши клавиатуры 
@@ -183,6 +186,7 @@ public:
             Redraw();
         }
     }
+
     /**
         \brief
             Создание файла
@@ -192,6 +196,7 @@ public:
         m_controller->NewFile();
         m_canvas->Clear();
     }
+
     /**
         \brief
             Сохранение файла 
@@ -201,6 +206,7 @@ public:
     {
         m_controller->SaveFile(filename);
     }
+
     /**
         \brief
             Загрузка файла 
@@ -218,37 +224,7 @@ protected:
             Холст редактора 
     */
     std::shared_ptr<IVisualCanvas> m_canvas;
-    /**
-        \brief
-            Палитра объектов 
-    */
-    std::shared_ptr<IObjectsPalette> m_object_palette;
-    /**
-        \brief
-            Палитра стилей пера 
-    */
-    std::shared_ptr<IPenStylePalette> m_pen_style_palette;
-    /**
-        \brief
-            Палитра цветов пера 
-    */    
-    std::shared_ptr<IColorPalette> m_pen_color_palette;
-    /**
-        \brief
-            Палитра стилей кисти 
-    */ 
-    std::shared_ptr<IBrushStylePalette> m_brush_style_palette;
-    /**
-        \brief
-            Палитра цветов кисти 
-    */ 
-    std::shared_ptr<IColorPalette> m_brush_color_palette;
-    /**
-        \brief
-            Палитра толщин пера
-    */ 
-    std::shared_ptr<IThicknessSelector> m_thickness_selector;
-    //
+
     /**
         \brief
             Контроллер
@@ -275,13 +251,8 @@ public:
         WriteLog("DesktopEditor()");
         //
         m_canvas = std::make_shared<DesktopCanvas>();
-        m_object_palette = std::make_shared<DesktopObjectsPalette>();
-        m_pen_style_palette = std::make_shared<DesktopPenStylePalette>();
-        m_pen_color_palette = std::make_shared<DesktopColorPalette>();
-        m_brush_style_palette = std::make_shared<DesktopBrushStylePalette>();
-        m_brush_color_palette = std::make_shared<DesktopColorPalette>();
-        m_thickness_selector = std::make_shared<DesktopThicknessSelector>();
     }
+    
     /**
         \brief
             Деструктор
@@ -289,12 +260,6 @@ public:
     ~DesktopEditor() 
     {
         m_canvas = nullptr;
-        m_object_palette = nullptr;
-        m_pen_style_palette = nullptr;
-        m_pen_color_palette = nullptr;
-        m_brush_style_palette = nullptr;
-        m_brush_color_palette = nullptr;
-        m_thickness_selector = nullptr;
     }
 
 };

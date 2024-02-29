@@ -30,11 +30,14 @@ public:
         \brief
             Конструктор контроллера
     */
-    VisualController()
+    VisualController(std::shared_ptr<ILogger> logger)
     {
+        m_logger = logger;
+        //
         WriteLog("VisualController()");
         ClearObjects();
     }
+    
     /**
         \brief
             Деструктор контроллера
@@ -44,6 +47,7 @@ public:
         WriteLog("~VisualController()");
         ClearObjects();
     }
+
     /**
         \brief
             Метод задания текущего создавемого объекта
@@ -53,6 +57,7 @@ public:
     {
         m_current_object_type = object_type;
     }
+
     /**
         \brief
             Метод задания текущего стиля пера
@@ -62,6 +67,7 @@ public:
     {
         m_current_pen.style = pen_style;
     }
+
     /**
         \brief
             Метод задания текущего цвета пера
@@ -71,6 +77,7 @@ public:
     {
         m_current_pen.color = color;
     }
+
     /**
         \brief
             Метод задания текущей толщины пера
@@ -80,6 +87,7 @@ public:
     {
         m_current_pen.thickness = thickness;
     }
+
     /**
         \brief
             Метод задания текущего стиля кисти
@@ -89,6 +97,7 @@ public:
     {
         m_current_brush.style = brush_style;
     }
+
     /**
         \brief
             Метод задания текущего цвета кисти
@@ -98,6 +107,7 @@ public:
     {
         m_current_brush.color = color;
     }
+
     /**
         \brief
             Поиск объекта, содержащего внутри указанную точку
@@ -110,6 +120,7 @@ public:
                 return m_objects[i];
         return nullptr;
     }
+
     /**
         \brief
             Обработка контроллером новой точки
@@ -142,6 +153,7 @@ public:
             }
         }                
     }
+
     /**
         \brief
             Обработка отмены конструирования
@@ -151,14 +163,16 @@ public:
         m_selected_object = nullptr;
         m_current_object = nullptr;
     }
+
     /**
         \brief
             Получение количества объектов
     */ 
-    int GetObjectsCount()
+    size_t GetObjectsCount()
     {
         return m_objects.size();
     }
+
     /**
         \brief
             Получение объекта по индексу
@@ -169,6 +183,7 @@ public:
             return m_objects[index];
         return nullptr;
     }
+
     /**
         \brief
             Удаление всех объектов
@@ -179,6 +194,7 @@ public:
             m_objects[i] = nullptr;
         m_objects.clear();    
     }
+
     /**
         \brief
             Удаление объекта
@@ -195,6 +211,7 @@ public:
         m_objects.erase(found); 
         return 1;            
     }
+
     /**
         \brief
             Создание нового файла
@@ -203,6 +220,7 @@ public:
     {
         ClearObjects();
     };
+
     /**
         \brief
            Загрузка файла
@@ -241,6 +259,7 @@ public:
         //
         WriteLog("File \"" + filename + "\" has been loaded!");
     };
+
     /**
         \brief
            Сохранение файла
@@ -259,6 +278,7 @@ public:
         //
         WriteLog("File \"" + filename + "\" has been saved!");
     };
+
     /**
         \brief
            Удаление текущего выбранного объекта
@@ -271,6 +291,12 @@ public:
     }
 
 private:
+
+    void WriteLog(std::string message)
+    {
+        m_logger->WriteLog(message);
+    }
+
     /**
         \brief
            Создание объекта указанного типа
@@ -294,31 +320,43 @@ private:
                 break;
         }
     }
+
+    /**
+        \brief
+            Логгер
+    */
+    std::shared_ptr<ILogger> m_logger;
+
     /**
         \brief
             Список объектов
     */
     std::vector<std::shared_ptr<VisualObject>> m_objects;
+
     /**
         \brief
             Текущий выбранный тип объекта
     */
     VisualObjectType m_current_object_type = VisualObjectType::selector;
+
     /**
         \brief
             Текущее перо
     */
     Pen m_current_pen;
+
     /**
         \brief
             Текущая кисть
     */
     Brush m_current_brush;
+
     /**
         \brief
             Конструируемый объект
     */
     std::shared_ptr<VisualObject> m_current_object;
+
     /**
         \brief
             Выбранный объект

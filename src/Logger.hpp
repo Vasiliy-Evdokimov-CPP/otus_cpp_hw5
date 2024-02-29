@@ -18,7 +18,7 @@ class ILogger
 public:
     /**
         \brief
-            Логирующий метод
+            Логгирующий метод
         \param message строка, записываемая в лог
     */
     virtual void WriteLog(std::string message) = 0;
@@ -33,12 +33,11 @@ class ConsoleLogger: public ILogger
 public:
     virtual void WriteLog(std::string message) override
     {
-        std::cout << message << std::endl;
+        std::cout << "Console logger:\t" << message << std::endl;
     }
 };
 
-
 void WriteLog(std::string message)
 {
-    std::cout << message << std::endl;
+    std::cout << "Default logging:\t" << message << std::endl;
 }

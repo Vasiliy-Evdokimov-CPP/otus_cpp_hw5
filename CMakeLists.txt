@@ -17,7 +17,6 @@ add_executable(${PROJECT_NAME}
     ${SRC_DIR}/VisualController.hpp
     ${SRC_DIR}/VisualEditor.hpp
     ${SRC_DIR}/VisualObjects.hpp
-    ${SRC_DIR}/VisualPalettes.hpp
     ${SRC_DIR}/VisualTypes.hpp
 )
 
