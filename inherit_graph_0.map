@@ -1,0 +1,11 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="node1" href="$classBaseVisualObject.html" title="Базовый класс визуальных объектов" alt="" coords="5,31,132,57"/>
+<area shape="rect" id="node2" href="$classSelector.html" title="Селектор &#45; отдельное или групповое выделение объектов" alt="" coords="193,5,263,32"/>
+<area shape="rect" id="node3" href="$classVisualObject.html" title="Визуальный объект &#45; объекты непосредственно рисуемые в редакторе" alt="" coords="180,56,276,83"/>
+<area shape="rect" id="node4" href="$classFilledVisualObject.html" title="Заполняемый объект" alt="" coords="324,31,451,57"/>
+<area shape="rect" id="node8" href="$classLineVisualObject.html" title="Линейный объект" alt="" coords="327,81,448,108"/>
+<area shape="rect" id="node5" href="$classRectVisualObject.html" title="Прямоугольный объект" alt="" coords="499,31,621,57"/>
+<area shape="rect" id="node6" href="$classEllipse.html" title="Объект &#45; эллипс" alt="" coords="679,5,739,32"/>
+<area shape="rect" id="node7" href="$classRectangle.html" title="Объект &#45; прямоугольник" alt="" coords="669,56,749,83"/>
+<area shape="rect" id="node9" href="$classSimpleLine.html" title="Объект &#45; простая линия" alt="" coords="517,81,603,108"/>
+</map>

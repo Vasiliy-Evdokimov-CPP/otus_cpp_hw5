@@ -1,0 +1,10 @@
+<map id="VisualObject" name="VisualObject">
+<area shape="rect" id="node1" title="Визуальный объект &#45; объекты непосредственно рисуемые в редакторе" alt="" coords="107,80,203,107"/>
+<area shape="rect" id="node3" href="$classFilledVisualObject.html" title="Заполняемый объект" alt="" coords="19,155,145,181"/>
+<area shape="rect" id="node7" href="$classLineVisualObject.html" title="Линейный объект" alt="" coords="169,155,291,181"/>
+<area shape="rect" id="node2" href="$classBaseVisualObject.html" title="Базовый класс визуальных объектов" alt="" coords="92,5,219,32"/>
+<area shape="rect" id="node4" href="$classRectVisualObject.html" title="Прямоугольный объект" alt="" coords="21,229,143,256"/>
+<area shape="rect" id="node5" href="$classEllipse.html" title="Объект &#45; эллипс" alt="" coords="5,304,65,331"/>
+<area shape="rect" id="node6" href="$classRectangle.html" title="Объект &#45; прямоугольник" alt="" coords="90,304,170,331"/>
+<area shape="rect" id="node8" href="$classSimpleLine.html" title="Объект &#45; простая линия" alt="" coords="187,229,273,256"/>
+</map>

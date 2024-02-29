@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>editor: Исходный файл src/VisualTypes.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">editor
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">OTUS C++ Professional Homework #5</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">VisualTypes.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="VisualTypes_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uint;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="VisualTypes_8hpp.html#ab70170afb6347d18ff9dac17e05e133e">   19</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="VisualTypes_8hpp.html#ab70170afb6347d18ff9dac17e05e133e">PenStyle</a> { unknown, solid, dotted, dashed };</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="VisualTypes_8hpp.html#af67a889bc5e9f8ab3a59fe58b0fa2128">   25</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="VisualTypes_8hpp.html#af67a889bc5e9f8ab3a59fe58b0fa2128">BrushStyle</a> { unknown, solid, clear, horizontal, vertical };</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="VisualTypes_8hpp.html#ab87bacfdad76e61b9412d7124be44c1c">   31</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="VisualTypes_8hpp.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a> { unknown, black, white, red, green, blue };</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="VisualTypes_8hpp.html#aeaa1ba7bed105e1b0b6523dddf317583">   37</a></span>&#160;std::map&lt;PenStyle, std::string&gt; <a class="code" href="VisualTypes_8hpp.html#aeaa1ba7bed105e1b0b6523dddf317583">PenStyleToStringMap</a> = </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    { PenStyle::unknown,    <span class="stringliteral">&quot;(unknown)&quot;</span> }, </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    { PenStyle::solid,      <span class="stringliteral">&quot;SOLID&quot;</span> }, </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    { PenStyle::dotted,     <span class="stringliteral">&quot;DOTTED&quot;</span> }, </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    { PenStyle::dashed,     <span class="stringliteral">&quot;DASHED&quot;</span> }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="VisualTypes_8hpp.html#a74cba5873bf94e07a8e579428b2b2a3a">   49</a></span>&#160;std::map&lt;BrushStyle, std::string&gt; <a class="code" href="VisualTypes_8hpp.html#a74cba5873bf94e07a8e579428b2b2a3a">BrushStyleToStringMap</a> = </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    { BrushStyle::unknown,      <span class="stringliteral">&quot;(unknown)&quot;</span> }, </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    { BrushStyle::solid,        <span class="stringliteral">&quot;SOLID&quot;</span> }, </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    { BrushStyle::clear,        <span class="stringliteral">&quot;CLEAR&quot;</span> }, </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    { BrushStyle::horizontal,   <span class="stringliteral">&quot;HORIZONTAL&quot;</span> },</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    { BrushStyle::vertical,     <span class="stringliteral">&quot;VERTICAL&quot;</span> }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="VisualTypes_8hpp.html#a2234511b26ae0f9bcc9ca4cd06f4a325">   62</a></span>&#160;std::map&lt;Color, std::string&gt; <a class="code" href="VisualTypes_8hpp.html#a2234511b26ae0f9bcc9ca4cd06f4a325">ColorToStringMap</a> = </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    { Color::unknown,   <span class="stringliteral">&quot;(unknown)&quot;</span> }, </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    { Color::black,     <span class="stringliteral">&quot;BLACK&quot;</span> }, </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    { Color::white,     <span class="stringliteral">&quot;WHITE&quot;</span> }, </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    { Color::red,       <span class="stringliteral">&quot;RED&quot;</span> },</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    { Color::green,     <span class="stringliteral">&quot;GREEN&quot;</span> },</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    { Color::blue,      <span class="stringliteral">&quot;BLUE&quot;</span> }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;};</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="VisualTypes_8hpp.html#ac9290d027e4abf69771a7e0c80406fc5">   76</a></span>&#160;std::string <a class="code" href="VisualTypes_8hpp.html#ac9290d027e4abf69771a7e0c80406fc5">PenStyleToString</a>(<a class="code" href="VisualTypes_8hpp.html#ab70170afb6347d18ff9dac17e05e133e">PenStyle</a> pen_style) </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;{</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="VisualTypes_8hpp.html#aeaa1ba7bed105e1b0b6523dddf317583">PenStyleToStringMap</a>.count(pen_style) == 0)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="VisualTypes_8hpp.html#aeaa1ba7bed105e1b0b6523dddf317583">PenStyleToStringMap</a>[PenStyle::unknown];</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="VisualTypes_8hpp.html#aeaa1ba7bed105e1b0b6523dddf317583">PenStyleToStringMap</a>[pen_style];     </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="VisualTypes_8hpp.html#a45a6906fed3728f07872d096cda06d94">   88</a></span>&#160;std::string <a class="code" href="VisualTypes_8hpp.html#a45a6906fed3728f07872d096cda06d94">BrushStyleToString</a>(<a class="code" href="VisualTypes_8hpp.html#af67a889bc5e9f8ab3a59fe58b0fa2128">BrushStyle</a> brush_style) </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;{</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="VisualTypes_8hpp.html#a74cba5873bf94e07a8e579428b2b2a3a">BrushStyleToStringMap</a>.count(brush_style) == 0)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="VisualTypes_8hpp.html#a74cba5873bf94e07a8e579428b2b2a3a">BrushStyleToStringMap</a>[BrushStyle::unknown];</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="VisualTypes_8hpp.html#a74cba5873bf94e07a8e579428b2b2a3a">BrushStyleToStringMap</a>[brush_style];    </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="VisualTypes_8hpp.html#a250994a24dfaa30785e83d4105c3c235">  100</a></span>&#160;std::string <a class="code" href="VisualTypes_8hpp.html#a250994a24dfaa30785e83d4105c3c235">ColorToString</a>(<a class="code" href="VisualTypes_8hpp.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a> color) </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;{</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="VisualTypes_8hpp.html#a2234511b26ae0f9bcc9ca4cd06f4a325">ColorToStringMap</a>.count(color) == 0)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="VisualTypes_8hpp.html#a2234511b26ae0f9bcc9ca4cd06f4a325">ColorToStringMap</a>[Color::unknown];</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="VisualTypes_8hpp.html#a2234511b26ae0f9bcc9ca4cd06f4a325">ColorToStringMap</a>[color]; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="structPoint.html">  112</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structPoint.html">Point</a></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;{</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">int</span> x;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">int</span> y;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="structPoint.html#aba32004a556319237903f6316f8b370d">  121</a></span>&#160;    std::string <a class="code" href="structPoint.html#aba32004a556319237903f6316f8b370d">ToString</a>() </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;(&quot;</span> + std::to_string(x) + <span class="stringliteral">&quot;; &quot;</span> + std::to_string(y) + <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="structPoint.html#a031af63ba2f8133e08347086bbb6a395">  130</a></span>&#160;    std::string <a class="code" href="structPoint.html#a031af63ba2f8133e08347086bbb6a395">Serialize</a>() </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordflow">return</span> std::to_string(x) + <span class="stringliteral">&quot; &quot;</span> + std::to_string(y);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;};</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="structPen.html">  140</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structPen.html">Pen</a> </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;{</div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="structPen.html#a35bb787978cb795bd371c65ece6baa21">  146</a></span>&#160;    <a class="code" href="structPen.html#a35bb787978cb795bd371c65ece6baa21">Pen</a>(): </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <a class="code" href="structPen.html#a2234cbbfb0ac45e0a01cac8d3bc8f916">style</a>(<a class="code" href="VisualTypes_8hpp.html#ab70170afb6347d18ff9dac17e05e133e">PenStyle</a>::solid),</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <a class="code" href="structPen.html#a8f99118a39311b2d97e98f3539ff55b2">color</a>(<a class="code" href="VisualTypes_8hpp.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a>::black),</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <a class="code" href="structPen.html#a72641553b0ec00d3864ef065e34c4043">thickness</a>(1) {}</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        </div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="structPen.html#a2234cbbfb0ac45e0a01cac8d3bc8f916">  155</a></span>&#160;    <a class="code" href="VisualTypes_8hpp.html#ab70170afb6347d18ff9dac17e05e133e">PenStyle</a> <a class="code" href="structPen.html#a2234cbbfb0ac45e0a01cac8d3bc8f916">style</a>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="structPen.html#a8f99118a39311b2d97e98f3539ff55b2">  161</a></span>&#160;    <a class="code" href="VisualTypes_8hpp.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a> <a class="code" href="structPen.html#a8f99118a39311b2d97e98f3539ff55b2">color</a>;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="structPen.html#a72641553b0ec00d3864ef065e34c4043">  167</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="structPen.html#a72641553b0ec00d3864ef065e34c4043">thickness</a>;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno"><a class="line" href="structPen.html#a3b2d0fd773b91c2d64571c2ab26913b9">  173</a></span>&#160;    std::string <a class="code" href="structPen.html#a3b2d0fd773b91c2d64571c2ab26913b9">ToString</a>()</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    {</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;(&quot;</span> +</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            std::to_string(<a class="code" href="structPen.html#a72641553b0ec00d3864ef065e34c4043">thickness</a>) + <span class="stringliteral">&quot;px; &quot;</span> +  </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <a class="code" href="VisualTypes_8hpp.html#ac9290d027e4abf69771a7e0c80406fc5">PenStyleToString</a>(<a class="code" href="structPen.html#a2234cbbfb0ac45e0a01cac8d3bc8f916">style</a>) + <span class="stringliteral">&quot;; &quot;</span> + </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            <a class="code" href="VisualTypes_8hpp.html#a250994a24dfaa30785e83d4105c3c235">ColorToString</a>(<a class="code" href="structPen.html#a8f99118a39311b2d97e98f3539ff55b2">color</a>) + </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;};</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno"><a class="line" href="structBrush.html">  188</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structBrush.html">Brush</a> </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;{</div>
+<div class="line"><a name="l00194"></a><span class="lineno"><a class="line" href="structBrush.html#ab7643401623ee2c203e24db745d1c725">  194</a></span>&#160;    <a class="code" href="structBrush.html#ab7643401623ee2c203e24db745d1c725">Brush</a>():</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <a class="code" href="structBrush.html#a6b0f7711db24fe522417840c5f7fe88a">style</a>(<a class="code" href="VisualTypes_8hpp.html#af67a889bc5e9f8ab3a59fe58b0fa2128">BrushStyle</a>::solid),</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <a class="code" href="structBrush.html#a248159c81b81efb25ff8ec3416898973">color</a>(<a class="code" href="VisualTypes_8hpp.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a>::white) {}</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="structBrush.html#a6b0f7711db24fe522417840c5f7fe88a">  202</a></span>&#160;    <a class="code" href="VisualTypes_8hpp.html#af67a889bc5e9f8ab3a59fe58b0fa2128">BrushStyle</a> <a class="code" href="structBrush.html#a6b0f7711db24fe522417840c5f7fe88a">style</a>;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00208"></a><span class="lineno"><a class="line" href="structBrush.html#a248159c81b81efb25ff8ec3416898973">  208</a></span>&#160;    <a class="code" href="VisualTypes_8hpp.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a> <a class="code" href="structBrush.html#a248159c81b81efb25ff8ec3416898973">color</a>;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    </div>
+<div class="line"><a name="l00214"></a><span class="lineno"><a class="line" href="structBrush.html#a7cdce9546fd6d8612465a18d1ebf7cad">  214</a></span>&#160;    std::string <a class="code" href="structBrush.html#a7cdce9546fd6d8612465a18d1ebf7cad">ToString</a>()</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    {</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;(&quot;</span> + </div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            <a class="code" href="VisualTypes_8hpp.html#a45a6906fed3728f07872d096cda06d94">BrushStyleToString</a>(<a class="code" href="structBrush.html#a6b0f7711db24fe522417840c5f7fe88a">style</a>) + <span class="stringliteral">&quot;; &quot;</span> + </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            <a class="code" href="VisualTypes_8hpp.html#a250994a24dfaa30785e83d4105c3c235">ColorToString</a>(<a class="code" href="structBrush.html#a248159c81b81efb25ff8ec3416898973">color</a>) + </div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    }</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;};</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
+<div class="line"><a name="l00230"></a><span class="lineno"><a class="line" href="VisualTypes_8hpp.html#ad2c5127560ec00a3ab73d953a4df6c64">  230</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="VisualTypes_8hpp.html#ad2c5127560ec00a3ab73d953a4df6c64">distance</a>(<a class="code" href="structPoint.html">Point</a> p, <a class="code" href="structPoint.html">Point</a> p1, <a class="code" href="structPoint.html">Point</a> p2) </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;{</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordtype">double</span> A = p.x - p1.x;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordtype">double</span> B = p.y - p1.y;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordtype">double</span> C = p2.x - p1.x;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordtype">double</span> D = p2.y - p1.y;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordtype">double</span> dot = A * C + B * D;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordtype">double</span> len_sq = C * C + D * D;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keywordtype">double</span> param = dot / len_sq;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordtype">double</span> xx, yy;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordflow">if</span> (param &lt; 0) {</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        xx = p1.x;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        yy = p1.y;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    }</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (param &gt; 1) {</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        xx = p2.x;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        yy = p2.y;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    }</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        xx = p1.x + param * C;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        yy = p1.y + param * D;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    }</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    </div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordtype">double</span> dx = p.x - xx;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordtype">double</span> dy = p.y - yy;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    </div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordflow">return</span> std::sqrt(dx * dx + dy * dy);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;}</div>
+<div class="ttc" id="aVisualTypes_8hpp_html_a2234511b26ae0f9bcc9ca4cd06f4a325"><div class="ttname"><a href="VisualTypes_8hpp.html#a2234511b26ae0f9bcc9ca4cd06f4a325">ColorToStringMap</a></div><div class="ttdeci">std::map&lt; Color, std::string &gt; ColorToStringMap</div><div class="ttdoc">Словарь соответствия цвета его названию</div><div class="ttdef"><b>Definition:</b> VisualTypes.hpp:62</div></div>
+<div class="ttc" id="aVisualTypes_8hpp_html_a250994a24dfaa30785e83d4105c3c235"><div class="ttname"><a href="VisualTypes_8hpp.html#a250994a24dfaa30785e83d4105c3c235">ColorToString</a></div><div class="ttdeci">std::string ColorToString(Color color)</div><div class="ttdoc">Преобразование цвета в строку</div><div class="ttdef"><b>Definition:</b> VisualTypes.hpp:100</div></div>
+<div class="ttc" id="aVisualTypes_8hpp_html_a45a6906fed3728f07872d096cda06d94"><div class="ttname"><a href="VisualTypes_8hpp.html#a45a6906fed3728f07872d096cda06d94">BrushStyleToString</a></div><div class="ttdeci">std::string BrushStyleToString(BrushStyle brush_style)</div><div class="ttdoc">Преобразование стиля кисти в строку</div><div class="ttdef"><b>Definition:</b> VisualTypes.hpp:88</div></div>
+<div class="ttc" id="aVisualTypes_8hpp_html_a74cba5873bf94e07a8e579428b2b2a3a"><div class="ttname"><a href="VisualTypes_8hpp.html#a74cba5873bf94e07a8e579428b2b2a3a">BrushStyleToStringMap</a></div><div class="ttdeci">std::map&lt; BrushStyle, std::string &gt; BrushStyleToStringMap</div><div class="ttdoc">Словарь соответствия стиля кисти его названию</div><div class="ttdef"><b>Definition:</b> VisualTypes.hpp:49</div></div>
+<div class="ttc" id="aVisualTypes_8hpp_html_ab70170afb6347d18ff9dac17e05e133e"><div class="ttname"><a href="VisualTypes_8hpp.html#ab70170afb6347d18ff9dac17e05e133e">PenStyle</a></div><div class="ttdeci">PenStyle</div><div class="ttdoc">Типы перьев</div><div class="ttdef"><b>Definition:</b> VisualTypes.hpp:19</div></div>
+<div class="ttc" id="aVisualTypes_8hpp_html_ab87bacfdad76e61b9412d7124be44c1c"><div class="ttname"><a href="VisualTypes_8hpp.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a></div><div class="ttdeci">Color</div><div class="ttdoc">Цвета</div><div class="ttdef"><b>Definition:</b> VisualTypes.hpp:31</div></div>
+<div class="ttc" id="aVisualTypes_8hpp_html_ac9290d027e4abf69771a7e0c80406fc5"><div class="ttname"><a href="VisualTypes_8hpp.html#ac9290d027e4abf69771a7e0c80406fc5">PenStyleToString</a></div><div class="ttdeci">std::string PenStyleToString(PenStyle pen_style)</div><div class="ttdoc">Преобразование стиля пера в строку</div><div class="ttdef"><b>Definition:</b> VisualTypes.hpp:76</div></div>
+<div class="ttc" id="aVisualTypes_8hpp_html_ad2c5127560ec00a3ab73d953a4df6c64"><div class="ttname"><a href="VisualTypes_8hpp.html#ad2c5127560ec00a3ab73d953a4df6c64">distance</a></div><div class="ttdeci">double distance(Point p, Point p1, Point p2)</div><div class="ttdoc">Вычисление расстояния от точки до отрезка</div><div class="ttdef"><b>Definition:</b> VisualTypes.hpp:230</div></div>
+<div class="ttc" id="aVisualTypes_8hpp_html_aeaa1ba7bed105e1b0b6523dddf317583"><div class="ttname"><a href="VisualTypes_8hpp.html#aeaa1ba7bed105e1b0b6523dddf317583">PenStyleToStringMap</a></div><div class="ttdeci">std::map&lt; PenStyle, std::string &gt; PenStyleToStringMap</div><div class="ttdoc">Словарь соответствия стиля пера его названию</div><div class="ttdef"><b>Definition:</b> VisualTypes.hpp:37</div></div>
+<div class="ttc" id="aVisualTypes_8hpp_html_af67a889bc5e9f8ab3a59fe58b0fa2128"><div class="ttname"><a href="VisualTypes_8hpp.html#af67a889bc5e9f8ab3a59fe58b0fa2128">BrushStyle</a></div><div class="ttdeci">BrushStyle</div><div class="ttdoc">Типы кистей</div><div class="ttdef"><b>Definition:</b> VisualTypes.hpp:25</div></div>
+<div class="ttc" id="astructBrush_html"><div class="ttname"><a href="structBrush.html">Brush</a></div><div class="ttdoc">Кисть</div><div class="ttdef"><b>Definition:</b> VisualTypes.hpp:189</div></div>
+<div class="ttc" id="astructBrush_html_a248159c81b81efb25ff8ec3416898973"><div class="ttname"><a href="structBrush.html#a248159c81b81efb25ff8ec3416898973">Brush::color</a></div><div class="ttdeci">Color color</div><div class="ttdoc">Цвет</div><div class="ttdef"><b>Definition:</b> VisualTypes.hpp:208</div></div>
+<div class="ttc" id="astructBrush_html_a6b0f7711db24fe522417840c5f7fe88a"><div class="ttname"><a href="structBrush.html#a6b0f7711db24fe522417840c5f7fe88a">Brush::style</a></div><div class="ttdeci">BrushStyle style</div><div class="ttdoc">Стиль кисти</div><div class="ttdef"><b>Definition:</b> VisualTypes.hpp:202</div></div>
+<div class="ttc" id="astructBrush_html_a7cdce9546fd6d8612465a18d1ebf7cad"><div class="ttname"><a href="structBrush.html#a7cdce9546fd6d8612465a18d1ebf7cad">Brush::ToString</a></div><div class="ttdeci">std::string ToString()</div><div class="ttdoc">Преобразование в строку</div><div class="ttdef"><b>Definition:</b> VisualTypes.hpp:214</div></div>
+<div class="ttc" id="astructBrush_html_ab7643401623ee2c203e24db745d1c725"><div class="ttname"><a href="structBrush.html#ab7643401623ee2c203e24db745d1c725">Brush::Brush</a></div><div class="ttdeci">Brush()</div><div class="ttdoc">Конструктор</div><div class="ttdef"><b>Definition:</b> VisualTypes.hpp:194</div></div>
+<div class="ttc" id="astructPen_html"><div class="ttname"><a href="structPen.html">Pen</a></div><div class="ttdoc">Перо</div><div class="ttdef"><b>Definition:</b> VisualTypes.hpp:141</div></div>
+<div class="ttc" id="astructPen_html_a2234cbbfb0ac45e0a01cac8d3bc8f916"><div class="ttname"><a href="structPen.html#a2234cbbfb0ac45e0a01cac8d3bc8f916">Pen::style</a></div><div class="ttdeci">PenStyle style</div><div class="ttdoc">Стиль пера</div><div class="ttdef"><b>Definition:</b> VisualTypes.hpp:155</div></div>
+<div class="ttc" id="astructPen_html_a35bb787978cb795bd371c65ece6baa21"><div class="ttname"><a href="structPen.html#a35bb787978cb795bd371c65ece6baa21">Pen::Pen</a></div><div class="ttdeci">Pen()</div><div class="ttdoc">Конструктор</div><div class="ttdef"><b>Definition:</b> VisualTypes.hpp:146</div></div>
+<div class="ttc" id="astructPen_html_a3b2d0fd773b91c2d64571c2ab26913b9"><div class="ttname"><a href="structPen.html#a3b2d0fd773b91c2d64571c2ab26913b9">Pen::ToString</a></div><div class="ttdeci">std::string ToString()</div><div class="ttdoc">Преобразование в строку</div><div class="ttdef"><b>Definition:</b> VisualTypes.hpp:173</div></div>
+<div class="ttc" id="astructPen_html_a72641553b0ec00d3864ef065e34c4043"><div class="ttname"><a href="structPen.html#a72641553b0ec00d3864ef065e34c4043">Pen::thickness</a></div><div class="ttdeci">unsigned int thickness</div><div class="ttdoc">Толщина</div><div class="ttdef"><b>Definition:</b> VisualTypes.hpp:167</div></div>
+<div class="ttc" id="astructPen_html_a8f99118a39311b2d97e98f3539ff55b2"><div class="ttname"><a href="structPen.html#a8f99118a39311b2d97e98f3539ff55b2">Pen::color</a></div><div class="ttdeci">Color color</div><div class="ttdoc">Цвет</div><div class="ttdef"><b>Definition:</b> VisualTypes.hpp:161</div></div>
+<div class="ttc" id="astructPoint_html"><div class="ttname"><a href="structPoint.html">Point</a></div><div class="ttdoc">Точка</div><div class="ttdef"><b>Definition:</b> VisualTypes.hpp:113</div></div>
+<div class="ttc" id="astructPoint_html_a031af63ba2f8133e08347086bbb6a395"><div class="ttname"><a href="structPoint.html#a031af63ba2f8133e08347086bbb6a395">Point::Serialize</a></div><div class="ttdeci">std::string Serialize()</div><div class="ttdoc">Сериализация</div><div class="ttdef"><b>Definition:</b> VisualTypes.hpp:130</div></div>
+<div class="ttc" id="astructPoint_html_aba32004a556319237903f6316f8b370d"><div class="ttname"><a href="structPoint.html#aba32004a556319237903f6316f8b370d">Point::ToString</a></div><div class="ttdeci">std::string ToString()</div><div class="ttdoc">Преобразование в строку</div><div class="ttdef"><b>Definition:</b> VisualTypes.hpp:121</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

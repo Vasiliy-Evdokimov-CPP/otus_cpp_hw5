@@ -1,0 +1,4 @@
+<map id="DesktopEditor" name="DesktopEditor">
+<area shape="rect" id="node1" title="Визуальный desktop редактор" alt="" coords="5,80,108,107"/>
+<area shape="rect" id="node2" href="$classVisualEditor.html" title="Визуальный редактор" alt="" coords="11,5,102,32"/>
+</map>

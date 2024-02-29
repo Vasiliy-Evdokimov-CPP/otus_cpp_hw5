@@ -1,0 +1,6 @@
+<map id="DesktopCanvas" name="DesktopCanvas">
+<area shape="rect" id="node1" title="Desktop холст" alt="" coords="8,171,123,197"/>
+<area shape="rect" id="node2" href="$classIVisualCanvas.html" title="Интерфейс холста" alt="" coords="12,95,119,121"/>
+<area shape="rect" id="node3" href="$structPen.html" title="Перо" alt="" coords="5,5,51,32"/>
+<area shape="rect" id="node4" href="$structBrush.html" title="Кисть" alt="" coords="75,5,131,32"/>
+</map>

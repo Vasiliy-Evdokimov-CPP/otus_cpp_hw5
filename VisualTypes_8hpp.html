@@ -1,0 +1,317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>editor: Файл src/VisualTypes.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">editor
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">OTUS C++ Professional Homework #5</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл VisualTypes.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для VisualTypes.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="VisualTypes_8hpp__incl.png" border="0" usemap="#asrc_2VisualTypes_8hpp" alt=""/></div>
+<map name="asrc_2VisualTypes_8hpp" id="asrc_2VisualTypes_8hpp">
+<area shape="rect" title=" " alt="" coords="45,5,183,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,60,107"/>
+<area shape="rect" title=" " alt="" coords="85,80,143,107"/>
+<area shape="rect" title=" " alt="" coords="168,80,215,107"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="VisualTypes_8hpp__dep__incl.png" border="0" usemap="#asrc_2VisualTypes_8hppdep" alt=""/></div>
+<map name="asrc_2VisualTypes_8hppdep" id="asrc_2VisualTypes_8hppdep">
+<area shape="rect" title=" " alt="" coords="137,5,275,32"/>
+<area shape="rect" href="VisualCanvas_8hpp.html" title=" " alt="" coords="20,80,168,107"/>
+<area shape="rect" href="VisualObjects_8hpp.html" title=" " alt="" coords="101,155,250,181"/>
+<area shape="rect" href="VisualController_8hpp.html" title=" " alt="" coords="101,229,260,256"/>
+<area shape="rect" href="VisualEditor_8hpp.html" title=" " alt="" coords="5,304,143,331"/>
+<area shape="rect" href="editor_8cpp.html" title="OTUS C++ Professional Домашнее задание №5." alt="" coords="77,379,177,405"/>
+</map>
+</div>
+</div>
+<p><a href="VisualTypes_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPoint.html">Point</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Точка  <a href="structPoint.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPen.html">Pen</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перо  <a href="structPen.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structBrush.html">Brush</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Кисть  <a href="structBrush.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:a91ad9478d81a7aaf2593e8d9c3d06a14"><td class="memItemLeft" align="right" valign="top"><a id="a91ad9478d81a7aaf2593e8d9c3d06a14"></a>
+typedef unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>uint</b></td></tr>
+<tr class="separator:a91ad9478d81a7aaf2593e8d9c3d06a14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:ab70170afb6347d18ff9dac17e05e133e"><td class="memItemLeft" align="right" valign="top"><a id="ab70170afb6347d18ff9dac17e05e133e"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="VisualTypes_8hpp.html#ab70170afb6347d18ff9dac17e05e133e">PenStyle</a> { <b>unknown</b>
+, <b>solid</b>
+, <b>dotted</b>
+, <b>dashed</b>
+ }</td></tr>
+<tr class="memdesc:ab70170afb6347d18ff9dac17e05e133e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Типы перьев <br /></td></tr>
+<tr class="separator:ab70170afb6347d18ff9dac17e05e133e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af67a889bc5e9f8ab3a59fe58b0fa2128"><td class="memItemLeft" align="right" valign="top"><a id="af67a889bc5e9f8ab3a59fe58b0fa2128"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="VisualTypes_8hpp.html#af67a889bc5e9f8ab3a59fe58b0fa2128">BrushStyle</a> { <br />
+&#160;&#160;<b>unknown</b>
+, <b>solid</b>
+, <b>clear</b>
+, <b>horizontal</b>
+, <br />
+&#160;&#160;<b>vertical</b>
+<br />
+ }</td></tr>
+<tr class="memdesc:af67a889bc5e9f8ab3a59fe58b0fa2128"><td class="mdescLeft">&#160;</td><td class="mdescRight">Типы кистей <br /></td></tr>
+<tr class="separator:af67a889bc5e9f8ab3a59fe58b0fa2128"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab87bacfdad76e61b9412d7124be44c1c"><td class="memItemLeft" align="right" valign="top"><a id="ab87bacfdad76e61b9412d7124be44c1c"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="VisualTypes_8hpp.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a> { <br />
+&#160;&#160;<b>unknown</b>
+, <b>black</b>
+, <b>white</b>
+, <b>red</b>
+, <br />
+&#160;&#160;<b>green</b>
+, <b>blue</b>
+<br />
+ }</td></tr>
+<tr class="memdesc:ab87bacfdad76e61b9412d7124be44c1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Цвета <br /></td></tr>
+<tr class="separator:ab87bacfdad76e61b9412d7124be44c1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ac9290d027e4abf69771a7e0c80406fc5"><td class="memItemLeft" align="right" valign="top"><a id="ac9290d027e4abf69771a7e0c80406fc5"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="VisualTypes_8hpp.html#ac9290d027e4abf69771a7e0c80406fc5">PenStyleToString</a> (<a class="el" href="VisualTypes_8hpp.html#ab70170afb6347d18ff9dac17e05e133e">PenStyle</a> pen_style)</td></tr>
+<tr class="memdesc:ac9290d027e4abf69771a7e0c80406fc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Преобразование стиля пера в строку <br /></td></tr>
+<tr class="separator:ac9290d027e4abf69771a7e0c80406fc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45a6906fed3728f07872d096cda06d94"><td class="memItemLeft" align="right" valign="top"><a id="a45a6906fed3728f07872d096cda06d94"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="VisualTypes_8hpp.html#a45a6906fed3728f07872d096cda06d94">BrushStyleToString</a> (<a class="el" href="VisualTypes_8hpp.html#af67a889bc5e9f8ab3a59fe58b0fa2128">BrushStyle</a> brush_style)</td></tr>
+<tr class="memdesc:a45a6906fed3728f07872d096cda06d94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Преобразование стиля кисти в строку <br /></td></tr>
+<tr class="separator:a45a6906fed3728f07872d096cda06d94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a250994a24dfaa30785e83d4105c3c235"><td class="memItemLeft" align="right" valign="top"><a id="a250994a24dfaa30785e83d4105c3c235"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="VisualTypes_8hpp.html#a250994a24dfaa30785e83d4105c3c235">ColorToString</a> (<a class="el" href="VisualTypes_8hpp.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a> color)</td></tr>
+<tr class="memdesc:a250994a24dfaa30785e83d4105c3c235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Преобразование цвета в строку <br /></td></tr>
+<tr class="separator:a250994a24dfaa30785e83d4105c3c235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2c5127560ec00a3ab73d953a4df6c64"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="VisualTypes_8hpp.html#ad2c5127560ec00a3ab73d953a4df6c64">distance</a> (<a class="el" href="structPoint.html">Point</a> p, <a class="el" href="structPoint.html">Point</a> p1, <a class="el" href="structPoint.html">Point</a> p2)</td></tr>
+<tr class="memdesc:ad2c5127560ec00a3ab73d953a4df6c64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вычисление расстояния от точки до отрезка  <a href="VisualTypes_8hpp.html#ad2c5127560ec00a3ab73d953a4df6c64">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad2c5127560ec00a3ab73d953a4df6c64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:aeaa1ba7bed105e1b0b6523dddf317583"><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="VisualTypes_8hpp.html#ab70170afb6347d18ff9dac17e05e133e">PenStyle</a>, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="VisualTypes_8hpp.html#aeaa1ba7bed105e1b0b6523dddf317583">PenStyleToStringMap</a></td></tr>
+<tr class="memdesc:aeaa1ba7bed105e1b0b6523dddf317583"><td class="mdescLeft">&#160;</td><td class="mdescRight">Словарь соответствия стиля пера его названию  <a href="VisualTypes_8hpp.html#aeaa1ba7bed105e1b0b6523dddf317583">Подробнее...</a><br /></td></tr>
+<tr class="separator:aeaa1ba7bed105e1b0b6523dddf317583"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74cba5873bf94e07a8e579428b2b2a3a"><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="VisualTypes_8hpp.html#af67a889bc5e9f8ab3a59fe58b0fa2128">BrushStyle</a>, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="VisualTypes_8hpp.html#a74cba5873bf94e07a8e579428b2b2a3a">BrushStyleToStringMap</a></td></tr>
+<tr class="memdesc:a74cba5873bf94e07a8e579428b2b2a3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Словарь соответствия стиля кисти его названию  <a href="VisualTypes_8hpp.html#a74cba5873bf94e07a8e579428b2b2a3a">Подробнее...</a><br /></td></tr>
+<tr class="separator:a74cba5873bf94e07a8e579428b2b2a3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2234511b26ae0f9bcc9ca4cd06f4a325"><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="VisualTypes_8hpp.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a>, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="VisualTypes_8hpp.html#a2234511b26ae0f9bcc9ca4cd06f4a325">ColorToStringMap</a></td></tr>
+<tr class="memdesc:a2234511b26ae0f9bcc9ca4cd06f4a325"><td class="mdescLeft">&#160;</td><td class="mdescRight">Словарь соответствия цвета его названию  <a href="VisualTypes_8hpp.html#a2234511b26ae0f9bcc9ca4cd06f4a325">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2234511b26ae0f9bcc9ca4cd06f4a325"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>В файле описывается вспомогательные типы </p>
+</div><h2 class="groupheader">Функции</h2>
+<a id="ad2c5127560ec00a3ab73d953a4df6c64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2c5127560ec00a3ab73d953a4df6c64">&#9670;&nbsp;</a></span>distance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double distance </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structPoint.html">Point</a>&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structPoint.html">Point</a>&#160;</td>
+          <td class="paramname"><em>p1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structPoint.html">Point</a>&#160;</td>
+          <td class="paramname"><em>p2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Вычисление расстояния от точки до отрезка </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>точка, расстояние от которой до отрезка вычисляем </td></tr>
+    <tr><td class="paramname">p1</td><td>первая точка отрезка </td></tr>
+    <tr><td class="paramname">p2</td><td>вторая точка отрезка </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="a74cba5873bf94e07a8e579428b2b2a3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74cba5873bf94e07a8e579428b2b2a3a">&#9670;&nbsp;</a></span>BrushStyleToStringMap</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;<a class="el" href="VisualTypes_8hpp.html#af67a889bc5e9f8ab3a59fe58b0fa2128">BrushStyle</a>, std::string&gt; BrushStyleToStringMap</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">= </div>
+<div class="line">{</div>
+<div class="line">    { BrushStyle::unknown,      <span class="stringliteral">&quot;(unknown)&quot;</span> }, </div>
+<div class="line">    { BrushStyle::solid,        <span class="stringliteral">&quot;SOLID&quot;</span> }, </div>
+<div class="line">    { BrushStyle::clear,        <span class="stringliteral">&quot;CLEAR&quot;</span> }, </div>
+<div class="line">    { BrushStyle::horizontal,   <span class="stringliteral">&quot;HORIZONTAL&quot;</span> },</div>
+<div class="line">    { BrushStyle::vertical,     <span class="stringliteral">&quot;VERTICAL&quot;</span> }</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>Словарь соответствия стиля кисти его названию </p>
+
+</div>
+</div>
+<a id="a2234511b26ae0f9bcc9ca4cd06f4a325"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2234511b26ae0f9bcc9ca4cd06f4a325">&#9670;&nbsp;</a></span>ColorToStringMap</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;<a class="el" href="VisualTypes_8hpp.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a>, std::string&gt; ColorToStringMap</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">= </div>
+<div class="line">{</div>
+<div class="line">    { Color::unknown,   <span class="stringliteral">&quot;(unknown)&quot;</span> }, </div>
+<div class="line">    { Color::black,     <span class="stringliteral">&quot;BLACK&quot;</span> }, </div>
+<div class="line">    { Color::white,     <span class="stringliteral">&quot;WHITE&quot;</span> }, </div>
+<div class="line">    { Color::red,       <span class="stringliteral">&quot;RED&quot;</span> },</div>
+<div class="line">    { Color::green,     <span class="stringliteral">&quot;GREEN&quot;</span> },</div>
+<div class="line">    { Color::blue,      <span class="stringliteral">&quot;BLUE&quot;</span> }</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>Словарь соответствия цвета его названию </p>
+
+</div>
+</div>
+<a id="aeaa1ba7bed105e1b0b6523dddf317583"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaa1ba7bed105e1b0b6523dddf317583">&#9670;&nbsp;</a></span>PenStyleToStringMap</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;<a class="el" href="VisualTypes_8hpp.html#ab70170afb6347d18ff9dac17e05e133e">PenStyle</a>, std::string&gt; PenStyleToStringMap</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">= </div>
+<div class="line">{</div>
+<div class="line">    { PenStyle::unknown,    <span class="stringliteral">&quot;(unknown)&quot;</span> }, </div>
+<div class="line">    { PenStyle::solid,      <span class="stringliteral">&quot;SOLID&quot;</span> }, </div>
+<div class="line">    { PenStyle::dotted,     <span class="stringliteral">&quot;DOTTED&quot;</span> }, </div>
+<div class="line">    { PenStyle::dashed,     <span class="stringliteral">&quot;DASHED&quot;</span> }</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>Словарь соответствия стиля пера его названию </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

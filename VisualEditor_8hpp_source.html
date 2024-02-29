@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>editor: Исходный файл src/VisualEditor.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">editor
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">OTUS C++ Professional Homework #5</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">VisualEditor.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="VisualEditor_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Logger_8hpp.html">Logger.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="VisualCanvas_8hpp.html">VisualCanvas.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="VisualController_8hpp.html">VisualController.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="VisualEditor_8hpp.html#ac1ec3647c005eacad401b06e7e18f711">   19</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="VisualEditor_8hpp.html#ac1ec3647c005eacad401b06e7e18f711">MouseButton</a> { left, middle, right };</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="VisualEditor_8hpp.html#a94b4a5e76ed30c0af90a1bbbdc214b2b">   25</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="VisualEditor_8hpp.html#a94b4a5e76ed30c0af90a1bbbdc214b2b">KeyboardKey</a> { vk_delete };</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="VisualEditor_8hpp.html#a3073b65bdb71bf05d661955f189da97e">   32</a></span>&#160;std::string <a class="code" href="VisualEditor_8hpp.html#a3073b65bdb71bf05d661955f189da97e">MouseButtonToString</a>(<a class="code" href="VisualEditor_8hpp.html#ac1ec3647c005eacad401b06e7e18f711">MouseButton</a> mouse_button) </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">switch</span> (mouse_button) </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">case</span> MouseButton::left:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;[LEFT_BTN]&quot;</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">case</span> MouseButton::right:</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;[RIGHT_BTN]&quot;</span>;                        </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;(unknown)&quot;</span>;    </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="VisualEditor_8hpp.html#ad1b98ce9305dd66cf9fec3085afe7ff6">   50</a></span>&#160;std::string <a class="code" href="VisualEditor_8hpp.html#ad1b98ce9305dd66cf9fec3085afe7ff6">KeyboardKeyToString</a>(<a class="code" href="VisualEditor_8hpp.html#a94b4a5e76ed30c0af90a1bbbdc214b2b">KeyboardKey</a> keyboard_key) </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">switch</span> (keyboard_key) </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">case</span> KeyboardKey::vk_delete:</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;[VK_DELETE]&quot;</span>;                    </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;(unknown)&quot;</span>;    </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classVisualEditor.html">   68</a></span>&#160;<span class="keyword">class </span><a class="code" href="classVisualEditor.html">VisualEditor</a></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classVisualEditor.html#a703e42b5bed1d77930f577784a1e3c66">   76</a></span>&#160;    <a class="code" href="classVisualEditor.html#a703e42b5bed1d77930f577784a1e3c66">VisualEditor</a>(std::shared_ptr&lt;VisualController&gt; visual_controller) </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <a class="code" href="classVisualEditor.html#a84792a037313a22b4d35e0e3435df2a3">m_controller</a> = visual_controller;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classVisualEditor.html#aa2494ed3b815f554a39cdb4dddd22501">   86</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classVisualEditor.html#aa2494ed3b815f554a39cdb4dddd22501">SelectObjectType</a>(<a class="code" href="VisualObjects_8hpp.html#a1071fd6943d552fb894b2d180a3736fc">VisualObjectType</a> object_type)</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <a class="code" href="classVisualEditor.html#a84792a037313a22b4d35e0e3435df2a3">m_controller</a>-&gt;SelectObjectType(object_type);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classVisualEditor.html#aa54cfd87517073170c580273c2cfee88">   96</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classVisualEditor.html#aa54cfd87517073170c580273c2cfee88">SelectPenStyle</a>(<a class="code" href="VisualTypes_8hpp.html#ab70170afb6347d18ff9dac17e05e133e">PenStyle</a> pen_style)</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <a class="code" href="classVisualEditor.html#a84792a037313a22b4d35e0e3435df2a3">m_controller</a>-&gt;SetPenStyle(pen_style);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="classVisualEditor.html#adba7bd06ec5da112900695f0e7b37f3d">  106</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classVisualEditor.html#adba7bd06ec5da112900695f0e7b37f3d">SelectPenColor</a>(<a class="code" href="VisualTypes_8hpp.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a> color)</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <a class="code" href="classVisualEditor.html#a84792a037313a22b4d35e0e3435df2a3">m_controller</a>-&gt;SetPenColor(color);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="classVisualEditor.html#acc5dfe0e8768356e9a8527d7d4e3dfc8">  116</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classVisualEditor.html#acc5dfe0e8768356e9a8527d7d4e3dfc8">SelectBrushStyle</a>(<a class="code" href="VisualTypes_8hpp.html#af67a889bc5e9f8ab3a59fe58b0fa2128">BrushStyle</a> brush_style)</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <a class="code" href="classVisualEditor.html#a84792a037313a22b4d35e0e3435df2a3">m_controller</a>-&gt;SetBrushStyle(brush_style);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="classVisualEditor.html#ab3b074029bd7c1c1a175353da516b2b8">  126</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classVisualEditor.html#ab3b074029bd7c1c1a175353da516b2b8">SelectBrushColor</a>(<a class="code" href="VisualTypes_8hpp.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a> color)</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <a class="code" href="classVisualEditor.html#a84792a037313a22b4d35e0e3435df2a3">m_controller</a>-&gt;SetBrushColor(color);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="classVisualEditor.html#a47af8cb6aaffa79443d2d13a9b7337cc">  136</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classVisualEditor.html#a47af8cb6aaffa79443d2d13a9b7337cc">SelectThickness</a>(uint thickness)</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    {</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <a class="code" href="classVisualEditor.html#a84792a037313a22b4d35e0e3435df2a3">m_controller</a>-&gt;SetPenThickness(thickness);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    }    </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="classVisualEditor.html#a2f74081accd24f78592716f422ee13b7">  145</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classVisualEditor.html#a2f74081accd24f78592716f422ee13b7">Redraw</a>()</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <a class="code" href="classVisualEditor.html#a934defdda06225701bd92ed1750af0ae">m_canvas</a>-&gt;Clear();</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="comment">//</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code" href="classVisualEditor.html#a84792a037313a22b4d35e0e3435df2a3">m_controller</a>-&gt;GetObjectsCount(); i++)</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        {</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            std::shared_ptr&lt;VisualObject&gt; obj = <a class="code" href="classVisualEditor.html#a84792a037313a22b4d35e0e3435df2a3">m_controller</a>-&gt;GetObject(i);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            obj-&gt;Draw(<a class="code" href="classVisualEditor.html#a934defdda06225701bd92ed1750af0ae">m_canvas</a>);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        }            </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    }</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno"><a class="line" href="classVisualEditor.html#a4f102511fa701a7ea387661cc94cef8c">  162</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classVisualEditor.html#a4f102511fa701a7ea387661cc94cef8c">MouseDown</a>(<a class="code" href="structPoint.html">Point</a> point, <a class="code" href="VisualEditor_8hpp.html#ac1ec3647c005eacad401b06e7e18f711">MouseButton</a> button)</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        WriteLog(<span class="stringliteral">&quot;MouseDown &quot;</span> + <a class="code" href="VisualEditor_8hpp.html#a3073b65bdb71bf05d661955f189da97e">MouseButtonToString</a>(button) + <span class="stringliteral">&quot; at &quot;</span> + point.<a class="code" href="structPoint.html#aba32004a556319237903f6316f8b370d">ToString</a>());</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="comment">//</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keywordflow">if</span> (button == MouseButton::left)</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <a class="code" href="classVisualEditor.html#a84792a037313a22b4d35e0e3435df2a3">m_controller</a>-&gt;HandlePoint(point);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keywordflow">if</span> (button == MouseButton::right)</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <a class="code" href="classVisualEditor.html#a84792a037313a22b4d35e0e3435df2a3">m_controller</a>-&gt;CancelPoint();   </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="comment">//</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <a class="code" href="classVisualEditor.html#a2f74081accd24f78592716f422ee13b7">Redraw</a>();</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="classVisualEditor.html#ab070610966d06235ef26959694ce6d48">  179</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classVisualEditor.html#ab070610966d06235ef26959694ce6d48">KeyPress</a>(<a class="code" href="VisualEditor_8hpp.html#a94b4a5e76ed30c0af90a1bbbdc214b2b">KeyboardKey</a> key)</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        WriteLog(<span class="stringliteral">&quot;KeyboardKeyDown &quot;</span> + <a class="code" href="VisualEditor_8hpp.html#ad1b98ce9305dd66cf9fec3085afe7ff6">KeyboardKeyToString</a>(key));</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="comment">//</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keywordflow">if</span> (key == KeyboardKey::vk_delete)</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            <a class="code" href="classVisualEditor.html#a84792a037313a22b4d35e0e3435df2a3">m_controller</a>-&gt;DeleteSelectedObject();</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            <a class="code" href="classVisualEditor.html#a2f74081accd24f78592716f422ee13b7">Redraw</a>();</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        }</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
+<div class="line"><a name="l00194"></a><span class="lineno"><a class="line" href="classVisualEditor.html#a302b4b746d04df459522109cacd34c25">  194</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classVisualEditor.html#a302b4b746d04df459522109cacd34c25">NewFile</a>()</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    {</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <a class="code" href="classVisualEditor.html#a84792a037313a22b4d35e0e3435df2a3">m_controller</a>-&gt;NewFile();</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <a class="code" href="classVisualEditor.html#a934defdda06225701bd92ed1750af0ae">m_canvas</a>-&gt;Clear();</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    }</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="classVisualEditor.html#abb9d46e27a77befd51d5eeb267f0d4cf">  205</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classVisualEditor.html#abb9d46e27a77befd51d5eeb267f0d4cf">SaveFile</a>(std::string filename)</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    {</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <a class="code" href="classVisualEditor.html#a84792a037313a22b4d35e0e3435df2a3">m_controller</a>-&gt;SaveFile(filename);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    }</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
+<div class="line"><a name="l00215"></a><span class="lineno"><a class="line" href="classVisualEditor.html#a722c9828dcdb8bc3bd048b7610f6f002">  215</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classVisualEditor.html#a722c9828dcdb8bc3bd048b7610f6f002">LoadFile</a>(std::string filename)</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    {        </div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <a class="code" href="classVisualEditor.html#a84792a037313a22b4d35e0e3435df2a3">m_controller</a>-&gt;LoadFile(filename);        </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <a class="code" href="classVisualEditor.html#a2f74081accd24f78592716f422ee13b7">Redraw</a>();</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    }</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160; </div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00226"></a><span class="lineno"><a class="line" href="classVisualEditor.html#a934defdda06225701bd92ed1750af0ae">  226</a></span>&#160;    std::shared_ptr&lt;IVisualCanvas&gt; <a class="code" href="classVisualEditor.html#a934defdda06225701bd92ed1750af0ae">m_canvas</a>;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
+<div class="line"><a name="l00232"></a><span class="lineno"><a class="line" href="classVisualEditor.html#a84792a037313a22b4d35e0e3435df2a3">  232</a></span>&#160;    std::shared_ptr&lt;VisualController&gt; <a class="code" href="classVisualEditor.html#a84792a037313a22b4d35e0e3435df2a3">m_controller</a>;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;};</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
+<div class="line"><a name="l00242"></a><span class="lineno"><a class="line" href="classDesktopEditor.html">  242</a></span>&#160;<span class="keyword">class </span><a class="code" href="classDesktopEditor.html">DesktopEditor</a>: <span class="keyword">public</span> <a class="code" href="classVisualEditor.html">VisualEditor</a></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;{    </div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00249"></a><span class="lineno"><a class="line" href="classDesktopEditor.html#a74002152cb60d6481bdce665b94ec1e4">  249</a></span>&#160;    <a class="code" href="classDesktopEditor.html#a74002152cb60d6481bdce665b94ec1e4">DesktopEditor</a>(std::shared_ptr&lt;VisualController&gt; visual_controller) : <a class="code" href="classVisualEditor.html">VisualEditor</a>(visual_controller)</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    {</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        WriteLog(<span class="stringliteral">&quot;DesktopEditor()&quot;</span>);</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        <span class="comment">//</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <a class="code" href="classVisualEditor.html#a934defdda06225701bd92ed1750af0ae">m_canvas</a> = std::make_shared&lt;DesktopCanvas&gt;();</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    }</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    </div>
+<div class="line"><a name="l00260"></a><span class="lineno"><a class="line" href="classDesktopEditor.html#a7f9cdba0d23d625b767294eee90104b1">  260</a></span>&#160;    <a class="code" href="classDesktopEditor.html#a7f9cdba0d23d625b767294eee90104b1">~DesktopEditor</a>() </div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    {</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <a class="code" href="classVisualEditor.html#a934defdda06225701bd92ed1750af0ae">m_canvas</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    }</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160; </div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;};</div>
+<div class="ttc" id="aLogger_8hpp_html"><div class="ttname"><a href="Logger_8hpp.html">Logger.hpp</a></div></div>
+<div class="ttc" id="aVisualCanvas_8hpp_html"><div class="ttname"><a href="VisualCanvas_8hpp.html">VisualCanvas.hpp</a></div></div>
+<div class="ttc" id="aVisualController_8hpp_html"><div class="ttname"><a href="VisualController_8hpp.html">VisualController.hpp</a></div></div>
+<div class="ttc" id="aVisualEditor_8hpp_html_a3073b65bdb71bf05d661955f189da97e"><div class="ttname"><a href="VisualEditor_8hpp.html#a3073b65bdb71bf05d661955f189da97e">MouseButtonToString</a></div><div class="ttdeci">std::string MouseButtonToString(MouseButton mouse_button)</div><div class="ttdoc">Преобразование кнопок мыши в строку</div><div class="ttdef"><b>Definition:</b> VisualEditor.hpp:32</div></div>
+<div class="ttc" id="aVisualEditor_8hpp_html_a94b4a5e76ed30c0af90a1bbbdc214b2b"><div class="ttname"><a href="VisualEditor_8hpp.html#a94b4a5e76ed30c0af90a1bbbdc214b2b">KeyboardKey</a></div><div class="ttdeci">KeyboardKey</div><div class="ttdef"><b>Definition:</b> VisualEditor.hpp:25</div></div>
+<div class="ttc" id="aVisualEditor_8hpp_html_ac1ec3647c005eacad401b06e7e18f711"><div class="ttname"><a href="VisualEditor_8hpp.html#ac1ec3647c005eacad401b06e7e18f711">MouseButton</a></div><div class="ttdeci">MouseButton</div><div class="ttdef"><b>Definition:</b> VisualEditor.hpp:19</div></div>
+<div class="ttc" id="aVisualEditor_8hpp_html_ad1b98ce9305dd66cf9fec3085afe7ff6"><div class="ttname"><a href="VisualEditor_8hpp.html#ad1b98ce9305dd66cf9fec3085afe7ff6">KeyboardKeyToString</a></div><div class="ttdeci">std::string KeyboardKeyToString(KeyboardKey keyboard_key)</div><div class="ttdoc">Преобразование клавиш клавиатуры в строку</div><div class="ttdef"><b>Definition:</b> VisualEditor.hpp:50</div></div>
+<div class="ttc" id="aVisualObjects_8hpp_html_a1071fd6943d552fb894b2d180a3736fc"><div class="ttname"><a href="VisualObjects_8hpp.html#a1071fd6943d552fb894b2d180a3736fc">VisualObjectType</a></div><div class="ttdeci">VisualObjectType</div><div class="ttdoc">Типы визуальных объектов</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:25</div></div>
+<div class="ttc" id="aVisualTypes_8hpp_html_ab70170afb6347d18ff9dac17e05e133e"><div class="ttname"><a href="VisualTypes_8hpp.html#ab70170afb6347d18ff9dac17e05e133e">PenStyle</a></div><div class="ttdeci">PenStyle</div><div class="ttdoc">Типы перьев</div><div class="ttdef"><b>Definition:</b> VisualTypes.hpp:19</div></div>
+<div class="ttc" id="aVisualTypes_8hpp_html_ab87bacfdad76e61b9412d7124be44c1c"><div class="ttname"><a href="VisualTypes_8hpp.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a></div><div class="ttdeci">Color</div><div class="ttdoc">Цвета</div><div class="ttdef"><b>Definition:</b> VisualTypes.hpp:31</div></div>
+<div class="ttc" id="aVisualTypes_8hpp_html_af67a889bc5e9f8ab3a59fe58b0fa2128"><div class="ttname"><a href="VisualTypes_8hpp.html#af67a889bc5e9f8ab3a59fe58b0fa2128">BrushStyle</a></div><div class="ttdeci">BrushStyle</div><div class="ttdoc">Типы кистей</div><div class="ttdef"><b>Definition:</b> VisualTypes.hpp:25</div></div>
+<div class="ttc" id="aclassDesktopEditor_html"><div class="ttname"><a href="classDesktopEditor.html">DesktopEditor</a></div><div class="ttdoc">Визуальный desktop редактор</div><div class="ttdef"><b>Definition:</b> VisualEditor.hpp:243</div></div>
+<div class="ttc" id="aclassDesktopEditor_html_a74002152cb60d6481bdce665b94ec1e4"><div class="ttname"><a href="classDesktopEditor.html#a74002152cb60d6481bdce665b94ec1e4">DesktopEditor::DesktopEditor</a></div><div class="ttdeci">DesktopEditor(std::shared_ptr&lt; VisualController &gt; visual_controller)</div><div class="ttdoc">Конструктор</div><div class="ttdef"><b>Definition:</b> VisualEditor.hpp:249</div></div>
+<div class="ttc" id="aclassDesktopEditor_html_a7f9cdba0d23d625b767294eee90104b1"><div class="ttname"><a href="classDesktopEditor.html#a7f9cdba0d23d625b767294eee90104b1">DesktopEditor::~DesktopEditor</a></div><div class="ttdeci">~DesktopEditor()</div><div class="ttdoc">Деструктор</div><div class="ttdef"><b>Definition:</b> VisualEditor.hpp:260</div></div>
+<div class="ttc" id="aclassVisualEditor_html"><div class="ttname"><a href="classVisualEditor.html">VisualEditor</a></div><div class="ttdoc">Визуальный редактор</div><div class="ttdef"><b>Definition:</b> VisualEditor.hpp:69</div></div>
+<div class="ttc" id="aclassVisualEditor_html_a2f74081accd24f78592716f422ee13b7"><div class="ttname"><a href="classVisualEditor.html#a2f74081accd24f78592716f422ee13b7">VisualEditor::Redraw</a></div><div class="ttdeci">void Redraw()</div><div class="ttdoc">Перерисовка редактора</div><div class="ttdef"><b>Definition:</b> VisualEditor.hpp:145</div></div>
+<div class="ttc" id="aclassVisualEditor_html_a302b4b746d04df459522109cacd34c25"><div class="ttname"><a href="classVisualEditor.html#a302b4b746d04df459522109cacd34c25">VisualEditor::NewFile</a></div><div class="ttdeci">void NewFile()</div><div class="ttdoc">Создание файла</div><div class="ttdef"><b>Definition:</b> VisualEditor.hpp:194</div></div>
+<div class="ttc" id="aclassVisualEditor_html_a47af8cb6aaffa79443d2d13a9b7337cc"><div class="ttname"><a href="classVisualEditor.html#a47af8cb6aaffa79443d2d13a9b7337cc">VisualEditor::SelectThickness</a></div><div class="ttdeci">void SelectThickness(uint thickness)</div><div class="ttdoc">Выбор толщины пера</div><div class="ttdef"><b>Definition:</b> VisualEditor.hpp:136</div></div>
+<div class="ttc" id="aclassVisualEditor_html_a4f102511fa701a7ea387661cc94cef8c"><div class="ttname"><a href="classVisualEditor.html#a4f102511fa701a7ea387661cc94cef8c">VisualEditor::MouseDown</a></div><div class="ttdeci">void MouseDown(Point point, MouseButton button)</div><div class="ttdoc">Нажатие кнопки мыши</div><div class="ttdef"><b>Definition:</b> VisualEditor.hpp:162</div></div>
+<div class="ttc" id="aclassVisualEditor_html_a703e42b5bed1d77930f577784a1e3c66"><div class="ttname"><a href="classVisualEditor.html#a703e42b5bed1d77930f577784a1e3c66">VisualEditor::VisualEditor</a></div><div class="ttdeci">VisualEditor(std::shared_ptr&lt; VisualController &gt; visual_controller)</div><div class="ttdoc">Конструктор</div><div class="ttdef"><b>Definition:</b> VisualEditor.hpp:76</div></div>
+<div class="ttc" id="aclassVisualEditor_html_a722c9828dcdb8bc3bd048b7610f6f002"><div class="ttname"><a href="classVisualEditor.html#a722c9828dcdb8bc3bd048b7610f6f002">VisualEditor::LoadFile</a></div><div class="ttdeci">void LoadFile(std::string filename)</div><div class="ttdoc">Загрузка файла</div><div class="ttdef"><b>Definition:</b> VisualEditor.hpp:215</div></div>
+<div class="ttc" id="aclassVisualEditor_html_a84792a037313a22b4d35e0e3435df2a3"><div class="ttname"><a href="classVisualEditor.html#a84792a037313a22b4d35e0e3435df2a3">VisualEditor::m_controller</a></div><div class="ttdeci">std::shared_ptr&lt; VisualController &gt; m_controller</div><div class="ttdoc">Контроллер</div><div class="ttdef"><b>Definition:</b> VisualEditor.hpp:232</div></div>
+<div class="ttc" id="aclassVisualEditor_html_a934defdda06225701bd92ed1750af0ae"><div class="ttname"><a href="classVisualEditor.html#a934defdda06225701bd92ed1750af0ae">VisualEditor::m_canvas</a></div><div class="ttdeci">std::shared_ptr&lt; IVisualCanvas &gt; m_canvas</div><div class="ttdoc">Холст редактора</div><div class="ttdef"><b>Definition:</b> VisualEditor.hpp:226</div></div>
+<div class="ttc" id="aclassVisualEditor_html_aa2494ed3b815f554a39cdb4dddd22501"><div class="ttname"><a href="classVisualEditor.html#aa2494ed3b815f554a39cdb4dddd22501">VisualEditor::SelectObjectType</a></div><div class="ttdeci">void SelectObjectType(VisualObjectType object_type)</div><div class="ttdoc">Выбор типа создаваемого объекта</div><div class="ttdef"><b>Definition:</b> VisualEditor.hpp:86</div></div>
+<div class="ttc" id="aclassVisualEditor_html_aa54cfd87517073170c580273c2cfee88"><div class="ttname"><a href="classVisualEditor.html#aa54cfd87517073170c580273c2cfee88">VisualEditor::SelectPenStyle</a></div><div class="ttdeci">void SelectPenStyle(PenStyle pen_style)</div><div class="ttdoc">Выбор типа пера</div><div class="ttdef"><b>Definition:</b> VisualEditor.hpp:96</div></div>
+<div class="ttc" id="aclassVisualEditor_html_ab070610966d06235ef26959694ce6d48"><div class="ttname"><a href="classVisualEditor.html#ab070610966d06235ef26959694ce6d48">VisualEditor::KeyPress</a></div><div class="ttdeci">void KeyPress(KeyboardKey key)</div><div class="ttdoc">Нажатие клавиши клавиатуры</div><div class="ttdef"><b>Definition:</b> VisualEditor.hpp:179</div></div>
+<div class="ttc" id="aclassVisualEditor_html_ab3b074029bd7c1c1a175353da516b2b8"><div class="ttname"><a href="classVisualEditor.html#ab3b074029bd7c1c1a175353da516b2b8">VisualEditor::SelectBrushColor</a></div><div class="ttdeci">void SelectBrushColor(Color color)</div><div class="ttdoc">Выбор цвета кисти</div><div class="ttdef"><b>Definition:</b> VisualEditor.hpp:126</div></div>
+<div class="ttc" id="aclassVisualEditor_html_abb9d46e27a77befd51d5eeb267f0d4cf"><div class="ttname"><a href="classVisualEditor.html#abb9d46e27a77befd51d5eeb267f0d4cf">VisualEditor::SaveFile</a></div><div class="ttdeci">void SaveFile(std::string filename)</div><div class="ttdoc">Сохранение файла</div><div class="ttdef"><b>Definition:</b> VisualEditor.hpp:205</div></div>
+<div class="ttc" id="aclassVisualEditor_html_acc5dfe0e8768356e9a8527d7d4e3dfc8"><div class="ttname"><a href="classVisualEditor.html#acc5dfe0e8768356e9a8527d7d4e3dfc8">VisualEditor::SelectBrushStyle</a></div><div class="ttdeci">void SelectBrushStyle(BrushStyle brush_style)</div><div class="ttdoc">Выбор типа кисти</div><div class="ttdef"><b>Definition:</b> VisualEditor.hpp:116</div></div>
+<div class="ttc" id="aclassVisualEditor_html_adba7bd06ec5da112900695f0e7b37f3d"><div class="ttname"><a href="classVisualEditor.html#adba7bd06ec5da112900695f0e7b37f3d">VisualEditor::SelectPenColor</a></div><div class="ttdeci">void SelectPenColor(Color color)</div><div class="ttdoc">Выбор цвета пера</div><div class="ttdef"><b>Definition:</b> VisualEditor.hpp:106</div></div>
+<div class="ttc" id="astructPoint_html"><div class="ttname"><a href="structPoint.html">Point</a></div><div class="ttdoc">Точка</div><div class="ttdef"><b>Definition:</b> VisualTypes.hpp:113</div></div>
+<div class="ttc" id="astructPoint_html_aba32004a556319237903f6316f8b370d"><div class="ttname"><a href="structPoint.html#aba32004a556319237903f6316f8b370d">Point::ToString</a></div><div class="ttdeci">std::string ToString()</div><div class="ttdoc">Преобразование в строку</div><div class="ttdef"><b>Definition:</b> VisualTypes.hpp:121</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

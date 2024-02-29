@@ -1,0 +1,543 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>editor: Класс VisualEditor</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">editor
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">OTUS C++ Professional Homework #5</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-attribs">Защищенные данные</a> &#124;
+<a href="classVisualEditor-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс VisualEditor</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Визуальный редактор  
+ <a href="classVisualEditor.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="VisualEditor_8hpp_source.html">VisualEditor.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:VisualEditor:</div>
+<div class="dyncontent">
+<div class="center"><img src="classVisualEditor__inherit__graph.png" border="0" usemap="#aVisualEditor_inherit__map" alt="Inheritance graph"/></div>
+<map name="aVisualEditor_inherit__map" id="aVisualEditor_inherit__map">
+<area shape="rect" title="Визуальный редактор" alt="" coords="11,5,102,32"/>
+<area shape="rect" href="classDesktopEditor.html" title="Визуальный desktop редактор" alt="" coords="5,80,108,107"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a703e42b5bed1d77930f577784a1e3c66"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualEditor.html#a703e42b5bed1d77930f577784a1e3c66">VisualEditor</a> (std::shared_ptr&lt; <a class="el" href="classVisualController.html">VisualController</a> &gt; visual_controller)</td></tr>
+<tr class="memdesc:a703e42b5bed1d77930f577784a1e3c66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор  <a href="classVisualEditor.html#a703e42b5bed1d77930f577784a1e3c66">Подробнее...</a><br /></td></tr>
+<tr class="separator:a703e42b5bed1d77930f577784a1e3c66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2494ed3b815f554a39cdb4dddd22501"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualEditor.html#aa2494ed3b815f554a39cdb4dddd22501">SelectObjectType</a> (<a class="el" href="VisualObjects_8hpp.html#a1071fd6943d552fb894b2d180a3736fc">VisualObjectType</a> object_type)</td></tr>
+<tr class="memdesc:aa2494ed3b815f554a39cdb4dddd22501"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выбор типа создаваемого объекта  <a href="classVisualEditor.html#aa2494ed3b815f554a39cdb4dddd22501">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa2494ed3b815f554a39cdb4dddd22501"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa54cfd87517073170c580273c2cfee88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualEditor.html#aa54cfd87517073170c580273c2cfee88">SelectPenStyle</a> (<a class="el" href="VisualTypes_8hpp.html#ab70170afb6347d18ff9dac17e05e133e">PenStyle</a> pen_style)</td></tr>
+<tr class="memdesc:aa54cfd87517073170c580273c2cfee88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выбор типа пера  <a href="classVisualEditor.html#aa54cfd87517073170c580273c2cfee88">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa54cfd87517073170c580273c2cfee88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adba7bd06ec5da112900695f0e7b37f3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualEditor.html#adba7bd06ec5da112900695f0e7b37f3d">SelectPenColor</a> (<a class="el" href="VisualTypes_8hpp.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a> color)</td></tr>
+<tr class="memdesc:adba7bd06ec5da112900695f0e7b37f3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выбор цвета пера  <a href="classVisualEditor.html#adba7bd06ec5da112900695f0e7b37f3d">Подробнее...</a><br /></td></tr>
+<tr class="separator:adba7bd06ec5da112900695f0e7b37f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc5dfe0e8768356e9a8527d7d4e3dfc8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualEditor.html#acc5dfe0e8768356e9a8527d7d4e3dfc8">SelectBrushStyle</a> (<a class="el" href="VisualTypes_8hpp.html#af67a889bc5e9f8ab3a59fe58b0fa2128">BrushStyle</a> brush_style)</td></tr>
+<tr class="memdesc:acc5dfe0e8768356e9a8527d7d4e3dfc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выбор типа кисти  <a href="classVisualEditor.html#acc5dfe0e8768356e9a8527d7d4e3dfc8">Подробнее...</a><br /></td></tr>
+<tr class="separator:acc5dfe0e8768356e9a8527d7d4e3dfc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3b074029bd7c1c1a175353da516b2b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualEditor.html#ab3b074029bd7c1c1a175353da516b2b8">SelectBrushColor</a> (<a class="el" href="VisualTypes_8hpp.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a> color)</td></tr>
+<tr class="memdesc:ab3b074029bd7c1c1a175353da516b2b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выбор цвета кисти  <a href="classVisualEditor.html#ab3b074029bd7c1c1a175353da516b2b8">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab3b074029bd7c1c1a175353da516b2b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47af8cb6aaffa79443d2d13a9b7337cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualEditor.html#a47af8cb6aaffa79443d2d13a9b7337cc">SelectThickness</a> (uint thickness)</td></tr>
+<tr class="memdesc:a47af8cb6aaffa79443d2d13a9b7337cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выбор толщины пера  <a href="classVisualEditor.html#a47af8cb6aaffa79443d2d13a9b7337cc">Подробнее...</a><br /></td></tr>
+<tr class="separator:a47af8cb6aaffa79443d2d13a9b7337cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f74081accd24f78592716f422ee13b7"><td class="memItemLeft" align="right" valign="top"><a id="a2f74081accd24f78592716f422ee13b7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualEditor.html#a2f74081accd24f78592716f422ee13b7">Redraw</a> ()</td></tr>
+<tr class="memdesc:a2f74081accd24f78592716f422ee13b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перерисовка редактора <br /></td></tr>
+<tr class="separator:a2f74081accd24f78592716f422ee13b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f102511fa701a7ea387661cc94cef8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualEditor.html#a4f102511fa701a7ea387661cc94cef8c">MouseDown</a> (<a class="el" href="structPoint.html">Point</a> point, <a class="el" href="VisualEditor_8hpp.html#ac1ec3647c005eacad401b06e7e18f711">MouseButton</a> button)</td></tr>
+<tr class="memdesc:a4f102511fa701a7ea387661cc94cef8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Нажатие кнопки мыши  <a href="classVisualEditor.html#a4f102511fa701a7ea387661cc94cef8c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a4f102511fa701a7ea387661cc94cef8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab070610966d06235ef26959694ce6d48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualEditor.html#ab070610966d06235ef26959694ce6d48">KeyPress</a> (<a class="el" href="VisualEditor_8hpp.html#a94b4a5e76ed30c0af90a1bbbdc214b2b">KeyboardKey</a> key)</td></tr>
+<tr class="memdesc:ab070610966d06235ef26959694ce6d48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Нажатие клавиши клавиатуры  <a href="classVisualEditor.html#ab070610966d06235ef26959694ce6d48">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab070610966d06235ef26959694ce6d48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a302b4b746d04df459522109cacd34c25"><td class="memItemLeft" align="right" valign="top"><a id="a302b4b746d04df459522109cacd34c25"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualEditor.html#a302b4b746d04df459522109cacd34c25">NewFile</a> ()</td></tr>
+<tr class="memdesc:a302b4b746d04df459522109cacd34c25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание файла <br /></td></tr>
+<tr class="separator:a302b4b746d04df459522109cacd34c25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb9d46e27a77befd51d5eeb267f0d4cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualEditor.html#abb9d46e27a77befd51d5eeb267f0d4cf">SaveFile</a> (std::string filename)</td></tr>
+<tr class="memdesc:abb9d46e27a77befd51d5eeb267f0d4cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сохранение файла  <a href="classVisualEditor.html#abb9d46e27a77befd51d5eeb267f0d4cf">Подробнее...</a><br /></td></tr>
+<tr class="separator:abb9d46e27a77befd51d5eeb267f0d4cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a722c9828dcdb8bc3bd048b7610f6f002"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualEditor.html#a722c9828dcdb8bc3bd048b7610f6f002">LoadFile</a> (std::string filename)</td></tr>
+<tr class="memdesc:a722c9828dcdb8bc3bd048b7610f6f002"><td class="mdescLeft">&#160;</td><td class="mdescRight">Загрузка файла  <a href="classVisualEditor.html#a722c9828dcdb8bc3bd048b7610f6f002">Подробнее...</a><br /></td></tr>
+<tr class="separator:a722c9828dcdb8bc3bd048b7610f6f002"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:a934defdda06225701bd92ed1750af0ae"><td class="memItemLeft" align="right" valign="top"><a id="a934defdda06225701bd92ed1750af0ae"></a>
+std::shared_ptr&lt; <a class="el" href="classIVisualCanvas.html">IVisualCanvas</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualEditor.html#a934defdda06225701bd92ed1750af0ae">m_canvas</a></td></tr>
+<tr class="memdesc:a934defdda06225701bd92ed1750af0ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Холст редактора <br /></td></tr>
+<tr class="separator:a934defdda06225701bd92ed1750af0ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84792a037313a22b4d35e0e3435df2a3"><td class="memItemLeft" align="right" valign="top"><a id="a84792a037313a22b4d35e0e3435df2a3"></a>
+std::shared_ptr&lt; <a class="el" href="classVisualController.html">VisualController</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualEditor.html#a84792a037313a22b4d35e0e3435df2a3">m_controller</a></td></tr>
+<tr class="memdesc:a84792a037313a22b4d35e0e3435df2a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Контроллер <br /></td></tr>
+<tr class="separator:a84792a037313a22b4d35e0e3435df2a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Визуальный редактор </p>
+<p>Позволяет редактировать векторное изображение. Может быть в разных реализациях - desktop, web, mobile... </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a703e42b5bed1d77930f577784a1e3c66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a703e42b5bed1d77930f577784a1e3c66">&#9670;&nbsp;</a></span>VisualEditor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VisualEditor::VisualEditor </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classVisualController.html">VisualController</a> &gt;&#160;</td>
+          <td class="paramname"><em>visual_controller</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Конструктор </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">visual_controller</td><td>контрроллер </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="ab070610966d06235ef26959694ce6d48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab070610966d06235ef26959694ce6d48">&#9670;&nbsp;</a></span>KeyPress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualEditor::KeyPress </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="VisualEditor_8hpp.html#a94b4a5e76ed30c0af90a1bbbdc214b2b">KeyboardKey</a>&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Нажатие клавиши клавиатуры </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>клавиша </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a722c9828dcdb8bc3bd048b7610f6f002"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a722c9828dcdb8bc3bd048b7610f6f002">&#9670;&nbsp;</a></span>LoadFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualEditor::LoadFile </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Загрузка файла </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>имя файла </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4f102511fa701a7ea387661cc94cef8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f102511fa701a7ea387661cc94cef8c">&#9670;&nbsp;</a></span>MouseDown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualEditor::MouseDown </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structPoint.html">Point</a>&#160;</td>
+          <td class="paramname"><em>point</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="VisualEditor_8hpp.html#ac1ec3647c005eacad401b06e7e18f711">MouseButton</a>&#160;</td>
+          <td class="paramname"><em>button</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Нажатие кнопки мыши </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">point</td><td>позиция курсора </td></tr>
+    <tr><td class="paramname">button</td><td>кнопка мыши </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abb9d46e27a77befd51d5eeb267f0d4cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb9d46e27a77befd51d5eeb267f0d4cf">&#9670;&nbsp;</a></span>SaveFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualEditor::SaveFile </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Сохранение файла </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>имя файла </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab3b074029bd7c1c1a175353da516b2b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3b074029bd7c1c1a175353da516b2b8">&#9670;&nbsp;</a></span>SelectBrushColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualEditor::SelectBrushColor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="VisualTypes_8hpp.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a>&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Выбор цвета кисти </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>цвет кисти </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acc5dfe0e8768356e9a8527d7d4e3dfc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc5dfe0e8768356e9a8527d7d4e3dfc8">&#9670;&nbsp;</a></span>SelectBrushStyle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualEditor::SelectBrushStyle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="VisualTypes_8hpp.html#af67a889bc5e9f8ab3a59fe58b0fa2128">BrushStyle</a>&#160;</td>
+          <td class="paramname"><em>brush_style</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Выбор типа кисти </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">brush_style</td><td>тип кисти </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa2494ed3b815f554a39cdb4dddd22501"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2494ed3b815f554a39cdb4dddd22501">&#9670;&nbsp;</a></span>SelectObjectType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualEditor::SelectObjectType </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="VisualObjects_8hpp.html#a1071fd6943d552fb894b2d180a3736fc">VisualObjectType</a>&#160;</td>
+          <td class="paramname"><em>object_type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Выбор типа создаваемого объекта </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object_type</td><td>тип объекта </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adba7bd06ec5da112900695f0e7b37f3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adba7bd06ec5da112900695f0e7b37f3d">&#9670;&nbsp;</a></span>SelectPenColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualEditor::SelectPenColor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="VisualTypes_8hpp.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a>&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Выбор цвета пера </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>цвет пера </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa54cfd87517073170c580273c2cfee88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa54cfd87517073170c580273c2cfee88">&#9670;&nbsp;</a></span>SelectPenStyle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualEditor::SelectPenStyle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="VisualTypes_8hpp.html#ab70170afb6347d18ff9dac17e05e133e">PenStyle</a>&#160;</td>
+          <td class="paramname"><em>pen_style</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Выбор типа пера </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pen_style</td><td>тип пера </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a47af8cb6aaffa79443d2d13a9b7337cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47af8cb6aaffa79443d2d13a9b7337cc">&#9670;&nbsp;</a></span>SelectThickness()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualEditor::SelectThickness </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>thickness</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Выбор толщины пера </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">thickness</td><td>толщина пера </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>src/<a class="el" href="VisualEditor_8hpp_source.html">VisualEditor.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

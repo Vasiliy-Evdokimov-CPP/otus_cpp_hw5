@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>editor: Исходный файл src/VisualObjects.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">editor
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">OTUS C++ Professional Homework #5</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">VisualObjects.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="VisualObjects_8hpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="VisualTypes_8hpp.html">VisualTypes.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="VisualCanvas_8hpp.html">VisualCanvas.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="VisualObjects_8hpp.html#ad49d774c16699acacb2d3c7feaa163a7">   19</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="VisualObjects_8hpp.html#ad49d774c16699acacb2d3c7feaa163a7">HIT_TOLERANCE</a> = 3;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="VisualObjects_8hpp.html#a1071fd6943d552fb894b2d180a3736fc">   25</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="VisualObjects_8hpp.html#a1071fd6943d552fb894b2d180a3736fc">VisualObjectType</a> { unknown, selector, line, rectangle, ellipse };</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="VisualObjects_8hpp.html#a83457d55b3b63a62976bafdad857a4c8">   31</a></span>&#160;std::map&lt;VisualObjectType, std::string&gt; <a class="code" href="VisualObjects_8hpp.html#a83457d55b3b63a62976bafdad857a4c8">ObjectTypeToStringMap</a> = </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    { VisualObjectType::unknown,    <span class="stringliteral">&quot;(unknown)&quot;</span> }, </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    { VisualObjectType::selector,   <span class="stringliteral">&quot;SELECTOR&quot;</span> }, </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    { VisualObjectType::line,       <span class="stringliteral">&quot;LINE&quot;</span> }, </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    { VisualObjectType::rectangle,  <span class="stringliteral">&quot;RECTANGLE&quot;</span> }, </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    { VisualObjectType::ellipse,    <span class="stringliteral">&quot;ELLIPSE&quot;</span> }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="VisualObjects_8hpp.html#a3ace6f2e3d89936f26673005c57d8e3a">   44</a></span>&#160;std::string <a class="code" href="VisualObjects_8hpp.html#a3ace6f2e3d89936f26673005c57d8e3a">ObjectTypeToString</a>(<a class="code" href="VisualObjects_8hpp.html#a1071fd6943d552fb894b2d180a3736fc">VisualObjectType</a> object_type)</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="VisualObjects_8hpp.html#a83457d55b3b63a62976bafdad857a4c8">ObjectTypeToStringMap</a>.count(object_type) == 0)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="VisualObjects_8hpp.html#a83457d55b3b63a62976bafdad857a4c8">ObjectTypeToStringMap</a>[VisualObjectType::unknown];</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="VisualObjects_8hpp.html#a83457d55b3b63a62976bafdad857a4c8">ObjectTypeToStringMap</a>[object_type];     </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="VisualObjects_8hpp.html#a8beada830c1a817bb8e129f57f9dceb8">   56</a></span>&#160;<a class="code" href="VisualObjects_8hpp.html#a1071fd6943d552fb894b2d180a3736fc">VisualObjectType</a> <a class="code" href="VisualObjects_8hpp.html#a8beada830c1a817bb8e129f57f9dceb8">StringToObjectType</a>(std::string object_type)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">for</span>(<span class="keyword">auto</span> iter{<a class="code" href="VisualObjects_8hpp.html#a83457d55b3b63a62976bafdad857a4c8">ObjectTypeToStringMap</a>.begin()}; iter != <a class="code" href="VisualObjects_8hpp.html#a83457d55b3b63a62976bafdad857a4c8">ObjectTypeToStringMap</a>.end(); iter++)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">if</span> (iter-&gt;second == object_type) </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">return</span> iter-&gt;first;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">//        </span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span> VisualObjectType::unknown;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classBaseVisualObject.html">   69</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBaseVisualObject.html">BaseVisualObject</a> {};</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classSelector.html">   75</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSelector.html">Selector</a>: <span class="keyword">public</span> <a class="code" href="classBaseVisualObject.html">BaseVisualObject</a> {};</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classVisualObject.html">   81</a></span>&#160;<span class="keyword">class </span><a class="code" href="classVisualObject.html">VisualObject</a>: <span class="keyword">public</span> <a class="code" href="classBaseVisualObject.html">BaseVisualObject</a></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;{</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="classVisualObject.html#a89801192b11afbc7f226072c1d653a8e">   88</a></span>&#160;    <a class="code" href="classVisualObject.html#a89801192b11afbc7f226072c1d653a8e">VisualObject</a>()</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    {        </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        WriteLog(<span class="stringliteral">&quot;VisualObject()&quot;</span>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classVisualObject.html#a068ba11545322d81d9ad8c675c4233f9">   97</a></span>&#160;    <a class="code" href="classVisualObject.html#a068ba11545322d81d9ad8c675c4233f9">~VisualObject</a>()</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    {        </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        WriteLog(<span class="stringliteral">&quot;~VisualObject()&quot;</span>);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="comment">//</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <a class="code" href="classVisualObject.html#a8b092f36024d2a0dac591445b75cc940">m_points</a>.clear();</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }    </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="classVisualObject.html#a870fdf40b9b9cb6423bbd5f42b82fcf2">  108</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="classVisualObject.html#a870fdf40b9b9cb6423bbd5f42b82fcf2">GetPointsCount</a>()</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classVisualObject.html#a8b092f36024d2a0dac591445b75cc940">m_points</a>.size();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }    </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="classVisualObject.html#a708e9d7645d16d94b76ba0ae5834a672">  119</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="classVisualObject.html#a708e9d7645d16d94b76ba0ae5834a672">GetMaxPointsCount</a>()</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classVisualObject.html#a1dd376a61cbe23dc9b3e95d3087e1fe2">m_max_points_count</a>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    } </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="classVisualObject.html#a3baabb10770f8745729beac826aa2081">  129</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classVisualObject.html#a3baabb10770f8745729beac826aa2081">AddPoint</a>(<a class="code" href="structPoint.html">Point</a> point)  </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    {</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <a class="code" href="classVisualObject.html#a8b092f36024d2a0dac591445b75cc940">m_points</a>.push_back(point);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno"><a class="line" href="classVisualObject.html#a39f28c2aedd5b0635afe7853aad68d6c">  138</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classVisualObject.html#a39f28c2aedd5b0635afe7853aad68d6c">IsFinished</a>() </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    {</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="classVisualObject.html#a8b092f36024d2a0dac591445b75cc940">m_points</a>.size() == <a class="code" href="classVisualObject.html#a708e9d7645d16d94b76ba0ae5834a672">GetMaxPointsCount</a>());</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    }</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="classVisualObject.html#a6e9ab5caae2af5bd6e31e0ee0dbaa8fe">  147</a></span>&#160;    <span class="keyword">virtual</span> std::string <a class="code" href="classVisualObject.html#a6e9ab5caae2af5bd6e31e0ee0dbaa8fe">Serialize</a>()</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    {</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        std::string res = <a class="code" href="VisualObjects_8hpp.html#a3ace6f2e3d89936f26673005c57d8e3a">ObjectTypeToString</a>(<a class="code" href="classVisualObject.html#aff210044e9f21841c6a4a8dd1a6f0a92">m_type</a>);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="comment">//</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        res += <span class="stringliteral">&quot; &quot;</span> + std::to_string(<a class="code" href="classVisualObject.html#a8b092f36024d2a0dac591445b75cc940">m_points</a>.size());</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="comment">//</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; <a class="code" href="classVisualObject.html#a8b092f36024d2a0dac591445b75cc940">m_points</a>.size(); ++i)</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            res += <span class="stringliteral">&quot; &quot;</span> + <a class="code" href="classVisualObject.html#a8b092f36024d2a0dac591445b75cc940">m_points</a>[i].<a class="code" href="classVisualObject.html#a6e9ab5caae2af5bd6e31e0ee0dbaa8fe">Serialize</a>();</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="comment">//</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keywordflow">return</span> res;    </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="classVisualObject.html#a663873c866f6cbf267f1bc4b80e243a7">  163</a></span>&#160;    <span class="keyword">virtual</span> std::string <a class="code" href="classVisualObject.html#a663873c866f6cbf267f1bc4b80e243a7">GetTypeName</a>()</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    {</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="VisualObjects_8hpp.html#a3ace6f2e3d89936f26673005c57d8e3a">ObjectTypeToString</a>(<a class="code" href="classVisualObject.html#aff210044e9f21841c6a4a8dd1a6f0a92">m_type</a>);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno"><a class="line" href="classVisualObject.html#a194a0e233b49dc4fb62b74ccc8a476ee">  173</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classVisualObject.html#a194a0e233b49dc4fb62b74ccc8a476ee">Draw</a>(std::shared_ptr&lt;IVisualCanvas&gt; canvas) = 0;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno"><a class="line" href="classVisualObject.html#a72c7b261c8df21566366184653759dc2">  180</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classVisualObject.html#a72c7b261c8df21566366184653759dc2">HitTest</a>(<a class="code" href="structPoint.html">Point</a> point) = 0;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00186"></a><span class="lineno"><a class="line" href="classVisualObject.html#ac900cf242c27f27027feb1339a276f4f">  186</a></span>&#160;    <a class="code" href="structPen.html">Pen</a> <a class="code" href="classVisualObject.html#ac900cf242c27f27027feb1339a276f4f">m_pen</a>;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00193"></a><span class="lineno"><a class="line" href="classVisualObject.html#a1dd376a61cbe23dc9b3e95d3087e1fe2">  193</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="classVisualObject.html#a1dd376a61cbe23dc9b3e95d3087e1fe2">m_max_points_count</a> = 2;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno"><a class="line" href="classVisualObject.html#a8b092f36024d2a0dac591445b75cc940">  199</a></span>&#160;    std::vector&lt;Point&gt; <a class="code" href="classVisualObject.html#a8b092f36024d2a0dac591445b75cc940">m_points</a>;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="classVisualObject.html#aff210044e9f21841c6a4a8dd1a6f0a92">  205</a></span>&#160;    <a class="code" href="VisualObjects_8hpp.html#a1071fd6943d552fb894b2d180a3736fc">VisualObjectType</a> <a class="code" href="classVisualObject.html#aff210044e9f21841c6a4a8dd1a6f0a92">m_type</a> = VisualObjectType::unknown;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;       </div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;};</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
+<div class="line"><a name="l00215"></a><span class="lineno"><a class="line" href="classFilledVisualObject.html">  215</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFilledVisualObject.html">FilledVisualObject</a>: <span class="keyword">public</span> <a class="code" href="classVisualObject.html">VisualObject</a></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;{   </div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00222"></a><span class="lineno"><a class="line" href="classFilledVisualObject.html#af2802e8aa76937bb4c40b516081197f2">  222</a></span>&#160;    <a class="code" href="structBrush.html">Brush</a> <a class="code" href="classFilledVisualObject.html#af2802e8aa76937bb4c40b516081197f2">m_brush</a>;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;};</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
+<div class="line"><a name="l00231"></a><span class="lineno"><a class="line" href="classLineVisualObject.html">  231</a></span>&#160;<span class="keyword">class </span><a class="code" href="classLineVisualObject.html">LineVisualObject</a>: <span class="keyword">public</span> <a class="code" href="classVisualObject.html">VisualObject</a></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;{</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00239"></a><span class="lineno"><a class="line" href="classLineVisualObject.html#a4683460fbaf36bf9acbe1a59c0764495">  239</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classLineVisualObject.html#a4683460fbaf36bf9acbe1a59c0764495">Draw</a>(std::shared_ptr&lt;IVisualCanvas&gt; canvas)<span class="keyword"> override</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        canvas-&gt;m_pen = <a class="code" href="classVisualObject.html#ac900cf242c27f27027feb1339a276f4f">m_pen</a>;    </div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <span class="comment">//</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 1; i &lt; <a class="code" href="classVisualObject.html#a8b092f36024d2a0dac591445b75cc940">m_points</a>.size(); ++i)</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            canvas-&gt;DrawLine(<a class="code" href="classVisualObject.html#a8b092f36024d2a0dac591445b75cc940">m_points</a>[i - 1], <a class="code" href="classVisualObject.html#a8b092f36024d2a0dac591445b75cc940">m_points</a>[i]);</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    }</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
+<div class="line"><a name="l00252"></a><span class="lineno"><a class="line" href="classLineVisualObject.html#a71791ee4fe66155889b890a9e5143cbd">  252</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classLineVisualObject.html#a71791ee4fe66155889b890a9e5143cbd">HitTest</a>(<a class="code" href="structPoint.html">Point</a> point)<span class="keyword"> override </span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classVisualObject.html#a8b092f36024d2a0dac591445b75cc940">m_points</a>.size() &lt; 2) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <span class="comment">//</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="VisualTypes_8hpp.html#ad2c5127560ec00a3ab73d953a4df6c64">distance</a>(point, <a class="code" href="classVisualObject.html#a8b092f36024d2a0dac591445b75cc940">m_points</a>[0], <a class="code" href="classVisualObject.html#a8b092f36024d2a0dac591445b75cc940">m_points</a>[1]) &lt; <a class="code" href="VisualObjects_8hpp.html#ad49d774c16699acacb2d3c7feaa163a7">HIT_TOLERANCE</a>;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    }</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;};</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
+<div class="line"><a name="l00266"></a><span class="lineno"><a class="line" href="classRectVisualObject.html">  266</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRectVisualObject.html">RectVisualObject</a>: <span class="keyword">public</span> <a class="code" href="classFilledVisualObject.html">FilledVisualObject</a></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;{</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00274"></a><span class="lineno"><a class="line" href="classRectVisualObject.html#a3ff4dbb8c8f0da133f2e1386cbed25b7">  274</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classRectVisualObject.html#a3ff4dbb8c8f0da133f2e1386cbed25b7">HitTest</a>(<a class="code" href="structPoint.html">Point</a> point) </div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    {</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classVisualObject.html#a8b092f36024d2a0dac591445b75cc940">m_points</a>.size() &lt; 2) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="comment">//</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        <span class="keywordflow">return</span> </div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            ((point.x &gt; <a class="code" href="classVisualObject.html#a8b092f36024d2a0dac591445b75cc940">m_points</a>[0].x - <a class="code" href="VisualObjects_8hpp.html#ad49d774c16699acacb2d3c7feaa163a7">HIT_TOLERANCE</a>) &amp;&amp; (point.x &lt; <a class="code" href="classVisualObject.html#a8b092f36024d2a0dac591445b75cc940">m_points</a>[1].x + <a class="code" href="VisualObjects_8hpp.html#ad49d774c16699acacb2d3c7feaa163a7">HIT_TOLERANCE</a>) &amp;&amp;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;             (point.y &gt; <a class="code" href="classVisualObject.html#a8b092f36024d2a0dac591445b75cc940">m_points</a>[0].y - <a class="code" href="VisualObjects_8hpp.html#ad49d774c16699acacb2d3c7feaa163a7">HIT_TOLERANCE</a>) &amp;&amp; (point.y &lt; <a class="code" href="classVisualObject.html#a8b092f36024d2a0dac591445b75cc940">m_points</a>[1].y + <a class="code" href="VisualObjects_8hpp.html#ad49d774c16699acacb2d3c7feaa163a7">HIT_TOLERANCE</a>));        </div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    }</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160; </div>
+<div class="line"><a name="l00289"></a><span class="lineno"><a class="line" href="classRectVisualObject.html#a1e72779847fae8e9ce21ba4cf483d3ec">  289</a></span>&#160;    <a class="code" href="classRectVisualObject.html#a1e72779847fae8e9ce21ba4cf483d3ec">RectVisualObject</a>(<a class="code" href="structPen.html">Pen</a> pen, <a class="code" href="structBrush.html">Brush</a> brush)</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    {</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <a class="code" href="classVisualObject.html#ac900cf242c27f27027feb1339a276f4f">m_pen</a> = pen;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        <a class="code" href="classFilledVisualObject.html#af2802e8aa76937bb4c40b516081197f2">m_brush</a> = brush;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    } </div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
+<div class="line"><a name="l00300"></a><span class="lineno"><a class="line" href="classRectVisualObject.html#af1b08e777c44799301aedc4e855608eb">  300</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classRectVisualObject.html#af1b08e777c44799301aedc4e855608eb">Draw</a>(std::shared_ptr&lt;IVisualCanvas&gt; canvas)<span class="keyword"> override</span></div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        canvas-&gt;m_pen = <a class="code" href="classVisualObject.html#ac900cf242c27f27027feb1339a276f4f">m_pen</a>;    </div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        canvas-&gt;m_brush = <a class="code" href="classFilledVisualObject.html#af2802e8aa76937bb4c40b516081197f2">m_brush</a>;    </div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    }</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;};</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160; </div>
+<div class="line"><a name="l00311"></a><span class="lineno"><a class="line" href="classSimpleLine.html">  311</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSimpleLine.html">SimpleLine</a>: <span class="keyword">public</span> <a class="code" href="classLineVisualObject.html">LineVisualObject</a></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;{</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00318"></a><span class="lineno"><a class="line" href="classSimpleLine.html#aad8bf7ce5b4efa970bbedff1320c5164">  318</a></span>&#160;    <a class="code" href="classSimpleLine.html#aad8bf7ce5b4efa970bbedff1320c5164">SimpleLine</a>()</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    {    </div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        WriteLog(<span class="stringliteral">&quot;SimpleLine()&quot;</span>);</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        <span class="comment">//</span></div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        <a class="code" href="classVisualObject.html#a1dd376a61cbe23dc9b3e95d3087e1fe2">m_max_points_count</a> = 2;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        <a class="code" href="classVisualObject.html#aff210044e9f21841c6a4a8dd1a6f0a92">m_type</a> = VisualObjectType::line;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    } </div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160; </div>
+<div class="line"><a name="l00331"></a><span class="lineno"><a class="line" href="classSimpleLine.html#a83bad49addcf539f57e084f606c756bb">  331</a></span>&#160;    <a class="code" href="classSimpleLine.html#a83bad49addcf539f57e084f606c756bb">SimpleLine</a>(<a class="code" href="structPen.html">Pen</a> pen) : <a class="code" href="classSimpleLine.html">SimpleLine</a>()</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    {</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        <a class="code" href="classVisualObject.html#ac900cf242c27f27027feb1339a276f4f">m_pen</a> = pen;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    }    </div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;};</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160; </div>
+<div class="line"><a name="l00341"></a><span class="lineno"><a class="line" href="classRectangle.html">  341</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRectangle.html">Rectangle</a>: <span class="keyword">public</span> <a class="code" href="classRectVisualObject.html">RectVisualObject</a></div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;{</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00350"></a><span class="lineno"><a class="line" href="classRectangle.html#af897ef5d7fd136bed48eb3a0486fd995">  350</a></span>&#160;    <a class="code" href="classRectangle.html#af897ef5d7fd136bed48eb3a0486fd995">Rectangle</a>(<a class="code" href="structPen.html">Pen</a> pen, <a class="code" href="structBrush.html">Brush</a> brush) : <a class="code" href="classRectVisualObject.html">RectVisualObject</a>(pen, brush)</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    {</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        WriteLog(<span class="stringliteral">&quot;Rectangle()&quot;</span>);</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        <span class="comment">//</span></div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        <a class="code" href="classVisualObject.html#aff210044e9f21841c6a4a8dd1a6f0a92">m_type</a> = VisualObjectType::rectangle;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    };</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160; </div>
+<div class="line"><a name="l00362"></a><span class="lineno"><a class="line" href="classRectangle.html#afc542b4bcd29a9468987b92c1d306a7e">  362</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRectangle.html#afc542b4bcd29a9468987b92c1d306a7e">Draw</a>(std::shared_ptr&lt;IVisualCanvas&gt; canvas)<span class="keyword"> override</span></div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        <a class="code" href="classRectVisualObject.html#af1b08e777c44799301aedc4e855608eb">RectVisualObject::Draw</a>(canvas);</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        <span class="comment">//</span></div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        canvas-&gt;DrawRectangle(<a class="code" href="classVisualObject.html#a8b092f36024d2a0dac591445b75cc940">m_points</a>[0], <a class="code" href="classVisualObject.html#a8b092f36024d2a0dac591445b75cc940">m_points</a>[1]);</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    }</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;};</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160; </div>
+<div class="line"><a name="l00374"></a><span class="lineno"><a class="line" href="classEllipse.html">  374</a></span>&#160;<span class="keyword">class </span><a class="code" href="classEllipse.html">Ellipse</a>: <span class="keyword">public</span> <a class="code" href="classRectVisualObject.html">RectVisualObject</a></div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;{</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00383"></a><span class="lineno"><a class="line" href="classEllipse.html#ab947c9331650d7db834df5d28f280818">  383</a></span>&#160;    <a class="code" href="classEllipse.html#ab947c9331650d7db834df5d28f280818">Ellipse</a>(<a class="code" href="structPen.html">Pen</a> pen, <a class="code" href="structBrush.html">Brush</a> brush) : <a class="code" href="classRectVisualObject.html">RectVisualObject</a>(pen, brush) </div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    {</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        WriteLog(<span class="stringliteral">&quot;Ellipse()&quot;</span>);</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        <span class="comment">//</span></div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        <a class="code" href="classVisualObject.html#aff210044e9f21841c6a4a8dd1a6f0a92">m_type</a> = VisualObjectType::ellipse;</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    };</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    </div>
+<div class="line"><a name="l00395"></a><span class="lineno"><a class="line" href="classEllipse.html#a5c19decd4b786dac1f608241a04a6c0f">  395</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classEllipse.html#a5c19decd4b786dac1f608241a04a6c0f">Draw</a>(std::shared_ptr&lt;IVisualCanvas&gt; canvas)<span class="keyword"> override</span></div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;        <a class="code" href="classRectVisualObject.html#af1b08e777c44799301aedc4e855608eb">RectVisualObject::Draw</a>(canvas);</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        <span class="comment">//</span></div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        canvas-&gt;DrawEllipse(<a class="code" href="classVisualObject.html#a8b092f36024d2a0dac591445b75cc940">m_points</a>[0], <a class="code" href="classVisualObject.html#a8b092f36024d2a0dac591445b75cc940">m_points</a>[1]);</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    }</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;}; </div>
+<div class="ttc" id="aVisualCanvas_8hpp_html"><div class="ttname"><a href="VisualCanvas_8hpp.html">VisualCanvas.hpp</a></div></div>
+<div class="ttc" id="aVisualObjects_8hpp_html_a1071fd6943d552fb894b2d180a3736fc"><div class="ttname"><a href="VisualObjects_8hpp.html#a1071fd6943d552fb894b2d180a3736fc">VisualObjectType</a></div><div class="ttdeci">VisualObjectType</div><div class="ttdoc">Типы визуальных объектов</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:25</div></div>
+<div class="ttc" id="aVisualObjects_8hpp_html_a3ace6f2e3d89936f26673005c57d8e3a"><div class="ttname"><a href="VisualObjects_8hpp.html#a3ace6f2e3d89936f26673005c57d8e3a">ObjectTypeToString</a></div><div class="ttdeci">std::string ObjectTypeToString(VisualObjectType object_type)</div><div class="ttdoc">Преобразование типа объекта в строку</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:44</div></div>
+<div class="ttc" id="aVisualObjects_8hpp_html_a83457d55b3b63a62976bafdad857a4c8"><div class="ttname"><a href="VisualObjects_8hpp.html#a83457d55b3b63a62976bafdad857a4c8">ObjectTypeToStringMap</a></div><div class="ttdeci">std::map&lt; VisualObjectType, std::string &gt; ObjectTypeToStringMap</div><div class="ttdoc">Словарь соответствия типа объекта его названию</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:31</div></div>
+<div class="ttc" id="aVisualObjects_8hpp_html_a8beada830c1a817bb8e129f57f9dceb8"><div class="ttname"><a href="VisualObjects_8hpp.html#a8beada830c1a817bb8e129f57f9dceb8">StringToObjectType</a></div><div class="ttdeci">VisualObjectType StringToObjectType(std::string object_type)</div><div class="ttdoc">Преобразование типа строки в тип объекта</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:56</div></div>
+<div class="ttc" id="aVisualObjects_8hpp_html_ad49d774c16699acacb2d3c7feaa163a7"><div class="ttname"><a href="VisualObjects_8hpp.html#ad49d774c16699acacb2d3c7feaa163a7">HIT_TOLERANCE</a></div><div class="ttdeci">const int HIT_TOLERANCE</div><div class="ttdoc">Чувствительность при выделении объекта</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:19</div></div>
+<div class="ttc" id="aVisualTypes_8hpp_html"><div class="ttname"><a href="VisualTypes_8hpp.html">VisualTypes.hpp</a></div></div>
+<div class="ttc" id="aVisualTypes_8hpp_html_ad2c5127560ec00a3ab73d953a4df6c64"><div class="ttname"><a href="VisualTypes_8hpp.html#ad2c5127560ec00a3ab73d953a4df6c64">distance</a></div><div class="ttdeci">double distance(Point p, Point p1, Point p2)</div><div class="ttdoc">Вычисление расстояния от точки до отрезка</div><div class="ttdef"><b>Definition:</b> VisualTypes.hpp:230</div></div>
+<div class="ttc" id="aclassBaseVisualObject_html"><div class="ttname"><a href="classBaseVisualObject.html">BaseVisualObject</a></div><div class="ttdoc">Базовый класс визуальных объектов</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:69</div></div>
+<div class="ttc" id="aclassEllipse_html"><div class="ttname"><a href="classEllipse.html">Ellipse</a></div><div class="ttdoc">Объект - эллипс</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:375</div></div>
+<div class="ttc" id="aclassEllipse_html_a5c19decd4b786dac1f608241a04a6c0f"><div class="ttname"><a href="classEllipse.html#a5c19decd4b786dac1f608241a04a6c0f">Ellipse::Draw</a></div><div class="ttdeci">void Draw(std::shared_ptr&lt; IVisualCanvas &gt; canvas) override</div><div class="ttdoc">Рисование объекта</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:395</div></div>
+<div class="ttc" id="aclassEllipse_html_ab947c9331650d7db834df5d28f280818"><div class="ttname"><a href="classEllipse.html#ab947c9331650d7db834df5d28f280818">Ellipse::Ellipse</a></div><div class="ttdeci">Ellipse(Pen pen, Brush brush)</div><div class="ttdoc">Конструктор</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:383</div></div>
+<div class="ttc" id="aclassFilledVisualObject_html"><div class="ttname"><a href="classFilledVisualObject.html">FilledVisualObject</a></div><div class="ttdoc">Заполняемый объект</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:216</div></div>
+<div class="ttc" id="aclassFilledVisualObject_html_af2802e8aa76937bb4c40b516081197f2"><div class="ttname"><a href="classFilledVisualObject.html#af2802e8aa76937bb4c40b516081197f2">FilledVisualObject::m_brush</a></div><div class="ttdeci">Brush m_brush</div><div class="ttdoc">Кисть заливки</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:222</div></div>
+<div class="ttc" id="aclassLineVisualObject_html"><div class="ttname"><a href="classLineVisualObject.html">LineVisualObject</a></div><div class="ttdoc">Линейный объект</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:232</div></div>
+<div class="ttc" id="aclassLineVisualObject_html_a4683460fbaf36bf9acbe1a59c0764495"><div class="ttname"><a href="classLineVisualObject.html#a4683460fbaf36bf9acbe1a59c0764495">LineVisualObject::Draw</a></div><div class="ttdeci">void Draw(std::shared_ptr&lt; IVisualCanvas &gt; canvas) override</div><div class="ttdoc">Рисование объекта</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:239</div></div>
+<div class="ttc" id="aclassLineVisualObject_html_a71791ee4fe66155889b890a9e5143cbd"><div class="ttname"><a href="classLineVisualObject.html#a71791ee4fe66155889b890a9e5143cbd">LineVisualObject::HitTest</a></div><div class="ttdeci">int HitTest(Point point) override</div><div class="ttdoc">Проверка на попадание точки внутрь объекта</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:252</div></div>
+<div class="ttc" id="aclassRectVisualObject_html"><div class="ttname"><a href="classRectVisualObject.html">RectVisualObject</a></div><div class="ttdoc">Прямоугольный объект</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:267</div></div>
+<div class="ttc" id="aclassRectVisualObject_html_a1e72779847fae8e9ce21ba4cf483d3ec"><div class="ttname"><a href="classRectVisualObject.html#a1e72779847fae8e9ce21ba4cf483d3ec">RectVisualObject::RectVisualObject</a></div><div class="ttdeci">RectVisualObject(Pen pen, Brush brush)</div><div class="ttdoc">Конструктор</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:289</div></div>
+<div class="ttc" id="aclassRectVisualObject_html_a3ff4dbb8c8f0da133f2e1386cbed25b7"><div class="ttname"><a href="classRectVisualObject.html#a3ff4dbb8c8f0da133f2e1386cbed25b7">RectVisualObject::HitTest</a></div><div class="ttdeci">int HitTest(Point point)</div><div class="ttdoc">Проверка на попадание точки внутрь объекта</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:274</div></div>
+<div class="ttc" id="aclassRectVisualObject_html_af1b08e777c44799301aedc4e855608eb"><div class="ttname"><a href="classRectVisualObject.html#af1b08e777c44799301aedc4e855608eb">RectVisualObject::Draw</a></div><div class="ttdeci">virtual void Draw(std::shared_ptr&lt; IVisualCanvas &gt; canvas) override</div><div class="ttdoc">Рисование объекта</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:300</div></div>
+<div class="ttc" id="aclassRectangle_html"><div class="ttname"><a href="classRectangle.html">Rectangle</a></div><div class="ttdoc">Объект - прямоугольник</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:342</div></div>
+<div class="ttc" id="aclassRectangle_html_af897ef5d7fd136bed48eb3a0486fd995"><div class="ttname"><a href="classRectangle.html#af897ef5d7fd136bed48eb3a0486fd995">Rectangle::Rectangle</a></div><div class="ttdeci">Rectangle(Pen pen, Brush brush)</div><div class="ttdoc">Конструктор</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:350</div></div>
+<div class="ttc" id="aclassRectangle_html_afc542b4bcd29a9468987b92c1d306a7e"><div class="ttname"><a href="classRectangle.html#afc542b4bcd29a9468987b92c1d306a7e">Rectangle::Draw</a></div><div class="ttdeci">void Draw(std::shared_ptr&lt; IVisualCanvas &gt; canvas) override</div><div class="ttdoc">Рисование объекта</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:362</div></div>
+<div class="ttc" id="aclassSelector_html"><div class="ttname"><a href="classSelector.html">Selector</a></div><div class="ttdoc">Селектор - отдельное или групповое выделение объектов</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:75</div></div>
+<div class="ttc" id="aclassSimpleLine_html"><div class="ttname"><a href="classSimpleLine.html">SimpleLine</a></div><div class="ttdoc">Объект - простая линия</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:312</div></div>
+<div class="ttc" id="aclassSimpleLine_html_a83bad49addcf539f57e084f606c756bb"><div class="ttname"><a href="classSimpleLine.html#a83bad49addcf539f57e084f606c756bb">SimpleLine::SimpleLine</a></div><div class="ttdeci">SimpleLine(Pen pen)</div><div class="ttdoc">Конструктор</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:331</div></div>
+<div class="ttc" id="aclassSimpleLine_html_aad8bf7ce5b4efa970bbedff1320c5164"><div class="ttname"><a href="classSimpleLine.html#aad8bf7ce5b4efa970bbedff1320c5164">SimpleLine::SimpleLine</a></div><div class="ttdeci">SimpleLine()</div><div class="ttdoc">Конструктор</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:318</div></div>
+<div class="ttc" id="aclassVisualObject_html"><div class="ttname"><a href="classVisualObject.html">VisualObject</a></div><div class="ttdoc">Визуальный объект - объекты непосредственно рисуемые в редакторе</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:82</div></div>
+<div class="ttc" id="aclassVisualObject_html_a068ba11545322d81d9ad8c675c4233f9"><div class="ttname"><a href="classVisualObject.html#a068ba11545322d81d9ad8c675c4233f9">VisualObject::~VisualObject</a></div><div class="ttdeci">~VisualObject()</div><div class="ttdoc">Деструктор</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:97</div></div>
+<div class="ttc" id="aclassVisualObject_html_a194a0e233b49dc4fb62b74ccc8a476ee"><div class="ttname"><a href="classVisualObject.html#a194a0e233b49dc4fb62b74ccc8a476ee">VisualObject::Draw</a></div><div class="ttdeci">virtual void Draw(std::shared_ptr&lt; IVisualCanvas &gt; canvas)=0</div><div class="ttdoc">Рисование объекта</div></div>
+<div class="ttc" id="aclassVisualObject_html_a1dd376a61cbe23dc9b3e95d3087e1fe2"><div class="ttname"><a href="classVisualObject.html#a1dd376a61cbe23dc9b3e95d3087e1fe2">VisualObject::m_max_points_count</a></div><div class="ttdeci">size_t m_max_points_count</div><div class="ttdoc">Максимальное количество точек</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:193</div></div>
+<div class="ttc" id="aclassVisualObject_html_a39f28c2aedd5b0635afe7853aad68d6c"><div class="ttname"><a href="classVisualObject.html#a39f28c2aedd5b0635afe7853aad68d6c">VisualObject::IsFinished</a></div><div class="ttdeci">int IsFinished()</div><div class="ttdoc">Завершено ли конструирование объекта</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:138</div></div>
+<div class="ttc" id="aclassVisualObject_html_a3baabb10770f8745729beac826aa2081"><div class="ttname"><a href="classVisualObject.html#a3baabb10770f8745729beac826aa2081">VisualObject::AddPoint</a></div><div class="ttdeci">virtual void AddPoint(Point point)</div><div class="ttdoc">Добавление точки</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:129</div></div>
+<div class="ttc" id="aclassVisualObject_html_a663873c866f6cbf267f1bc4b80e243a7"><div class="ttname"><a href="classVisualObject.html#a663873c866f6cbf267f1bc4b80e243a7">VisualObject::GetTypeName</a></div><div class="ttdeci">virtual std::string GetTypeName()</div><div class="ttdoc">Возвращает наименовани етипа объекта</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:163</div></div>
+<div class="ttc" id="aclassVisualObject_html_a6e9ab5caae2af5bd6e31e0ee0dbaa8fe"><div class="ttname"><a href="classVisualObject.html#a6e9ab5caae2af5bd6e31e0ee0dbaa8fe">VisualObject::Serialize</a></div><div class="ttdeci">virtual std::string Serialize()</div><div class="ttdoc">Сериализация объекта</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:147</div></div>
+<div class="ttc" id="aclassVisualObject_html_a708e9d7645d16d94b76ba0ae5834a672"><div class="ttname"><a href="classVisualObject.html#a708e9d7645d16d94b76ba0ae5834a672">VisualObject::GetMaxPointsCount</a></div><div class="ttdeci">size_t GetMaxPointsCount()</div><div class="ttdoc">Получение максимального количества точек</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:119</div></div>
+<div class="ttc" id="aclassVisualObject_html_a72c7b261c8df21566366184653759dc2"><div class="ttname"><a href="classVisualObject.html#a72c7b261c8df21566366184653759dc2">VisualObject::HitTest</a></div><div class="ttdeci">virtual int HitTest(Point point)=0</div><div class="ttdoc">Проверка на попадание точки внутрь объекта</div></div>
+<div class="ttc" id="aclassVisualObject_html_a870fdf40b9b9cb6423bbd5f42b82fcf2"><div class="ttname"><a href="classVisualObject.html#a870fdf40b9b9cb6423bbd5f42b82fcf2">VisualObject::GetPointsCount</a></div><div class="ttdeci">size_t GetPointsCount()</div><div class="ttdoc">Получение количества точек</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:108</div></div>
+<div class="ttc" id="aclassVisualObject_html_a89801192b11afbc7f226072c1d653a8e"><div class="ttname"><a href="classVisualObject.html#a89801192b11afbc7f226072c1d653a8e">VisualObject::VisualObject</a></div><div class="ttdeci">VisualObject()</div><div class="ttdoc">Конструктор</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:88</div></div>
+<div class="ttc" id="aclassVisualObject_html_a8b092f36024d2a0dac591445b75cc940"><div class="ttname"><a href="classVisualObject.html#a8b092f36024d2a0dac591445b75cc940">VisualObject::m_points</a></div><div class="ttdeci">std::vector&lt; Point &gt; m_points</div><div class="ttdoc">Точки объекта</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:199</div></div>
+<div class="ttc" id="aclassVisualObject_html_ac900cf242c27f27027feb1339a276f4f"><div class="ttname"><a href="classVisualObject.html#ac900cf242c27f27027feb1339a276f4f">VisualObject::m_pen</a></div><div class="ttdeci">Pen m_pen</div><div class="ttdoc">Перо рисования объекта</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:186</div></div>
+<div class="ttc" id="aclassVisualObject_html_aff210044e9f21841c6a4a8dd1a6f0a92"><div class="ttname"><a href="classVisualObject.html#aff210044e9f21841c6a4a8dd1a6f0a92">VisualObject::m_type</a></div><div class="ttdeci">VisualObjectType m_type</div><div class="ttdoc">Тип объекта</div><div class="ttdef"><b>Definition:</b> VisualObjects.hpp:205</div></div>
+<div class="ttc" id="astructBrush_html"><div class="ttname"><a href="structBrush.html">Brush</a></div><div class="ttdoc">Кисть</div><div class="ttdef"><b>Definition:</b> VisualTypes.hpp:189</div></div>
+<div class="ttc" id="astructPen_html"><div class="ttname"><a href="structPen.html">Pen</a></div><div class="ttdoc">Перо</div><div class="ttdef"><b>Definition:</b> VisualTypes.hpp:141</div></div>
+<div class="ttc" id="astructPoint_html"><div class="ttname"><a href="structPoint.html">Point</a></div><div class="ttdoc">Точка</div><div class="ttdef"><b>Definition:</b> VisualTypes.hpp:113</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<map id="Ellipse" name="Ellipse">
+<area shape="rect" id="node1" title="Объект &#45; эллипс" alt="" coords="143,336,203,363"/>
+<area shape="rect" id="node2" href="$classRectVisualObject.html" title="Прямоугольный объект" alt="" coords="111,260,234,287"/>
+<area shape="rect" id="node3" href="$classFilledVisualObject.html" title="Заполняемый объект" alt="" coords="109,184,236,211"/>
+<area shape="rect" id="node4" href="$classVisualObject.html" title="Визуальный объект &#45; объекты непосредственно рисуемые в редакторе" alt="" coords="75,95,171,121"/>
+<area shape="rect" id="node5" href="$classBaseVisualObject.html" title="Базовый класс визуальных объектов" alt="" coords="5,5,132,32"/>
+<area shape="rect" id="node6" href="$structPen.html" title="Перо" alt="" coords="157,5,202,32"/>
+<area shape="rect" id="node7" href="$structBrush.html" title="Кисть" alt="" coords="195,95,251,121"/>
+</map>

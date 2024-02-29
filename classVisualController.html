@@ -1,0 +1,501 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>editor: Класс VisualController</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">editor
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">OTUS C++ Professional Homework #5</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="classVisualController-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс VisualController</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Визуальный контроллер  
+ <a href="classVisualController.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="VisualController_8hpp_source.html">VisualController.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a1119edfd7d935f8c52e2462b0b25b3c2"><td class="memItemLeft" align="right" valign="top"><a id="a1119edfd7d935f8c52e2462b0b25b3c2"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualController.html#a1119edfd7d935f8c52e2462b0b25b3c2">VisualController</a> (std::shared_ptr&lt; <a class="el" href="classILogger.html">ILogger</a> &gt; logger)</td></tr>
+<tr class="memdesc:a1119edfd7d935f8c52e2462b0b25b3c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор контроллера <br /></td></tr>
+<tr class="separator:a1119edfd7d935f8c52e2462b0b25b3c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2eefa934377a94566a08e2d94ee4dafc"><td class="memItemLeft" align="right" valign="top"><a id="a2eefa934377a94566a08e2d94ee4dafc"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualController.html#a2eefa934377a94566a08e2d94ee4dafc">~VisualController</a> ()</td></tr>
+<tr class="memdesc:a2eefa934377a94566a08e2d94ee4dafc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Деструктор контроллера <br /></td></tr>
+<tr class="separator:a2eefa934377a94566a08e2d94ee4dafc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c71df2a72e16bf54bfa703915aa3d30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualController.html#a0c71df2a72e16bf54bfa703915aa3d30">SelectObjectType</a> (<a class="el" href="VisualObjects_8hpp.html#a1071fd6943d552fb894b2d180a3736fc">VisualObjectType</a> object_type)</td></tr>
+<tr class="memdesc:a0c71df2a72e16bf54bfa703915aa3d30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод задания текущего создавемого объекта  <a href="classVisualController.html#a0c71df2a72e16bf54bfa703915aa3d30">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0c71df2a72e16bf54bfa703915aa3d30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add9eb37055b345f39ed9dcb86cba1da3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualController.html#add9eb37055b345f39ed9dcb86cba1da3">SetPenStyle</a> (<a class="el" href="VisualTypes_8hpp.html#ab70170afb6347d18ff9dac17e05e133e">PenStyle</a> pen_style)</td></tr>
+<tr class="memdesc:add9eb37055b345f39ed9dcb86cba1da3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод задания текущего стиля пера  <a href="classVisualController.html#add9eb37055b345f39ed9dcb86cba1da3">Подробнее...</a><br /></td></tr>
+<tr class="separator:add9eb37055b345f39ed9dcb86cba1da3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8930399af8b1a3d7a0ef257cedfa40d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualController.html#a8930399af8b1a3d7a0ef257cedfa40d5">SetPenColor</a> (<a class="el" href="VisualTypes_8hpp.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a> color)</td></tr>
+<tr class="memdesc:a8930399af8b1a3d7a0ef257cedfa40d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод задания текущего цвета пера  <a href="classVisualController.html#a8930399af8b1a3d7a0ef257cedfa40d5">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8930399af8b1a3d7a0ef257cedfa40d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11bd14f0611a3a45141d6ab317d6535f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualController.html#a11bd14f0611a3a45141d6ab317d6535f">SetPenThickness</a> (uint thickness)</td></tr>
+<tr class="memdesc:a11bd14f0611a3a45141d6ab317d6535f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод задания текущей толщины пера  <a href="classVisualController.html#a11bd14f0611a3a45141d6ab317d6535f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a11bd14f0611a3a45141d6ab317d6535f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a753fed7520242d8110fc661710bf7167"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualController.html#a753fed7520242d8110fc661710bf7167">SetBrushStyle</a> (<a class="el" href="VisualTypes_8hpp.html#af67a889bc5e9f8ab3a59fe58b0fa2128">BrushStyle</a> brush_style)</td></tr>
+<tr class="memdesc:a753fed7520242d8110fc661710bf7167"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод задания текущего стиля кисти  <a href="classVisualController.html#a753fed7520242d8110fc661710bf7167">Подробнее...</a><br /></td></tr>
+<tr class="separator:a753fed7520242d8110fc661710bf7167"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8360db99f20c1aaf4f2c60498e1b1217"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualController.html#a8360db99f20c1aaf4f2c60498e1b1217">SetBrushColor</a> (<a class="el" href="VisualTypes_8hpp.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a> color)</td></tr>
+<tr class="memdesc:a8360db99f20c1aaf4f2c60498e1b1217"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод задания текущего цвета кисти  <a href="classVisualController.html#a8360db99f20c1aaf4f2c60498e1b1217">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8360db99f20c1aaf4f2c60498e1b1217"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a427ea4ba79949e0f46fbcf19bb396b"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classVisualObject.html">VisualObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualController.html#a8a427ea4ba79949e0f46fbcf19bb396b">HitTest</a> (<a class="el" href="structPoint.html">Point</a> point)</td></tr>
+<tr class="memdesc:a8a427ea4ba79949e0f46fbcf19bb396b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Поиск объекта, содержащего внутри указанную точку  <a href="classVisualController.html#a8a427ea4ba79949e0f46fbcf19bb396b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8a427ea4ba79949e0f46fbcf19bb396b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2476ed150ab9db80a0fa8734a80dc13d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualController.html#a2476ed150ab9db80a0fa8734a80dc13d">HandlePoint</a> (<a class="el" href="structPoint.html">Point</a> point)</td></tr>
+<tr class="memdesc:a2476ed150ab9db80a0fa8734a80dc13d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обработка контроллером новой точки  <a href="classVisualController.html#a2476ed150ab9db80a0fa8734a80dc13d">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2476ed150ab9db80a0fa8734a80dc13d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac881096815218903dc1b4b88d758e7e1"><td class="memItemLeft" align="right" valign="top"><a id="ac881096815218903dc1b4b88d758e7e1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualController.html#ac881096815218903dc1b4b88d758e7e1">CancelPoint</a> ()</td></tr>
+<tr class="memdesc:ac881096815218903dc1b4b88d758e7e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обработка отмены конструирования <br /></td></tr>
+<tr class="separator:ac881096815218903dc1b4b88d758e7e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cbb7e20b3c7df0e4bb948f43e6e4fb1"><td class="memItemLeft" align="right" valign="top"><a id="a4cbb7e20b3c7df0e4bb948f43e6e4fb1"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualController.html#a4cbb7e20b3c7df0e4bb948f43e6e4fb1">GetObjectsCount</a> ()</td></tr>
+<tr class="memdesc:a4cbb7e20b3c7df0e4bb948f43e6e4fb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение количества объектов <br /></td></tr>
+<tr class="separator:a4cbb7e20b3c7df0e4bb948f43e6e4fb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad57ec30b3d2b34046cae24f58da43c17"><td class="memItemLeft" align="right" valign="top"><a id="ad57ec30b3d2b34046cae24f58da43c17"></a>
+std::shared_ptr&lt; <a class="el" href="classVisualObject.html">VisualObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualController.html#ad57ec30b3d2b34046cae24f58da43c17">GetObject</a> (uint index)</td></tr>
+<tr class="memdesc:ad57ec30b3d2b34046cae24f58da43c17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение объекта по индексу <br /></td></tr>
+<tr class="separator:ad57ec30b3d2b34046cae24f58da43c17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f6aa8d58513073c235474bde2a3820c"><td class="memItemLeft" align="right" valign="top"><a id="a2f6aa8d58513073c235474bde2a3820c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualController.html#a2f6aa8d58513073c235474bde2a3820c">ClearObjects</a> ()</td></tr>
+<tr class="memdesc:a2f6aa8d58513073c235474bde2a3820c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаление всех объектов <br /></td></tr>
+<tr class="separator:a2f6aa8d58513073c235474bde2a3820c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c5e9a91691370481e8b92e0930f2b06"><td class="memItemLeft" align="right" valign="top"><a id="a6c5e9a91691370481e8b92e0930f2b06"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualController.html#a6c5e9a91691370481e8b92e0930f2b06">DeleteObject</a> (std::shared_ptr&lt; <a class="el" href="classVisualObject.html">VisualObject</a> &gt; object)</td></tr>
+<tr class="memdesc:a6c5e9a91691370481e8b92e0930f2b06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаление объекта <br /></td></tr>
+<tr class="separator:a6c5e9a91691370481e8b92e0930f2b06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8993ddde5a456beb75568c9e959a439e"><td class="memItemLeft" align="right" valign="top"><a id="a8993ddde5a456beb75568c9e959a439e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualController.html#a8993ddde5a456beb75568c9e959a439e">NewFile</a> ()</td></tr>
+<tr class="memdesc:a8993ddde5a456beb75568c9e959a439e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание нового файла <br /></td></tr>
+<tr class="separator:a8993ddde5a456beb75568c9e959a439e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27cfa1c05a2ef470afabc97871fff84d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualController.html#a27cfa1c05a2ef470afabc97871fff84d">LoadFile</a> (std::string filename)</td></tr>
+<tr class="memdesc:a27cfa1c05a2ef470afabc97871fff84d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Загрузка файла  <a href="classVisualController.html#a27cfa1c05a2ef470afabc97871fff84d">Подробнее...</a><br /></td></tr>
+<tr class="separator:a27cfa1c05a2ef470afabc97871fff84d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f2fdaffc94f0c892d2dbe25d5547fe1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualController.html#a5f2fdaffc94f0c892d2dbe25d5547fe1">SaveFile</a> (std::string filename)</td></tr>
+<tr class="memdesc:a5f2fdaffc94f0c892d2dbe25d5547fe1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сохранение файла  <a href="classVisualController.html#a5f2fdaffc94f0c892d2dbe25d5547fe1">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5f2fdaffc94f0c892d2dbe25d5547fe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75ad71f10275df6e9ee2cf88beb10498"><td class="memItemLeft" align="right" valign="top"><a id="a75ad71f10275df6e9ee2cf88beb10498"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualController.html#a75ad71f10275df6e9ee2cf88beb10498">DeleteSelectedObject</a> ()</td></tr>
+<tr class="memdesc:a75ad71f10275df6e9ee2cf88beb10498"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаление текущего выбранного объекта <br /></td></tr>
+<tr class="separator:a75ad71f10275df6e9ee2cf88beb10498"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Визуальный контроллер </p>
+<p>Отвечает за создание, хранение объектов </p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="a2476ed150ab9db80a0fa8734a80dc13d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2476ed150ab9db80a0fa8734a80dc13d">&#9670;&nbsp;</a></span>HandlePoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualController::HandlePoint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structPoint.html">Point</a>&#160;</td>
+          <td class="paramname"><em>point</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Обработка контроллером новой точки </p>
+<p>Создание нового объекта, выбор существующего объекьа, создание новой точки в конструируемом объекте </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">point</td><td>новая точка </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8a427ea4ba79949e0f46fbcf19bb396b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a427ea4ba79949e0f46fbcf19bb396b">&#9670;&nbsp;</a></span>HitTest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classVisualObject.html">VisualObject</a>&gt; VisualController::HitTest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structPoint.html">Point</a>&#160;</td>
+          <td class="paramname"><em>point</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Поиск объекта, содержащего внутри указанную точку </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">point</td><td>точка для проверки </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a27cfa1c05a2ef470afabc97871fff84d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27cfa1c05a2ef470afabc97871fff84d">&#9670;&nbsp;</a></span>LoadFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualController::LoadFile </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Загрузка файла </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">point</td><td>имя файла </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5f2fdaffc94f0c892d2dbe25d5547fe1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f2fdaffc94f0c892d2dbe25d5547fe1">&#9670;&nbsp;</a></span>SaveFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualController::SaveFile </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Сохранение файла </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">point</td><td>имя файла </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0c71df2a72e16bf54bfa703915aa3d30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c71df2a72e16bf54bfa703915aa3d30">&#9670;&nbsp;</a></span>SelectObjectType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualController::SelectObjectType </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="VisualObjects_8hpp.html#a1071fd6943d552fb894b2d180a3736fc">VisualObjectType</a>&#160;</td>
+          <td class="paramname"><em>object_type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Метод задания текущего создавемого объекта </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object_type</td><td>тип объекта </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8360db99f20c1aaf4f2c60498e1b1217"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8360db99f20c1aaf4f2c60498e1b1217">&#9670;&nbsp;</a></span>SetBrushColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualController::SetBrushColor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="VisualTypes_8hpp.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a>&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Метод задания текущего цвета кисти </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">brush_style</td><td>цвет кисти </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a753fed7520242d8110fc661710bf7167"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a753fed7520242d8110fc661710bf7167">&#9670;&nbsp;</a></span>SetBrushStyle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualController::SetBrushStyle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="VisualTypes_8hpp.html#af67a889bc5e9f8ab3a59fe58b0fa2128">BrushStyle</a>&#160;</td>
+          <td class="paramname"><em>brush_style</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Метод задания текущего стиля кисти </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">brush_style</td><td>стиль кисти </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8930399af8b1a3d7a0ef257cedfa40d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8930399af8b1a3d7a0ef257cedfa40d5">&#9670;&nbsp;</a></span>SetPenColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualController::SetPenColor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="VisualTypes_8hpp.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a>&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Метод задания текущего цвета пера </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>цвет пера </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="add9eb37055b345f39ed9dcb86cba1da3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add9eb37055b345f39ed9dcb86cba1da3">&#9670;&nbsp;</a></span>SetPenStyle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualController::SetPenStyle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="VisualTypes_8hpp.html#ab70170afb6347d18ff9dac17e05e133e">PenStyle</a>&#160;</td>
+          <td class="paramname"><em>pen_style</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Метод задания текущего стиля пера </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pen_style</td><td>стиль пера </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a11bd14f0611a3a45141d6ab317d6535f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11bd14f0611a3a45141d6ab317d6535f">&#9670;&nbsp;</a></span>SetPenThickness()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VisualController::SetPenThickness </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>thickness</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Метод задания текущей толщины пера </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">thickness</td><td>толщина пера </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>src/<a class="el" href="VisualController_8hpp_source.html">VisualController.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<map id="SimpleLine" name="SimpleLine">
+<area shape="rect" id="node1" title="Объект &#45; простая линия" alt="" coords="80,247,167,273"/>
+<area shape="rect" id="node2" href="$classLineVisualObject.html" title="Линейный объект" alt="" coords="63,171,184,197"/>
+<area shape="rect" id="node3" href="$classVisualObject.html" title="Визуальный объект &#45; объекты непосредственно рисуемые в редакторе" alt="" coords="75,95,171,121"/>
+<area shape="rect" id="node4" href="$classBaseVisualObject.html" title="Базовый класс визуальных объектов" alt="" coords="5,5,132,32"/>
+<area shape="rect" id="node5" href="$structPen.html" title="Перо" alt="" coords="157,5,202,32"/>
+</map>

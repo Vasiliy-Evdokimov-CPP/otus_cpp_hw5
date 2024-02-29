@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>editor: Файл src/VisualController.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">editor
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">OTUS C++ Professional Homework #5</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл VisualController.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &quot;<a class="el" href="Logger_8hpp_source.html">Logger.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="VisualTypes_8hpp_source.html">VisualTypes.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="VisualObjects_8hpp_source.html">VisualObjects.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для VisualController.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="VisualController_8hpp__incl.png" border="0" usemap="#asrc_2VisualController_8hpp" alt=""/></div>
+<map name="asrc_2VisualController_8hpp" id="asrc_2VisualController_8hpp">
+<area shape="rect" title=" " alt="" coords="248,5,407,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,73,107"/>
+<area shape="rect" title=" " alt="" coords="298,155,357,181"/>
+<area shape="rect" title=" " alt="" coords="149,80,223,107"/>
+<area shape="rect" title=" " alt="" coords="247,80,317,107"/>
+<area shape="rect" title=" " alt="" coords="341,80,407,107"/>
+<area shape="rect" href="Logger_8hpp.html" title=" " alt="" coords="319,229,405,256"/>
+<area shape="rect" href="VisualTypes_8hpp.html" title=" " alt="" coords="442,229,559,256"/>
+<area shape="rect" href="VisualObjects_8hpp.html" title=" " alt="" coords="483,80,609,107"/>
+<area shape="rect" title=" " alt="" coords="305,304,377,331"/>
+<area shape="rect" title=" " alt="" coords="401,304,456,331"/>
+<area shape="rect" title=" " alt="" coords="481,304,539,331"/>
+<area shape="rect" title=" " alt="" coords="569,304,616,331"/>
+<area shape="rect" href="VisualCanvas_8hpp.html" title=" " alt="" coords="381,155,508,181"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="VisualController_8hpp__dep__incl.png" border="0" usemap="#asrc_2VisualController_8hppdep" alt=""/></div>
+<map name="asrc_2VisualController_8hppdep" id="asrc_2VisualController_8hppdep">
+<area shape="rect" title=" " alt="" coords="5,5,164,32"/>
+<area shape="rect" href="editor_8cpp.html" title="OTUS C++ Professional Домашнее задание №5." alt="" coords="35,155,135,181"/>
+<area shape="rect" href="VisualEditor_8hpp.html" title=" " alt="" coords="69,80,207,107"/>
+</map>
+</div>
+</div>
+<p><a href="VisualController_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualController.html">VisualController</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Визуальный контроллер  <a href="classVisualController.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>В файле описывается класс визуального контроллера </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

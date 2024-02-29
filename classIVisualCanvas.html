@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>editor: Класс IVisualCanvas</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">editor
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">OTUS C++ Professional Homework #5</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="classIVisualCanvas-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс IVisualCanvas<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Интерфейс холста  
+ <a href="classIVisualCanvas.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="VisualCanvas_8hpp_source.html">VisualCanvas.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:IVisualCanvas:</div>
+<div class="dyncontent">
+<div class="center"><img src="classIVisualCanvas__inherit__graph.png" border="0" usemap="#aIVisualCanvas_inherit__map" alt="Inheritance graph"/></div>
+<map name="aIVisualCanvas_inherit__map" id="aIVisualCanvas_inherit__map">
+<area shape="rect" title="Интерфейс холста" alt="" coords="9,5,116,32"/>
+<area shape="rect" href="classDesktopCanvas.html" title="Desktop холст" alt="" coords="5,80,120,107"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса IVisualCanvas:</div>
+<div class="dyncontent">
+<div class="center"><img src="classIVisualCanvas__coll__graph.png" border="0" usemap="#aIVisualCanvas_coll__map" alt="Collaboration graph"/></div>
+<map name="aIVisualCanvas_coll__map" id="aIVisualCanvas_coll__map">
+<area shape="rect" title="Интерфейс холста" alt="" coords="12,95,119,121"/>
+<area shape="rect" href="structPen.html" title="Перо" alt="" coords="5,5,51,32"/>
+<area shape="rect" href="structBrush.html" title="Кисть" alt="" coords="75,5,131,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a0f7cda1f8d2e0604fc0f176db37308e6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structPoint.html">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIVisualCanvas.html#a0f7cda1f8d2e0604fc0f176db37308e6">ConvertLogToPhys</a> (<a class="el" href="structPoint.html">Point</a> point)=0</td></tr>
+<tr class="memdesc:a0f7cda1f8d2e0604fc0f176db37308e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конвертация логических координат в координаты холста  <a href="classIVisualCanvas.html#a0f7cda1f8d2e0604fc0f176db37308e6">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0f7cda1f8d2e0604fc0f176db37308e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af314d8660737ccac35fac4d5cc27d9e9"><td class="memItemLeft" align="right" valign="top"><a id="af314d8660737ccac35fac4d5cc27d9e9"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIVisualCanvas.html#af314d8660737ccac35fac4d5cc27d9e9">DrawLine</a> (<a class="el" href="structPoint.html">Point</a> point_1, <a class="el" href="structPoint.html">Point</a> point_2)=0</td></tr>
+<tr class="memdesc:af314d8660737ccac35fac4d5cc27d9e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Рисование линии <br /></td></tr>
+<tr class="separator:af314d8660737ccac35fac4d5cc27d9e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d7ea3c00c546bc57c0fbda1725948f4"><td class="memItemLeft" align="right" valign="top"><a id="a4d7ea3c00c546bc57c0fbda1725948f4"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIVisualCanvas.html#a4d7ea3c00c546bc57c0fbda1725948f4">DrawRectangle</a> (<a class="el" href="structPoint.html">Point</a> left_top, <a class="el" href="structPoint.html">Point</a> right_bottom)=0</td></tr>
+<tr class="memdesc:a4d7ea3c00c546bc57c0fbda1725948f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Рисование прямоугольника <br /></td></tr>
+<tr class="separator:a4d7ea3c00c546bc57c0fbda1725948f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a741a3ab22551b7e3af67796d6d738b57"><td class="memItemLeft" align="right" valign="top"><a id="a741a3ab22551b7e3af67796d6d738b57"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIVisualCanvas.html#a741a3ab22551b7e3af67796d6d738b57">DrawEllipse</a> (<a class="el" href="structPoint.html">Point</a> left_top, <a class="el" href="structPoint.html">Point</a> right_bottom)=0</td></tr>
+<tr class="memdesc:a741a3ab22551b7e3af67796d6d738b57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Рисование эллипса <br /></td></tr>
+<tr class="separator:a741a3ab22551b7e3af67796d6d738b57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cd634981f4f4809cf01e31c422f0848"><td class="memItemLeft" align="right" valign="top"><a id="a5cd634981f4f4809cf01e31c422f0848"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIVisualCanvas.html#a5cd634981f4f4809cf01e31c422f0848">Clear</a> ()</td></tr>
+<tr class="memdesc:a5cd634981f4f4809cf01e31c422f0848"><td class="mdescLeft">&#160;</td><td class="mdescRight">Очищение холста <br /></td></tr>
+<tr class="separator:a5cd634981f4f4809cf01e31c422f0848"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf1b5450273cee942468635c1d16e8cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIVisualCanvas.html#adf1b5450273cee942468635c1d16e8cb">SetScale</a> (int scale)</td></tr>
+<tr class="memdesc:adf1b5450273cee942468635c1d16e8cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Установка масштаба  <a href="classIVisualCanvas.html#adf1b5450273cee942468635c1d16e8cb">Подробнее...</a><br /></td></tr>
+<tr class="separator:adf1b5450273cee942468635c1d16e8cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:ad93dc79532d7931e663b96d1d6d8bdef"><td class="memItemLeft" align="right" valign="top"><a id="ad93dc79532d7931e663b96d1d6d8bdef"></a>
+<a class="el" href="structPen.html">Pen</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIVisualCanvas.html#ad93dc79532d7931e663b96d1d6d8bdef">m_pen</a></td></tr>
+<tr class="memdesc:ad93dc79532d7931e663b96d1d6d8bdef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перо рисования <br /></td></tr>
+<tr class="separator:ad93dc79532d7931e663b96d1d6d8bdef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4599627777b338339ea0edc32c8196d0"><td class="memItemLeft" align="right" valign="top"><a id="a4599627777b338339ea0edc32c8196d0"></a>
+<a class="el" href="structBrush.html">Brush</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIVisualCanvas.html#a4599627777b338339ea0edc32c8196d0">m_brush</a></td></tr>
+<tr class="memdesc:a4599627777b338339ea0edc32c8196d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Кисть рисования <br /></td></tr>
+<tr class="separator:a4599627777b338339ea0edc32c8196d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Интерфейс холста </p>
+<p>Декларируются методы рисования графических примитивов на холсте </p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="a0f7cda1f8d2e0604fc0f176db37308e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f7cda1f8d2e0604fc0f176db37308e6">&#9670;&nbsp;</a></span>ConvertLogToPhys()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structPoint.html">Point</a> IVisualCanvas::ConvertLogToPhys </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structPoint.html">Point</a>&#160;</td>
+          <td class="paramname"><em>point</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Конвертация логических координат в координаты холста </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">point</td><td>конвертируемая точка <br  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adf1b5450273cee942468635c1d16e8cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf1b5450273cee942468635c1d16e8cb">&#9670;&nbsp;</a></span>SetScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IVisualCanvas::SetScale </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>scale</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Установка масштаба </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scale</td><td>масштаб <br  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>src/<a class="el" href="VisualCanvas_8hpp_source.html">VisualCanvas.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

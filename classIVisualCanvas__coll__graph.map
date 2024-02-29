@@ -1,0 +1,5 @@
+<map id="IVisualCanvas" name="IVisualCanvas">
+<area shape="rect" id="node1" title="Интерфейс холста" alt="" coords="12,95,119,121"/>
+<area shape="rect" id="node2" href="$structPen.html" title="Перо" alt="" coords="5,5,51,32"/>
+<area shape="rect" id="node3" href="$structBrush.html" title="Кисть" alt="" coords="75,5,131,32"/>
+</map>

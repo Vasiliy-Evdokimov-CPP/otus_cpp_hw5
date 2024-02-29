@@ -1,0 +1,313 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>editor: Класс VisualObject</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">editor
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">OTUS C++ Professional Homework #5</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-attribs">Открытые атрибуты</a> &#124;
+<a href="#pro-attribs">Защищенные данные</a> &#124;
+<a href="classVisualObject-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle">
+<div class="title">Класс VisualObject<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Визуальный объект - объекты непосредственно рисуемые в редакторе  
+ <a href="classVisualObject.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="VisualObjects_8hpp_source.html">VisualObjects.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:VisualObject:</div>
+<div class="dyncontent">
+<div class="center"><img src="classVisualObject__inherit__graph.png" border="0" usemap="#aVisualObject_inherit__map" alt="Inheritance graph"/></div>
+<map name="aVisualObject_inherit__map" id="aVisualObject_inherit__map">
+<area shape="rect" title="Визуальный объект &#45; объекты непосредственно рисуемые в редакторе" alt="" coords="107,80,203,107"/>
+<area shape="rect" href="classFilledVisualObject.html" title="Заполняемый объект" alt="" coords="19,155,145,181"/>
+<area shape="rect" href="classLineVisualObject.html" title="Линейный объект" alt="" coords="169,155,291,181"/>
+<area shape="rect" href="classBaseVisualObject.html" title="Базовый класс визуальных объектов" alt="" coords="92,5,219,32"/>
+<area shape="rect" href="classRectVisualObject.html" title="Прямоугольный объект" alt="" coords="21,229,143,256"/>
+<area shape="rect" href="classEllipse.html" title="Объект &#45; эллипс" alt="" coords="5,304,65,331"/>
+<area shape="rect" href="classRectangle.html" title="Объект &#45; прямоугольник" alt="" coords="90,304,170,331"/>
+<area shape="rect" href="classSimpleLine.html" title="Объект &#45; простая линия" alt="" coords="187,229,273,256"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса VisualObject:</div>
+<div class="dyncontent">
+<div class="center"><img src="classVisualObject__coll__graph.png" border="0" usemap="#aVisualObject_coll__map" alt="Collaboration graph"/></div>
+<map name="aVisualObject_coll__map" id="aVisualObject_coll__map">
+<area shape="rect" title="Визуальный объект &#45; объекты непосредственно рисуемые в редакторе" alt="" coords="75,95,171,121"/>
+<area shape="rect" href="classBaseVisualObject.html" title="Базовый класс визуальных объектов" alt="" coords="5,5,132,32"/>
+<area shape="rect" href="structPen.html" title="Перо" alt="" coords="157,5,202,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a89801192b11afbc7f226072c1d653a8e"><td class="memItemLeft" align="right" valign="top"><a id="a89801192b11afbc7f226072c1d653a8e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualObject.html#a89801192b11afbc7f226072c1d653a8e">VisualObject</a> ()</td></tr>
+<tr class="memdesc:a89801192b11afbc7f226072c1d653a8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор <br /></td></tr>
+<tr class="separator:a89801192b11afbc7f226072c1d653a8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a068ba11545322d81d9ad8c675c4233f9"><td class="memItemLeft" align="right" valign="top"><a id="a068ba11545322d81d9ad8c675c4233f9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualObject.html#a068ba11545322d81d9ad8c675c4233f9">~VisualObject</a> ()</td></tr>
+<tr class="memdesc:a068ba11545322d81d9ad8c675c4233f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Деструктор <br /></td></tr>
+<tr class="separator:a068ba11545322d81d9ad8c675c4233f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a870fdf40b9b9cb6423bbd5f42b82fcf2"><td class="memItemLeft" align="right" valign="top"><a id="a870fdf40b9b9cb6423bbd5f42b82fcf2"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualObject.html#a870fdf40b9b9cb6423bbd5f42b82fcf2">GetPointsCount</a> ()</td></tr>
+<tr class="memdesc:a870fdf40b9b9cb6423bbd5f42b82fcf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение количества точек <br /></td></tr>
+<tr class="separator:a870fdf40b9b9cb6423bbd5f42b82fcf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a708e9d7645d16d94b76ba0ae5834a672"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualObject.html#a708e9d7645d16d94b76ba0ae5834a672">GetMaxPointsCount</a> ()</td></tr>
+<tr class="memdesc:a708e9d7645d16d94b76ba0ae5834a672"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение максимального количества точек  <a href="classVisualObject.html#a708e9d7645d16d94b76ba0ae5834a672">Подробнее...</a><br /></td></tr>
+<tr class="separator:a708e9d7645d16d94b76ba0ae5834a672"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3baabb10770f8745729beac826aa2081"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualObject.html#a3baabb10770f8745729beac826aa2081">AddPoint</a> (<a class="el" href="structPoint.html">Point</a> point)</td></tr>
+<tr class="memdesc:a3baabb10770f8745729beac826aa2081"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавление точки  <a href="classVisualObject.html#a3baabb10770f8745729beac826aa2081">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3baabb10770f8745729beac826aa2081"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39f28c2aedd5b0635afe7853aad68d6c"><td class="memItemLeft" align="right" valign="top"><a id="a39f28c2aedd5b0635afe7853aad68d6c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualObject.html#a39f28c2aedd5b0635afe7853aad68d6c">IsFinished</a> ()</td></tr>
+<tr class="memdesc:a39f28c2aedd5b0635afe7853aad68d6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Завершено ли конструирование объекта <br /></td></tr>
+<tr class="separator:a39f28c2aedd5b0635afe7853aad68d6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e9ab5caae2af5bd6e31e0ee0dbaa8fe"><td class="memItemLeft" align="right" valign="top"><a id="a6e9ab5caae2af5bd6e31e0ee0dbaa8fe"></a>
+virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualObject.html#a6e9ab5caae2af5bd6e31e0ee0dbaa8fe">Serialize</a> ()</td></tr>
+<tr class="memdesc:a6e9ab5caae2af5bd6e31e0ee0dbaa8fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сериализация объекта <br /></td></tr>
+<tr class="separator:a6e9ab5caae2af5bd6e31e0ee0dbaa8fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a663873c866f6cbf267f1bc4b80e243a7"><td class="memItemLeft" align="right" valign="top"><a id="a663873c866f6cbf267f1bc4b80e243a7"></a>
+virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualObject.html#a663873c866f6cbf267f1bc4b80e243a7">GetTypeName</a> ()</td></tr>
+<tr class="memdesc:a663873c866f6cbf267f1bc4b80e243a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает наименовани етипа объекта <br /></td></tr>
+<tr class="separator:a663873c866f6cbf267f1bc4b80e243a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a194a0e233b49dc4fb62b74ccc8a476ee"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualObject.html#a194a0e233b49dc4fb62b74ccc8a476ee">Draw</a> (std::shared_ptr&lt; <a class="el" href="classIVisualCanvas.html">IVisualCanvas</a> &gt; canvas)=0</td></tr>
+<tr class="memdesc:a194a0e233b49dc4fb62b74ccc8a476ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Рисование объекта  <a href="classVisualObject.html#a194a0e233b49dc4fb62b74ccc8a476ee">Подробнее...</a><br /></td></tr>
+<tr class="separator:a194a0e233b49dc4fb62b74ccc8a476ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72c7b261c8df21566366184653759dc2"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualObject.html#a72c7b261c8df21566366184653759dc2">HitTest</a> (<a class="el" href="structPoint.html">Point</a> point)=0</td></tr>
+<tr class="memdesc:a72c7b261c8df21566366184653759dc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка на попадание точки внутрь объекта  <a href="classVisualObject.html#a72c7b261c8df21566366184653759dc2">Подробнее...</a><br /></td></tr>
+<tr class="separator:a72c7b261c8df21566366184653759dc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Открытые атрибуты</h2></td></tr>
+<tr class="memitem:ac900cf242c27f27027feb1339a276f4f"><td class="memItemLeft" align="right" valign="top"><a id="ac900cf242c27f27027feb1339a276f4f"></a>
+<a class="el" href="structPen.html">Pen</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualObject.html#ac900cf242c27f27027feb1339a276f4f">m_pen</a></td></tr>
+<tr class="memdesc:ac900cf242c27f27027feb1339a276f4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перо рисования объекта <br /></td></tr>
+<tr class="separator:ac900cf242c27f27027feb1339a276f4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:a1dd376a61cbe23dc9b3e95d3087e1fe2"><td class="memItemLeft" align="right" valign="top"><a id="a1dd376a61cbe23dc9b3e95d3087e1fe2"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualObject.html#a1dd376a61cbe23dc9b3e95d3087e1fe2">m_max_points_count</a> = 2</td></tr>
+<tr class="memdesc:a1dd376a61cbe23dc9b3e95d3087e1fe2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Максимальное количество точек <br /></td></tr>
+<tr class="separator:a1dd376a61cbe23dc9b3e95d3087e1fe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b092f36024d2a0dac591445b75cc940"><td class="memItemLeft" align="right" valign="top"><a id="a8b092f36024d2a0dac591445b75cc940"></a>
+std::vector&lt; <a class="el" href="structPoint.html">Point</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualObject.html#a8b092f36024d2a0dac591445b75cc940">m_points</a></td></tr>
+<tr class="memdesc:a8b092f36024d2a0dac591445b75cc940"><td class="mdescLeft">&#160;</td><td class="mdescRight">Точки объекта <br /></td></tr>
+<tr class="separator:a8b092f36024d2a0dac591445b75cc940"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff210044e9f21841c6a4a8dd1a6f0a92"><td class="memItemLeft" align="right" valign="top"><a id="aff210044e9f21841c6a4a8dd1a6f0a92"></a>
+<a class="el" href="VisualObjects_8hpp.html#a1071fd6943d552fb894b2d180a3736fc">VisualObjectType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVisualObject.html#aff210044e9f21841c6a4a8dd1a6f0a92">m_type</a> = VisualObjectType::unknown</td></tr>
+<tr class="memdesc:aff210044e9f21841c6a4a8dd1a6f0a92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тип объекта <br /></td></tr>
+<tr class="separator:aff210044e9f21841c6a4a8dd1a6f0a92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Визуальный объект - объекты непосредственно рисуемые в редакторе </p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="a3baabb10770f8745729beac826aa2081"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3baabb10770f8745729beac826aa2081">&#9670;&nbsp;</a></span>AddPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void VisualObject::AddPoint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structPoint.html">Point</a>&#160;</td>
+          <td class="paramname"><em>point</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Добавление точки </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">point</td><td>добавляемая точка </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a194a0e233b49dc4fb62b74ccc8a476ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a194a0e233b49dc4fb62b74ccc8a476ee">&#9670;&nbsp;</a></span>Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void VisualObject::Draw </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classIVisualCanvas.html">IVisualCanvas</a> &gt;&#160;</td>
+          <td class="paramname"><em>canvas</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Рисование объекта </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">canvas</td><td>холст для рисования </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещается в <a class="el" href="classEllipse.html#a5c19decd4b786dac1f608241a04a6c0f">Ellipse</a>, <a class="el" href="classRectangle.html#afc542b4bcd29a9468987b92c1d306a7e">Rectangle</a>, <a class="el" href="classRectVisualObject.html#af1b08e777c44799301aedc4e855608eb">RectVisualObject</a> и <a class="el" href="classLineVisualObject.html#a4683460fbaf36bf9acbe1a59c0764495">LineVisualObject</a>.</p>
+
+</div>
+</div>
+<a id="a708e9d7645d16d94b76ba0ae5834a672"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a708e9d7645d16d94b76ba0ae5834a672">&#9670;&nbsp;</a></span>GetMaxPointsCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t VisualObject::GetMaxPointsCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получение максимального количества точек </p>
+<p>Например для обычной линии - всего две, а для полилинии - неограниченно </p>
+
+</div>
+</div>
+<a id="a72c7b261c8df21566366184653759dc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72c7b261c8df21566366184653759dc2">&#9670;&nbsp;</a></span>HitTest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int VisualObject::HitTest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structPoint.html">Point</a>&#160;</td>
+          <td class="paramname"><em>point</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Проверка на попадание точки внутрь объекта </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">point</td><td>проверяема точка </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Замещается в <a class="el" href="classLineVisualObject.html#a71791ee4fe66155889b890a9e5143cbd">LineVisualObject</a> и <a class="el" href="classRectVisualObject.html#a3ff4dbb8c8f0da133f2e1386cbed25b7">RectVisualObject</a>.</p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>src/<a class="el" href="VisualObjects_8hpp_source.html">VisualObjects.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

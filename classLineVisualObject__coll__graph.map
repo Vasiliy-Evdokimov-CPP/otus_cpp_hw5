@@ -1,0 +1,6 @@
+<map id="LineVisualObject" name="LineVisualObject">
+<area shape="rect" id="node1" title="Линейный объект" alt="" coords="63,171,184,197"/>
+<area shape="rect" id="node2" href="$classVisualObject.html" title="Визуальный объект &#45; объекты непосредственно рисуемые в редакторе" alt="" coords="75,95,171,121"/>
+<area shape="rect" id="node3" href="$classBaseVisualObject.html" title="Базовый класс визуальных объектов" alt="" coords="5,5,132,32"/>
+<area shape="rect" id="node4" href="$structPen.html" title="Перо" alt="" coords="157,5,202,32"/>
+</map>
